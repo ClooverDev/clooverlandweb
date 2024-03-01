@@ -1,0 +1,155 @@
+@import url('https://fonts.cdnfonts.com/css/pixeloid-sans');
+
+* {
+	font-family:'Pixeloid Sans', sans-serif;
+	color: white;
+	text-decoration:none;
+	text-shadow: 0px 0px 2px 0px black;
+}
+
+.top_container {
+	transform:translateX(-10px);
+	width:50%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	position:relative;
+}
+
+#logo {
+	position:relative;
+	width:10vw;
+	height:100%;
+	transition: ease-in 0.25s;
+}
+
+#logo:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+#nav {
+	position:relative;
+	transition: ease-in 0.25s;
+	display: inline-block;
+}
+
+#nav:hover {
+	font-size: 110%;
+	cursor: pointer;
+}
+
+#nav:hover h4 {
+	color:gold;
+}
+
+table, th, td {
+	border-collapse: separate;
+}
+
+th, td {
+	font-size:1vw;
+	padding: 15px;
+	text-align: center;
+	text-shadow:0px 0px 3px black, 0px 2px 0px black;
+}
+
+h1, h2, h3, p {
+   width:100%;
+   font-size:2vw;
+   margin:auto;
+   text-shadow:0px 0px 2px black, 0px 2px 0px black;
+}
+
+.start_information {
+	transform:translateY(-15px);
+	width:50%;
+	margin:auto;
+}
+
+@keyframes slide {
+  0% {
+	transform: translate3d(-2000px, -2000px, 0);
+  }
+  100% {
+	transform: translate3d(0px, 0px, 0);
+  }
+}
+
+*, *::after, *::before {
+box-sizing: border-box;
+}
+
+.modal {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scale(0);
+transition: 200ms ease-in-out;
+border: 2px solid white;
+border-radius: 10px;
+z-index: 10;
+background-color: black;
+opacity:0.8;
+width: 500px;
+max-width: 80%;
+}
+
+.modal.active {
+transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+padding: 10px 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.modal-header .modal-title {
+font-size: 1.25rem;
+font-weight: bold;
+}
+
+.modal-header .close-button {
+cursor: pointer;
+border: none;
+outline: none;
+background: none;
+font-size: 1.25rem;
+font-weight: bold;
+transform:translateY(-20px);
+}
+
+.modal-body {
+padding: 10px 15px;
+}
+
+#overlay {
+position: fixed;
+opacity: 0;
+transition: 200ms ease-in-out;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, .5);
+pointer-events: none;
+}
+
+#overlay.active {
+opacity: 1;
+pointer-events: all;
+}
+
+.changelogs_span {
+color:gold;
+font-size:1.7vh;
+transition: ease-in 0.25s;
+}
+
+.changelogs_span:hover {
+color:white;
+font-size:1.9vh;
+cursor: pointer;
+}

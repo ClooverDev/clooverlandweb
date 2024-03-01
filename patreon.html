@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link href="https://fonts.cdnfonts.com/css/pixeloid-sans" rel="stylesheet">
+		<link rel="icon" type="image/x-icon" href="favicons/new_default.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=0.8">
+		<meta charset="UTF-8">
+		<title>Redirect - TopHat Games</title>
+		
+		<style>
+			* {
+				font-family: 'Pixeloid Sans', sans-serif;
+			}
+		</style>
+		
+	</head>
+	
+	<body bgcolor="black">
+	
+	<div>
+		<h3 id="timer" style="color:gold; font-family: 'Pixeloid Mono', sans-serif;">
+			Redirecting to ClooverDev's Patreon Memberships from Patreon.com in 0 seconds.
+		</h3>
+		
+		<h4 style="color:white; font-size:80%; transform: translateY(-15px)">
+			If this fails, restart the page or report to support: <span style="color:yellow">support@tophatgames.net</span>
+		</h4>
+	</div>
+	
+	</body>
+	
+	<script>
+	
+		const text = "Redirecting to ClooverDev's Patreon Memberships from Patreon.com in "
+		
+		document.getElementById("timer").innerHTML = text+"3 seconds."
+	
+		setTimeout(function updateTimer() {
+			document.getElementById("timer").innerHTML = text+"2 seconds."
+		}, 1000);
+		
+		setTimeout(function updateTimer() {
+			document.getElementById("timer").innerHTML = text+"1 seconds."
+		}, 2000);
+		
+		setTimeout(function updateTimer() {
+			document.getElementById("timer").innerHTML = text+"0 seconds."
+		}, 2999);
+	
+		setTimeout(function loadGamePage() {
+		document.getElementById("timer").innerHTML = "Redirecting..."
+			window.location = "https://www.patreon.com/clooverdev/membership"
+		}, 3000);
+	
+	</script>
+
+</html>

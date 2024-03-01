@@ -1,0 +1,119 @@
+.start_logo {
+	width: 300px;
+	height: 150px;
+	position: relative;
+	transform:translate(0px, 10px);
+	margin: 0 auto;
+}
+
+.start_logo img {
+	width: 100%;
+	height: 100%;
+	background-repeat:no-repeat;
+	background-size: cover;
+	animation: start_logo_fadeIn 1s ease-in;
+}
+
+@keyframes start_logo_fadeIn {
+	from { opacity: 0; transform:translateY(10px); }
+	to { opacity: 1; transform:translateY(0px); }
+}
+
+.sliding-background {
+	background: url("resources/images/backgrounds/background-pink.png") repeat;
+}
+
+#fanarts-title {
+	position:relative; 
+	text-align:center; 
+	text-shadow:0px 0px 3px black, 0px 2px 0px black; 
+	font-family:'Pixeloid Mono', sans-serif;
+}
+
+#fanarts-description {
+	position:relative; 
+	transform:translateY(-18px); 
+	font-size:0.9vw; 
+	text-align:center; 
+	text-shadow:0px 0px 2px black, 0px 2px 0px black;
+}
+
+.fanart img {
+	border-style: outset;
+	border: 6px solid white;
+	border-radius: 25px;
+	width: 17vh;
+	height: 19vh;
+	background-size: cover;
+	object-fit: cover;
+	object-position: 40% 25%;
+}
+
+.fanart {
+	width: 100%;
+	height: 100%;
+}
+
+.fanarts {
+	position: absolute;
+	width: 20vh;
+	height: 25vh;
+}
+
+#fanart_background {
+	transform:translate(5px, 150px);
+	position:absolute;
+	background-color:black;
+	border: 3px solid white;
+	border-radius: 10px;
+	width: 19.2vh;
+	height: 4vh;
+}
+
+#fanart_creator {
+	transform:translateY(5px); 
+	width: 100%; 
+	height: 100%; 
+	font-size: 1.5vh;
+	text-align: center;
+}
+
+table {
+	transform: translate(-100px, -30px);
+	padding-bottom: 200px;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding-bottom: 200px;
+}
+
+.monthly_fanart {
+	width: 400px;
+	height: 300px;
+	border-radius: 80px;
+	border: 10px solid black;
+}
+
+.monthly_fanart img {
+	width: 100%;
+	height: 100%;
+	border-radius: 60px;
+	border: 5px solid white;
+	object-fit:cover;
+}
+
+#monthly_fanart_creator {
+	transform: translate(400px, -250px);
+}
+
+.monthly_fanart_background {
+	transform: translate(250px, -255px);
+	position:fixed;
+	background-color:black;
+	width:600px;
+	height:200px;
+	opacity: 0.45;
+	filter:blur(40px);
+}

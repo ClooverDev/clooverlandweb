@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<!-- 
+	Font Types: 
+	-- Pixeloid Sans
+	-- Pixeloid Mono
+
+	Colors:
+	-- backgrund: #153569
+	-- header bar: #10284f
+
+	Website fully coded in HTML5 by ClooverDev
+	-->
+
+	<head>
+		<link href="https://fonts.cdnfonts.com/css/pixeloid-sans" rel="stylesheet">
+		<link rel="icon" type="image/x-icon" href="favicons/new_default.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=0.8">
+		<meta charset="UTF-8">
+		<title>TopHat Games</title>
+		<link rel="stylesheet" href="css/home.css">
+		<link rel="stylesheet" href="main.css">
+		
+	</head>
+
+	<body style="background-color:black">
+		<div class="sliding-background" style="background: url('resources/images/backgrounds/background-blue.png') repeat;"></div>
+
+		<div class="top_container" style="position:relative;">
+		  <table id="logo_table" style="width:50%">
+			<tr>
+			  <th><a id="nav" class="__NAV_game"><h4 style="font-size:120%">Games</h4></a></th>
+			  
+			  <th><a id="nav" class="__NAV_fanarts"><h4 style="font-size:120%">FanArts<br>Exhibition</h4></a></th>
+			  
+			  <th><img id="logo" class="__NAV_logo"></th>
+			  
+			  <th><a id="nav" class="__NAV_damiao"><h4 style="font-size:120%">Damiao's<br>Arts</h4></a></th>
+			  
+			  <th><a id="nav" class="__NAV_forums"><h4 style="font-size:120%">Forums</h4></a></th>
+			</tr>
+		  </table>
+		</div>
+		
+		<div id = "bar"></div>
+		
+		<div class="start_information" style="transform:translateY(22px)">
+
+				<h2 style="position:relative; text-align:center; text-shadow:0px 0px 3px black, 0px 2px 0px black; font-family:'Pixeloid Mono', sans-serif;">What is this group's about?</h2>
+				<h4 style="transform:translateY(-10px); position:relative; font-size:0.9vw; text-align:center; text-shadow:0px 0px 2px black, 0px 2px 0px black"> 
+					TopHat Games is a group I've started in 2020 with the intention of storing my games and as a main group for my games, this happened because I was working with two devs before and now I work alone. The group became my brand instead of my online name (ClooverDev) so I just wanted to keep using it.
+					TopHat Games was once called Platform Game Studios because the group originated from my first ever game that started it all, Roblox Platform Game (the classic version released on January 20th), and it took a bunch of time to be renamed to TopHat Games, the reason behind the name is because I love tophats and the group is about games that I make, so that kind of clicked in my mind. This group has games that were made in Roblox and GXC.gg but since I cut out my Roblox games on December 15th 2023 and got the Creator license on April (which now means nothing because of Gamemaker's new license system) I've started doing games on Gamejolt only for Windows, since the other exports require the operational systems specifically for them.
+					The group was once composed by me and my friends DamiaoRoby and MrDash.<br>
+					DamiaoRoby is one of the greatest friends I've ever had and is one of the greatest artists I have ever seen, he helped ALOT, like ALOT during RBPG remake (since I didn't met him back then) in the art part and became for a while a Developer for the game, you can see his stuff made for my games on the page <a href="damiaos-arts.html"><span style="color:gold">DamiaoRoby's Arts</span></a>.<br>
+					MrDash was a friend I've met on his own server, I found his server through Bloxy News's discord server (because they have a advertisement channel to advertise discord servers) and eventually became friends with him. He helped alot when I had problems in his server and during my time as a moderator, but on the Developer side, he helped me alot in budget during the time Roblox's badges were paid and during the time I didn't knew at all how to model on Blender, he deserves to be mentioned here. He was a Developer for the same time as Damiao.
+					MrDash and DamiaoRoby became the lead admins in my server after I cut out the Developer team to work alone, since I don't work well with others and couldn't work with them together, but DamiaoRoby kept helping me out for a while until I stepped back as a Roblox developer.
+				</h4>
+		</div>
+		
+		<div id = "bar" style="transform:translateY(20px)"></div>
+		
+		<div class="website_logs" style="position:relative; transform:translate(0px, 40px);">
+			<h2 style="position:relative; text-align:center; text-shadow:0px 0px 3px black, 0px 2px 0px black; font-family:'Pixeloid Mono', sans-serif;">CHANGELOGS</h2>
+			<div class="logs">
+				<h4 class="log" style="padding-bottom:-25px; transform:translateY(-15px); position:relative; text-align:center; text-shadow:0px 0px 2px black, 0px 2px 0px black"> 
+					<span id = "CHANGELOGS" data-modal-target="#modal" class="changelogs_span">29.02.2024 | CHANGELOGS</span><br>
+					<span id = "PAGES" data-modal-target="#modal" class="changelogs_span">27.02.2024 | PAGES (4/4)</span><br>
+					<span id="GITHUBANDOVERHAUL" data-modal-target="#modal" class="changelogs_span">26.02.2024 | GITHUB & OVERHAUL</span><br>
+					<span id = "DOMAINDAY" data-modal-target="#modal" class="changelogs_span">23.02.2024 | DOMAIN DAY</span><br>
+					<br>
+			</div>
+		</div>
+		
+		<div class="modal" id="modal">
+		  <div class="modal-header">
+			<div class="modal-title"><h3 id="title_modal" style="font-size:120%;">Template Title</h3><br><p id="title_modal_date" style="color:gold; font-size:80%; transform:translateY(-15px);">XX.XX.XXXX</p></div>
+			<button data-close-button class="close-button">&times;</button>
+		  </div>
+		  <div id = "bar" style="align:left; width: 90%; height: 10%; transform:translate(-10px, -12px)"></div>
+		  <div class="modal-body" style="transform:translateY(-10px);">
+			<span id="desc_modal" style="color:lightgray;">
+				Template Description
+			</span>
+		  </div>
+		</div>
+		<div id="overlay"></div>
+		
+		<footer>
+			<h3 id="__footer" style="position:relative; text-align:center; font-size:1.25vh">support: support@tophatgames.net<br>business: business@tophatgames.net<br><br>© TopHat Games, 2021-2024</h3>
+		</footer>
+
+	</body>
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-101ZSH9YZR"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-101ZSH9YZR');
+	</script>
+
+	<script type="text/javascript" src="javascripts/home.js"></script>
+	<script type="text/javascript" src="javascripts/main.js"></script>
+
+</html>

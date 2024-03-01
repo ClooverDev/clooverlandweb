@@ -1,0 +1,119 @@
+@keyframes slide {
+  0% {
+	transform: translate3d(-2000px, -2000px, 0);
+  }
+  100% {
+	transform: translate3d(0px, 0px, 0);
+  }
+}
+
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+.c-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 200ms ease-in-out;
+	border: 2px solid white;
+	border-radius: 10px;
+	z-index: 10;
+	background-color: black;
+	opacity:1;
+	width: 500px;
+	max-width: 80%;
+}
+
+.c-modal.active {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.c-modal-header {
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.c-modal-header .c-modal-title {
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.c-modal-header .c-close-button {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 1.25rem;
+	font-weight: bold;
+	transform:translateY(-20px);
+}
+
+.c-modal-body {
+	padding: 10px 15px;
+}
+
+#overlay {
+	position: fixed;
+	opacity: 0;
+	transition: 200ms ease-in-out;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .5);
+	pointer-events: none;
+}
+
+#overlay.active {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.changelogs_span {
+	color:gold;
+	font-size:1.7vh;
+	transition: ease-in 0.25s;
+}
+
+.changelogs_span:hover, span {
+	color:white;
+	font-size:1.9vh;
+	cursor: pointer;
+}
+
+.ch_game_logo {
+	position: relative;
+	width: 100%;
+	height: 150px;
+	transform: translateY(35px);
+}
+
+.ch_container {
+	position: relative;
+	margin: 0 auto;
+	width: 500px;
+	height: 210px;
+}
+
+.ch_container img {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+.clog {
+	color:gold;
+	font-size:1.7vh;
+	transition: ease-in 0.25s;
+}
+
+.clog:hover {
+	color:white;
+	font-size:1.9vh;
+	cursor: pointer;
+}
