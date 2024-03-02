@@ -20,6 +20,7 @@
 		<meta charset="UTF-8">
 		<title>TopHat Games</title>
 		<link rel="stylesheet" href="css/home.css">
+		<link rel="stylesheet" href="css/progress_bar.css">
 		<link rel="stylesheet" href="main.css">
 		
 	</head>
@@ -43,9 +44,21 @@
 		  </table>
 		</div>
 		
-		<div id = "bar"></div>
+		<div id = "bar" style="transform:translateY(-15px)"></div>
 		
-		<div class="start_information" style="transform:translateY(22px)">
+		<div class="progress_container">
+			<h3 class="text" style="font-size: 40px; transform: translate(0px, 0px); text-align: center; color:gold"> NEXT<br><span class="text" style="font-size: 25px; transform: translate(0px, 0px); text-align: center; color:white">Cross-Worlds Party: Minis+ Update</span></h3>
+			<h1 class="text" id="text" style="font-size: 30px; transform: translate(0px, 15px)">100%</h1>
+			<div class="bg" style="transform:translate(0, 25px);">
+			  <div class="bar_container">
+				<div id="cool_bar" class="bar"></div>
+			  </div>
+			</div>
+		</div>
+		
+		<div id = "bar" style="transform:translateY(30px)"></div>
+		
+		<div class="start_information" style="transform:translateY(50px)">
 
 				<h2 style="position:relative; text-align:center; text-shadow:0px 0px 3px black, 0px 2px 0px black; font-family:'Pixeloid Mono', sans-serif;">What is this group's about?</h2>
 				<h4 style="transform:translateY(-10px); position:relative; font-size:0.9vw; text-align:center; text-shadow:0px 0px 2px black, 0px 2px 0px black"> 
@@ -58,9 +71,9 @@
 				</h4>
 		</div>
 		
-		<div id = "bar" style="transform:translateY(20px)"></div>
+		<div id = "bar" style="transform:translateY(35px)"></div>
 		
-		<div class="website_logs" style="position:relative; transform:translate(0px, 40px);">
+		<div class="website_logs" style="position:relative; transform:translate(0px, 60px);">
 			<h2 style="position:relative; text-align:center; text-shadow:0px 0px 3px black, 0px 2px 0px black; font-family:'Pixeloid Mono', sans-serif;">CHANGELOGS</h2>
 			<div class="logs">
 				<h4 class="log" style="padding-bottom:-25px; transform:translateY(-15px); position:relative; text-align:center; text-shadow:0px 0px 2px black, 0px 2px 0px black"> 
@@ -87,7 +100,7 @@
 		<div id="overlay"></div>
 		
 		<footer>
-			<h3 id="__footer" style="position:relative; text-align:center; font-size:1.25vh">support: support@tophatgames.net<br>business: business@tophatgames.net<br><br>© TopHat Games, 2021-2024</h3>
+			<h3 id="__footer" style="position:relative; text-align:center; font-size:1.25vh; bottom:-25px">support: support@tophatgames.net<br>business: business@tophatgames.net<br><br>© TopHat Games, 2021-2024</h3>
 		</footer>
 
 	</body>
@@ -103,5 +116,6 @@
 
 	<script type="text/javascript" src="javascripts/home.js"></script>
 	<script type="text/javascript" src="javascripts/main.js"></script>
+	<script type="text/javascript" src="javascripts/progress_bar.js"></script>
 
 </html>
