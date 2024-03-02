@@ -141,3 +141,15 @@
 	border: 6px solid lime;
 	transform: scale(1.05);
 }
+
+.__GAMES_comingsoon {
+	transform: translate(50%, 25px);
+	width: 50%;
+}
+
+#cm-list {
+	transform: translateY(-35px);
+	font-size:150%; 
+	color: white; 
+	text-align: center;
+}
