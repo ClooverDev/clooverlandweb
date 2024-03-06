@@ -157,8 +157,12 @@ function isMobile() {
 
 if (isMobile()) {
 	console.log("user is on mobile!");
-	window.location.replace("https://m.tophatgames.net");
+	if (window.location.hostname  == "www.tophatgames.net") {
+		window.location.replace("https://m.tophatgames.net");
+	}
 } else {
 	console.log("user is on desktop!");
-	window.location.replace("https://tophatgames.net");
+	if (window.location.hostname  == "m.tophatgames.net") {
+		window.location.replace("https://tophatgames.net");
+	}
 }
