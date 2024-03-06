@@ -1,3 +1,20 @@
+function isMobile() {
+  const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+  return regex.test(navigator.userAgent);
+}
+
+if (isMobile()) {
+	console.log("user is on mobile!");
+	if (window.location.hostname  == "www.tophatgames.net") {
+		window.location.replace("https://m.tophatgames.net");
+	}
+} else {
+	console.log("user is on desktop!");
+	if (window.location.hostname  == "m.tophatgames.net") {
+		window.location.replace("https://tophatgames.net");
+	}
+}
+
 if (window.location.href == "https://tophatgames.net/index") {
 	window.top.location.replace("https://tophatgames.net");
 	
@@ -153,16 +170,4 @@ for (var i = 0; i < forums.length; i++) {
 function isMobile() {
   const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
   return regex.test(navigator.userAgent);
-}
-
-if (isMobile()) {
-	console.log("user is on mobile!");
-	if (window.location.hostname  == "www.tophatgames.net") {
-		window.location.replace("https://m.tophatgames.net");
-	}
-} else {
-	console.log("user is on desktop!");
-	if (window.location.hostname  == "m.tophatgames.net") {
-		window.location.replace("https://tophatgames.net");
-	}
 }
