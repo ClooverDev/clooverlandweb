@@ -160,4 +160,5 @@ if (isMobile()) {
 	window.location.replace("https://m.tophatgames.net");
 } else {
 	console.log("user is on desktop!");
+	window.location.replace("https://tophatgames.net");
 }
