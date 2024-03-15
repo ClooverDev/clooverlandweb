@@ -1,4 +1,5 @@
-const  bar_amount = 44;
+const  bar_amount = 48;
+
 const colors = [
 	"red",
 	"#ff9305",
