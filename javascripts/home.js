@@ -9,11 +9,33 @@ const WEBSITE_LOGS = [
 	document.getElementById("GITHUBANDOVERHAUL"),
 	document.getElementById("PAGES"),
 	document.getElementById("CHANGELOGS"),
+	document.getElementById("EASTER24"),
 ]
 
 var updated = false;
 
 if (updated == false) {
+	WEBSITE_LOGS[4].onclick = function() {
+		var title = "";
+		var date = "";
+		var desc = "";
+		
+		title = "EASTER 2024";
+		date = "31.03.2024";
+		desc = 	(
+			"> Replaced the background's base with a new one" + "<br>" +
+			"> Made a easter-themed background for every page" + "<br>" +
+			"> Update the logo for easter" + "<br><br>" +
+			"The reason I didn't make a easter-themed favicon it's because it would likely break the website's search, so stick with the normal one <3"
+		)
+		
+		document.getElementById("title_modal").innerHTML = title;
+		document.getElementById("title_modal_date").innerHTML = date;
+		document.getElementById("desc_modal").innerHTML = desc;
+		
+		updated = true;
+	}
+	
 	WEBSITE_LOGS[3].onclick = function() {
 		var title = "";
 		var date = "";
