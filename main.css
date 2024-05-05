@@ -1,0 +1,16 @@
+.sliding-background {
+	position:fixed;
+	overflow: hidden;
+	height: 5000px;
+	width: 5000px;
+	animation: slide 60s linear infinite;
+} 
+
+@keyframes slide {
+  0% {
+	transform: translate3d(-2000px, -2000px, 0);
+  }
+  100% {
+	transform: translate3d(0px, 0px, 0);
+  }
+}
