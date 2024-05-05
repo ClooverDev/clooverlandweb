@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+
+<html>
+
+	<!-- 
+	Font Types: 
+	-- Pixeloid Sans
+	-- Pixeloid Mono
+
+	Colors:
+	-- background: #153569
+	-- header bar: #10284f
+
+	Website fully coded in HTML5 by ClooverDev
+	-->
+	
+	<title> TopHat Games </title>
+
+	<head>
+		<link href="https://fonts.cdnfonts.com/css/pixeloid-sans" rel="stylesheet">
+		<link rel="icon" type="image/x-icon" href="favicons/default.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1.1">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="main.css">
+		
+		<style>
+			html {
+				scrollbar-width: none;
+			}
+		
+			* {
+				color: white;
+				font-family: 'Pixeloid Sans', sans-serif;
+
+			}
+			
+			#mono {
+				font-family: 'Pixeloid Mono', sans-serif;
+			}
+			
+			.start { 
+				width: 50%; 
+				transform: translateX(50%);
+			}
+			
+			.start img {	
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 16em;
+			}
+			
+			.backblur {		
+				width:120%;
+				height: 300px;
+				
+				background-color: #0f274d;
+				
+				transform: translateY(720px);
+				
+				margin-left:-70px;
+				position: fixed;
+				
+				filter:blur(45px);
+				
+				opacity: 0.5;
+				top: 20px;
+				
+				pointer-events: none;
+			}
+			
+			.games { 
+				width: 100%; 
+			}
+			
+			.games_buttons {
+				position:relative;
+				
+				transform:translateY(-10px);
+				width: 100%;
+				height: 140px;
+				
+				margin: auto;
+				display: flex;
+				justify-content: center;
+			}
+			
+				
+			.gbuttons_child {
+				position: relative;
+				height: 120px;
+				width: 200px;
+				align-items: center;
+				
+				padding-right: 10px;
+				padding-left: 10px;
+				padding-top: 5px;
+			}
+			
+			.gbuttons_child img {
+				border: 5px solid white;
+				border-radius: 50px 20px;
+				
+				width:100%; 
+				height:100%;
+				
+				transition: 0.15s ease-in;
+			}
+			
+			.gbuttons_child img:hover {
+				cursor: pointer;
+				filter: drop-shadow(0px 0px 7px #00e66f);
+				border: 5px solid #00e66f;
+				transform: scale(1.05);
+			}
+			
+			.bar {
+				border-bottom: solid 5px gold;
+				width:100%;
+			}
+			
+			.next_game {
+				width: 50%;
+				height: 400px;
+				
+				padding-bottom: 15px;
+			}
+			
+			.next_game_logo {
+				transform:translateY(-25px);
+				width: 400px;
+				height: 250px;
+			}
+			
+			.next_game_progress {
+				border: #00803e 5px outset;
+				
+				width: 90%;
+				
+				height: 15px;
+			}
+			
+			.progress_bar {
+				position: relative;
+			
+				width: 0%;
+				
+				display: flex;
+				margin-right: auto;
+				
+				height:100%;
+				background-color:lime;
+				
+				background-image: linear-gradient(90deg, #00e66f 0%, #6bffb3 80%, #bdffdd 100%);
+				
+				filter:blur(2px);
+			}
+			
+			.next_game_progress {
+				background-color: hsla(149, 100%, 25%, 0.45);
+				width: 100%;
+				height: 15px;
+			}
+			
+			#start_logo {
+				transition: 0.5s ease;
+			}
+			
+			.animation {
+				animation: animation  0.75s ease;
+			}
+			
+			@keyframes animation  {
+			
+				0% {
+					
+					transform: rotate(0deg);
+				}
+				
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+
+			.animation2 {
+				animation: animation2  0.75s ease;
+			}
+			
+			@keyframes animation2  {
+			
+				0% {
+					
+					transform: rotate(0deg);
+				}
+				
+				50% {
+					transform: rotate(360deg);
+				}
+				
+				75% {
+					transform: scale(1.25);
+				}
+				
+				100% {
+					transform: scale(1);
+				}
+			}
+			
+			.oneup {
+				transform: translate(-180px, -170px);
+				animation: appearAnim 0.5s ease-in forwards;
+			}
+			
+			.oneup_default {
+				opacity: 0;
+				transform: translate(-180px, -170px);
+			}
+			
+			@keyframes appearAnim {
+				0% {
+					transform: translate(-180px, -170px);
+					opacity: 0;
+				}
+				
+				50% {
+					opacity: 1;
+				}
+				
+				100% {
+					opacity: 0;
+					transform: translate(-180px, -80px);
+				}
+			}
+			
+			.header_lang_child {
+				transform: translateY(5px);
+				width:  55px;
+				height: 55px;
+				padding-right: 25px;
+				
+				
+			}
+			
+			.langs img {
+				transition: 0.5s ease;
+			}
+			
+			.langs img:hover {
+				filter: drop-shadow(0px 0px 5px white);
+				transform: scale(1.1);
+			}
+			
+			.flashing_default {
+				opacity: 0;
+			}
+			
+			.flashing {
+				animation: flashThis 0.5s ease forwards;
+			}
+			
+			@keyframes flashThis {
+				from { opacity: 1; }
+				to { opacity: 0; }
+			}
+			
+			#flash {
+				position: absolute;
+				transform: translate(-9px, -72px);
+				margin: auto;
+				background-color: white;
+				width: 100%;
+				height: 155%;
+				z-index: 2;
+				pointer-events: none;
+			}
+			
+		</style>
+	</head>
+	
+	<body bgColor=black>
+	
+		<div id="slbg" class="sliding-background" style="background: url('resources/images/backgrounds/default/home.png') repeat;"></div>
+			
+		<header>
+			<center>
+				<div class="header_lang">
+					<a class="langs" href="#" onclick="translate_back()" style="text-decoration:none">
+						<img class="header_lang_child" src="resources/images/langs/en.png">
+					</a>
+					
+					<a class="langs" href="#" onclick="translate_to_ptbr()" style="text-decoration:none">
+						<img class="header_lang_child" src="resources/images/langs/pt-br.png">
+					</a>
+				</div>
+			</center>
+		</header>
+		
+		<main>
+		
+			<div id="flash" class="flashing_default"></div>
+			
+			<div class="main" style="position:relative;">
+				<div class="start">
+					<a href="#" onclick="logoInteraction()"><img id="start_logo" src="resources/images/logos/normal.png"></a>
+					<img class="oneup_default" id="id_oneup" style="width:3rem;" src="resources/images/coin.png">
+					
+					<div style="transform: translateY(-75px)">
+						<p id="start_info_title" style="border-bottom: solid; text-align:center; font-size:1.5em; color:gold"> WHAT IS THIS GROUP ABOUT?? </p>
+						<p id="start_info" style="text-align:center; font-size:100%;"> This is a indie game development group where I show all of my creations that I had in mind. <br> In this group you'll mostly find platformer and horror games and experiments, this group was mainly for Roblox games, now I do games on GameMaker Studio 2 for both GameJolt and, futurely, Steam. </p>
+						<img id="start_info_img" style="width:20em;" src="resources/images/cloover_approved.png">
+					</div>
+				</div>
+				
+				<div class="games" style="transform:translateY(-90px); position:relative">
+					
+					<center><img src="resources/images/logos/games.png" style="transform:translateY(10px);"></center>
+					<div class="bar" style="border-bottom: solid 5px #00e66f;"></div>
+					<p style="text-align:center; font-size:100%;">
+					
+					<center>
+						<div class="next_game" style="transform:translateY(-30px);">
+							<p id="next_game_title" style="color:#00e66f; font-size:1.5em; transform:translateY(25px); filter:drop-shadow(0px 0px 5px black);"> NEXT GAME </p>
+							
+							<div class="next_game_logo">
+								<img src="resources/images/logos/games/IceCreamCATCH.png" style="width: 100%; height: 100%; filter:drop-shadow(0px 0px 5px black);">
+							</div>
+							
+							<h2 id="progress_bar_perc" style="color:#00e66f; font-size:3rem; transform:translateY(-60px); filter:drop-shadow(0px 0px 5px black);"> 0% </h2>
+							
+							<div class="next_game_progress" style="transform:translateY(-100px); filter:drop-shadow(0px 0px 5px black);">
+								<div class="progress_bar_bg"></div>
+								<div class="progress_bar" id="progress_bar"></div>
+							</div>
+						</div>
+					
+						<div class="games_buttons" style="transform:translateY(-60px);">
+							<div class="gbuttons_child">
+								<a href="https://play.tophatgames.net/crossworlds">
+									<img src="resources/images/games/cross_worlds.png">
+								</a>
+							</div>
+							
+							<div class="gbuttons_child">
+								<a href="https://play.tophatgames.net/friendshiptest">
+									<img src="resources/images/games/friendship_test.png">
+								</a>
+							</div>
+							
+							<div class="gbuttons_child">
+								<a href="https://play.tophatgames.net/poweroutagedemo">
+									<img src="resources/images/games/poweroutage_demo.png">
+								</a>
+							</div>
+							
+							<div class="gbuttons_child">
+								<a href="https://play.tophatgames.net/lightsout">
+									<img src="resources/images/games/lights_out.png">
+								</a>
+							</div>
+							
+							<div class="gbuttons_child">
+								<a href="https://play.tophatgames.net/superplatformdtag">
+									<img src="resources/images/games/super_platform_c2.png">
+								</a>
+							</div>
+							
+							<div class="gbuttons_child">
+								<a href="https://play.tophatgames.net/superplatformorg">
+									<img src="resources/images/games/super_platform_org.png">
+								</a>
+							</div>
+						</div>
+					</center>
+					
+				</div>
+
+			</div>
+		</main>
+		
+		<footer>
+			<center>
+				<div class="footer" style="transform:translateX(-125px);">
+					<pre>
+						<a href="https://twitter.com/tophatgamesofc" style="text-decoration: none; color:cyan">Twitter</a>    <a href="https://discord.com/invite/7YhtNaN95R" style=" text-decoration: none; color:pink">Discord Server</a>    <a  href="https://www.youtube.com/@tophatgamesofc" style=" text-decoration: none; color:red">YouTube</a>
+						©  TopHat Games, 2021-2024
+					</pre>
+				</div>
+			</center>
+		</footer>
+		
+		<div id="bb" class="backblur"></div>
+		
+	</body>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-101ZSH9YZR"></script>
+	
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-101ZSH9YZR');
+
+
+		// BAR \\
+		const  bar_amount = 0;
+
+		const bar = "progress_bar";
+		const percentage = "progress_bar_perc"
+	  
+		function updateBar() {
+			document.getElementById(bar).style.width = bar_amount+"%";
+			document.getElementById(percentage).innerHTML = bar_amount+"%";
+		}
+		
+		updateBar()
+		
+		function sleep(ms) {
+		  return new Promise(resolve => setTimeout(resolve, ms));
+		}
+		
+		let canInteract = true;
+		let jackpot = 0
+		let jackpot_on = false;
+		const jackpot_required = 1;
+		
+		function getRandomNum(min, max) {
+			const floatRandom = Math.random()
+			
+			const difference = max - min;
+			
+			// between 0 and the difference
+			const randomDiffer = Math.round(floatRandom * difference)
+			const randomRange = randomDiffer + min
+			
+			return randomRange
+		}
+		
+		function logoInteraction() {
+			let audio = new Audio("resources/sounds/jackpot.mp3");
+			let audio_win = new Audio("resources/sounds/jackpot_win.mp3");
+		
+			if (canInteract == true) {
+				jackpot = getRandomNum(1, 15)
+				
+				console.log(jackpot);
+				
+				document.getElementById('id_oneup').classList.remove('oneup_default');
+			
+				
+				if (jackpot == jackpot_required) {
+					jackpot = 0;
+					
+					if (jackpot_on == true) { jackpot_on = false; } else { jackpot_on = true; }
+					
+					document.getElementById('flash').classList.add('flashing');
+					document.getElementById('start_logo').classList.add('animation2');
+					audio_win.play();
+				} else {
+					document.getElementById('start_logo').classList.add('animation');
+					audio.play();
+				}
+				
+				document.getElementById('id_oneup').classList.add('oneup');
+			
+				canInteract = false;
+				
+				if (jackpot_on) {
+					document.getElementById("bb").style.backgroundColor = "gold";
+					document.getElementById("slbg").style.backgroundImage = "url('resources/images/backgrounds/win.png')"
+				} else {
+					document.getElementById("bb").style.backgroundColor = "#0f274d";
+					document.getElementById("slbg").style.backgroundImage = "url('resources/images/backgrounds/default/home.png')"
+				}
+				
+				sleep(1200).then(() => { 
+					canInteract = true;
+					document.getElementById('start_logo').classList.remove('animation');
+					document.getElementById('start_logo').classList.remove('animation2');
+					document.getElementById('id_oneup').classList.remove('oneup');
+					document.getElementById('id_oneup').classList.add('oneup_default');
+					document.getElementById('flash').classList.remove('flashing');
+					document.getElementById('flash').classList.add('flashing_default');
+				});
+			}
+			
+		}
+		
+		function translate_to_ptbr() {
+			document.getElementById('start_info_title').innerHTML = "O QUE ESSE GRUPO É SOBRE??"
+			document.getElementById('start_info').innerHTML = "Este grupo é um grupo de desenvolvimento de jogos indie onde eu mostro todas as minhas criações que tive em mente para fazer.<br>Neste grupo você vai encontrar jogos boa parte do gênero plataforma e terror, e também alguns experimentos, este grupo foi feito apenas para jogos do Roblox, agora eu faço jogos no GameMaker Studio 2, tanto para a GameJolt e, futuramente, para a Steam."
+			document.getElementById('start_info_img').src = "resources/images/pt-br/cloover_approved_ptbr.png"
+			
+			document.getElementById('next_game_title').innerHTML = "PRÓXIMO JOGO"
+			
+		}
+		
+		function translate_back() {
+			document.getElementById('start_info_title').innerHTML = "WHAT IS THIS GROUP ABOUT??"
+			document.getElementById('start_info').innerHTML = "This is a indie game development group where I show all of my creations that I had in mind. <br> In this group you'll mostly find platformer and horror games and experiments, this group was mainly for Roblox games, now I do games on GameMaker Studio 2 for both GameJolt and, futurely, Steam."
+			document.getElementById('start_info_img').src = "resources/images/cloover_approved.png"
+			
+			document.getElementById('next_game_title').innerHTML = "NEXT GAME"
+		}
+
+	</script>
+
+</html>
