@@ -5,7 +5,7 @@ function isMobile() {
 
 if (isMobile()) {
 	console.log("user is on mobile!");
-    window.location.replace("https://m.tophatgames.net");
+	window.location.replace("https://m.tophatgames.net");
 } else {
 	console.log("user is on desktop!");
 }
