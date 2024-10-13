@@ -1,0 +1,29 @@
+#__inner_footer {
+	max-width: 1600px;
+	min-width: 800px;
+	width: 1600px;
+	height: 100%;
+	display: block;
+	margin: 0 auto;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#__inner_footer h3 {
+	width: 30%;
+	text-align: center;
+	
+	transform: translateY(30px);
+
+	padding-right: 100px;
+	padding-left: 100px;
+	
+	line-height: 1;
+	
+	font-size: 20px;
+	transition: 0.1s ease-out;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
