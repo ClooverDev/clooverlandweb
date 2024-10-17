@@ -10,26 +10,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 	
-	<link rel="stylesheet" href="arcade_styling.css">
-	<link rel="stylesheet" href="header_styling.css">
-	<link rel="stylesheet" href="footer_styling.css">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="header_css.css">
+	<link rel="stylesheet" href="footer_css.css">
 	
 	<style>
-		html {
-			scrollbar-width: none;
-		}
-	
-		* {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-			text-decoration: none;
-			color: white;
-			font-family: 'Arima Madurai', sans-serif;
-		}
-		
-		*:hover {
-			cursor: default;
+		.news_holder {
+			width: 100%;
+			height: 550px;
 		}
 		
 		#main_group {
@@ -58,13 +46,19 @@
 			overflow: hidden;
 			margin-left: auto;
 			margin-right: auto;
-			width: 1000px;
-			height: 10000px;
+			width: 100%;
+			height: 100%;
+			
+			display: flex;
+			align-items: center;
+			align-content: center;
+			flex-direction: column;
 		}
 		
 		#news_item {
 			display: block;
-			width: 60%;
+			width: 50%;
+			min-width: 350px;
 			height: 60px;
 			border: 5px inset #261575;
 			background: radial-gradient(circle, rgba(0,31,73,1) 0%, rgba(0,0,0,1) 100%);
@@ -110,7 +104,7 @@
 		}
 		
 		#cool_block {
-			transform: translate(350px, -50px) rotate(25deg);
+			transform: translate(100%, 0) rotate(25deg);
 			filter: blur(25px);
 			
 			background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,31,73,1) 25%, rgba(0,70,164,1) 50%, rgba(0,31,73,1) 75%, rgba(0,0,0,1) 100%);
@@ -119,7 +113,7 @@
 		}
 		
 		#news_item_click {
-			transform: translate(510px, -272px);
+			transform: translate(400%, -210%);
 			
 			margin: 0; padding: 0; 
 			
@@ -136,28 +130,37 @@
 			color: gold;
 			font-size: 85px;
 			cursor: pointer;
-			transform: translate(510px, -275px);
+			transform: translate(380%, -200%);
 		}
-		
 	</style>
+
 </head>
 
 <body bgColor="black">
 
-	<header style="height: 120px; display: block; width: 100%; margin-left: auto; margin-right: auto; background: linear-gradient(to bottom, rgba(13, 7, 39, 1) 0%, rgba(13, 7, 39, 0.25) 100%);">
-		<div id="__inner_header">
-			<ul id="__nav">
-				<li onclick="javascript:( function() { window.location.replace('https://tophatgames.net') } )()"> HOME </li>
-				<li onclick="javascript:( function() { window.location.replace('https://tophatgames.net/news') } )()"> NEWS </li>
-				<li> <img src="resources/logos/logo_white.png" style="width: 300px;"> </li>
-				<li onclick="javascript:( function() { window.open('https://arcade.tophatgames.net', '_blank') } )()"> ARCADE </li>
-				<li onclick="javascript:( function() { window.location.replace('https://tophatgames.net/about') } ) ()"> ABOUT </li>
-			</ul>
- 		</div>
-	</header>
-
-	<main id="main_group">
-
+	<div class="header">
+		<div class="inner_header">
+			<h4 onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com') } )()"> HOME </h4>
+			<h4 onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/news') } )()"> NEWS </h4>
+			
+			<img src="resources/logos/logo_white.png">
+			
+			<h4 onclick="javascript:( function() { window.open('https://arcade.clooverlandstudios.com', '_blank') } )()"> ARCADE </h4>
+			<h4 onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/about') } )()"> ABOUT </h4>
+		</div>
+		
+		<div class="inner_header_mobile">
+			<img onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com') } )()" class="header_icon_base" id="header_icon_home" src="resources/icons/dad.png">
+			<img onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/news') } )()" class="header_icon_base" id="header_icon_news" src="resources/icons/dad.png">
+			
+			<img id="header_logo" src="resources/logos/logo_white.png">
+			
+			<img onclick="javascript:( function() { window.open('https://arcade.clooverlandstudios.com', '_blank') } )()" class="header_icon_base" id="header_icon_arcade" src="resources/icons/dad.png">
+			<img onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/about') } )()" class="header_icon_base" id="header_icon_about" src="resources/icons/dad.png">
+		</div>
+	</div>
+	
+	<div class="news_holder">
 		<div id="news_group">
 			<div id="news_item">
 				<div id="cool_block"></div>
@@ -168,17 +171,86 @@
 			</div>
 
 		</div>
+	</div>
 	
-	</main>
+	<div class="footer" style="transform: translateY(100px);">
+		<div class="inner_footer">
+			<h4> CLOOVERLAND STUDIOS <br> <span style="font-size: 13px;"> Making games for entertainment since 2021. </span> </h4>
+			
+			<div class="socials">
+				<h4 onclick="open_youtube();" style="color: #f45757;"> YOUTUBE </h4>
+				<h4 onclick="open_twitter();" style="color: #82bff7;"> TWITTER </h4>
+				<h4 onclick="open_server();" style="color: #8286f7"> DISCORD SERVER </h4>
+			</div>
+		</div>
+	</div>
 	
-	<footer style="transform: translateY(0%); height: 120px; display: block; width: 100%; margin-left: auto; margin-right: auto; background: linear-gradient(to bottom, rgba(13, 7, 39, 0.25) 0%, rgba(13, 7, 39, 1) 100%);">
-		<div id="__inner_footer">
-			<h3> Clooverland Studios<br><span style="font-size: 12px; color:lightgray;">doing games for entertainment since 2021</span><br><span style="padding-right: 25px; padding-left: 25px; color: #d12e2e;" id="__social" onclick="javascript:(function() { window.open('https://youtube.com/@clooverlandstudios', '__blank') })()">YouTube</span> <span id="__social" style="padding-right: 25px; padding-left: 25px; color: #64c7dd" onclick="javascript:(function() { window.open('https://x.com/clooverland', '__blank') })()">Twitter</span><span style="padding-right: 25px; padding-left: 25px; color: #7a6ddf" id="__social" onclick="javascript:(function() { window.open('https://discord.com/invite/7YhtNaN95R', '__blank') })()">Discord Server</span></h3>
- 		</div>
-	</footer>
+	<div class="bottom_footer" style="transform: translateY(100px);"></div>
 
 </body>
 
-<script type="text/javascript" src="mobile_check.js"></script>
+<script>
+	var current_arcade_game = 0;
+	const max_games = 6;
+	const domain = "https://arcade.clooverlandstudios.com/";
+	const visuals_folder = "resources/arcade/";
+	
+	var can_update_arcade = true;
+	
+	const game_links = [
+		domain+"superplatformoriginal",
+		domain+"superplatformdemo",
+		domain+"lightsout",
+		domain+"poweroutage_olddemo",
+		domain+"friendshiptest",
+		domain+"crossworldsparty",
+		domain+"icecreamcatch",
+	]
+	
+	const game_visuals = [
+		visuals_folder+"sp_org.png",
+		visuals_folder+"sp_demo.png",
+		visuals_folder+"lo.png",
+		visuals_folder+"po_demo.png",
+		visuals_folder+"ft.png",
+		visuals_folder+"cw.png",
+		visuals_folder+"ic.png",
+	]
+	
+	function update_arcade_to_game() {
+		const machine = document.getElementById("a_machine");
+		const button = document.getElementById("a_button");
+		const analog = document.getElementById("a_analog");
+		
+		if (can_update_arcade) {
+			can_update_arcade = false;
+			current_arcade_game += 1;
+			
+			machine.src = "resources/arcade/changing.gif";
+			analog.src = "resources/arcade/assets/analog_pull.png";
+			
+			setTimeout(()=> {
+				if (current_arcade_game > max_games) {
+					current_arcade_game = 0;
+				}
+			
+				can_update_arcade = true;
+				machine.src = game_visuals[current_arcade_game];
+				analog.src = "resources/arcade/assets/analog_idle.png";
+			}, (500))
+		}
+	}
+	
+	function open_game_page() {
+		if (can_update_arcade) {
+			window.open(game_links[current_arcade_game], "_blank");
+		}
+	}
+	
+	function open_youtube() { window.open("https://youtube.com/@clooverlandstudios", "_blank"); }
+	function open_twitter() { window.open("https://x.com/clooverlandstudios", "_blank"); }
+	function open_server() { window.open("https://discord.com/invite/7YhtNaN95R", "_blank"); }
+	
+</script>
 
 </html>
