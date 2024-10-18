@@ -32,7 +32,7 @@
 }
 
 .bottom_footer {
-	background: linear-gradient(to bottom, rgba(60, 35, 21, 1) 0%, rgba(60, 35, 21, .25) 100%); /* hallow */
+	background: linear-gradient(to bottom, rgba(60, 35, 21, 1) 0%, rgba(60, 35, 21, .25) 100%);
 	
 	position: relative;
 	
