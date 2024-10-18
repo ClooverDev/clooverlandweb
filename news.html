@@ -15,6 +15,12 @@
 	<link rel="stylesheet" href="footer_css.css">
 	
 	<style>
+		@import url('https://fonts.cdnfonts.com/css/evil-of-frankenstein-2');
+		
+		* {
+			font-family: 'Evil Of Frankenstein', sans-serif;
+		}
+	
 		.news_holder {
 			width: 100%;
 			height: 550px;
@@ -60,8 +66,16 @@
 			width: 50%;
 			min-width: 350px;
 			height: 60px;
+			
+			border: 5px inset #3c2315;
+			background: radial-gradient(circle, rgba(60, 35, 21,1) 0%, rgba(0,0,0,1) 100%);
+			
+			/*
+			default
 			border: 5px inset #261575;
 			background: radial-gradient(circle, rgba(0,31,73,1) 0%, rgba(0,0,0,1) 100%);
+			*/
+			
 			margin-left: auto;
 			margin-right: auto;
 			
@@ -77,11 +91,17 @@
 			
 			transform: translate(-4px, -255px); 
 			
-			border: 4px inset #261575;
 			width: 14%;
 			height: 12px;
 			
+			/* halloween */
+			border: 4px inset #3c2315;
+			background-color: #3c2315;
+			
+			/* default
+			border: 4px inset #261575;
 			background-color: #261575;
+			*/
 			
 			position: absolute;
 			
@@ -97,17 +117,22 @@
 			position: absolute;
 			
 			transform: translate(10px, -235px); 
-			font-family: 'Arima Madurai', sans-serif; 
+			font-family: 'Evil Of Frankenstein', sans-serif;
+			/*font-family: 'Arima Madurai', sans-serif; */
 			color: white; 
 			text-align: center;
-			font-size: 30px;
+			font-size: 28px;
 		}
 		
 		#cool_block {
 			transform: translate(100%, 0) rotate(25deg);
 			filter: blur(25px);
 			
-			background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,31,73,1) 25%, rgba(0,70,164,1) 50%, rgba(0,31,73,1) 75%, rgba(0,0,0,1) 100%);
+			/* halloween */
+			background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(87, 50, 30,1) 25%, rgba(121, 70, 42,1) 50%, rgba(87, 50, 30,1) 75%, rgba(0,0,0,1) 100%);
+			
+			/* default background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,31,73,1) 25%, rgba(0,70,164,1) 50%, rgba(0,31,73,1) 75%, rgba(0,0,0,1) 100%); */
+			
 			width: 250px;
 			height: 250px;
 		}
@@ -143,7 +168,7 @@
 			<h4 onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com') } )()"> HOME </h4>
 			<h4 onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/news') } )()"> NEWS </h4>
 			
-			<img src="resources/logos/logo_white.png">
+			<img src="resources/logos/logo_white_hallow.png">
 			
 			<h4 onclick="javascript:( function() { window.open('https://arcade.clooverlandstudios.com', '_blank') } )()"> ARCADE </h4>
 			<h4 onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/about') } )()"> ABOUT </h4>
@@ -153,7 +178,7 @@
 			<img onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com') } )()" class="header_icon_base" id="header_icon_home" src="resources/icons/dad.png">
 			<img onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/news') } )()" class="header_icon_base" id="header_icon_news" src="resources/icons/dad.png">
 			
-			<img id="header_logo" src="resources/logos/logo_white.png">
+			<img id="header_logo" src="resources/logos/logo_white_hallow.png">
 			
 			<img onclick="javascript:( function() { window.open('https://arcade.clooverlandstudios.com', '_blank') } )()" class="header_icon_base" id="header_icon_arcade" src="resources/icons/dad.png">
 			<img onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/about') } )()" class="header_icon_base" id="header_icon_about" src="resources/icons/dad.png">
@@ -248,7 +273,7 @@
 	}
 	
 	function open_youtube() { window.open("https://youtube.com/@clooverlandstudios", "_blank"); }
-	function open_twitter() { window.open("https://x.com/clooverland", "_blank"); }
+	function open_twitter() { window.open("https://x.com/clooverlandstudios", "_blank"); }
 	function open_server() { window.open("https://discord.com/invite/7YhtNaN95R", "_blank"); }
 	
 </script>
