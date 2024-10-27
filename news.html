@@ -70,6 +70,12 @@
 			border: 5px inset #3c2315;
 			background: radial-gradient(circle, rgba(60, 35, 21,1) 0%, rgba(0,0,0,1) 100%);
 			
+			/*
+			default
+			border: 5px inset #261575;
+			background: radial-gradient(circle, rgba(0,31,73,1) 0%, rgba(0,0,0,1) 100%);
+			*/
+			
 			margin-left: auto;
 			margin-right: auto;
 			
@@ -88,8 +94,14 @@
 			width: 14%;
 			height: 12px;
 			
+			/* halloween */
 			border: 4px inset #3c2315;
 			background-color: #3c2315;
+			
+			/* default
+			border: 4px inset #261575;
+			background-color: #261575;
+			*/
 			
 			position: absolute;
 			
@@ -104,19 +116,22 @@
 			
 			position: absolute;
 			
-			transform: translate(10px, -235px); 
+			transform: translate(10px, -230px); 
 			font-family: 'Evil Of Frankenstein', sans-serif;
-
+			/*font-family: 'Arima Madurai', sans-serif; */
 			color: white; 
 			text-align: center;
-			font-size: 28px;
+			font-size: 24px;
 		}
 		
 		#cool_block {
 			transform: translate(100%, 0) rotate(25deg);
 			filter: blur(25px);
 			
+			/* halloween */
 			background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(87, 50, 30,1) 25%, rgba(121, 70, 42,1) 50%, rgba(87, 50, 30,1) 75%, rgba(0,0,0,1) 100%);
+			
+			/* default background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,31,73,1) 25%, rgba(0,70,164,1) 50%, rgba(0,31,73,1) 75%, rgba(0,0,0,1) 100%); */
 			
 			width: 250px;
 			height: 250px;
@@ -172,6 +187,14 @@
 	
 	<div class="news_holder">
 		<div id="news_group">
+			<div id="news_item">
+				<div id="cool_block"></div>
+				<h3 id="news_item_date"> 10/27/2024 </h3>
+				<h3 id="news_item_title"> HALLOWEEN PROJECT</h3>
+				
+				<h2 id="news_item_click" onclick="javascript:( function() { window.top.location.replace('news/10-27-2024') } )()"> → </h2>
+			</div>
+		
 			<div id="news_item">
 				<div id="cool_block"></div>
 				<h3 id="news_item_date"> 10/12/2024 </h3>
