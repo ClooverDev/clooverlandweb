@@ -70,11 +70,13 @@
 		}
 		
 		.icy {
-			animation: squish 0.025s ease-out infinite alternate;
+			width: clamp(150px, 100%, 150px);
+			height: clamp(30px, 100%, 220px);
 		}
 		
 		.rev_icy {
-			animation: rev_squish 0.025s ease-out infinite alternate;
+			width: clamp(150px, 100%, 250px);
+			height: clamp(30px, 100%, 220px);
 		}
 		
 		@keyframes squish {
@@ -117,7 +119,7 @@
 		}
 		
 		.banner_ad img {
-			width: clamp(100px, 100%, 310px);
+			width: clamp(100px, 100%, 300px);
 		}
 		
 		.banner_ad h3  {
@@ -233,19 +235,19 @@
 	
 	<div class="big_painting">
 		<img src="resources/big_painting_h.png">
-		<h3 style="font-size: 35px; margin-bottom: 10px;"> =============== EVERYONE IS HERE! =============== </h3>
+		<h3 style="font-size: 35px; margin-bottom: 10px;">EVERYONE IS HERE! </h3>
 	</div>
 	
 	<div class="newgame_banner">
 		<div class="inner_banner">
-			<img class="icy" src="resources/lil_icy.png">
+			<img class="icy" src="resources/funnyguy.png">
 				
 			<div class="banner_ad">
-				<img src="resources/arcade/logos/icecreamcatch.png">
-				<h3 onclick="javascript:( function() { window.open('https://arcade.clooverlandstudios.com/icecreamcatch', '_blank'); } )()"> PLAY NOW! </h3>
+				<img src="resources/arcade/logos/superplatformreoriginal.png">
+				<h3 onclick="javascript:( function() { window.open('https://arcade.clooverlandstudios.com/superplatformreoriginal', '_blank'); } )()"> PLAY NOW! </h3>
 			</div>
 			
-			<img class="rev_icy" src="resources/lil_icy.png">
+			<img class="rev_icy" src="resources/funnyguy2.png">
 		</div>
 	</div>
 	
@@ -277,7 +279,7 @@
 
 <script>
 	var current_arcade_game = 0;
-	const max_games = 6;
+	const max_games = 7;
 	const domain = "https://arcade.clooverlandstudios.com/";
 	const visuals_folder = "resources/arcade/";
 	
@@ -291,6 +293,7 @@
 		domain+"friendshiptest",
 		domain+"crossworldsparty",
 		domain+"icecreamcatch",
+		domain+"superplatformreoriginal",
 	]
 	
 	const game_visuals = [
@@ -301,6 +304,7 @@
 		visuals_folder+"ft.png",
 		visuals_folder+"cw.png",
 		visuals_folder+"ic.png",
+		visuals_folder+"sp_r.png",
 	]
 	
 	function update_arcade_to_game() {
