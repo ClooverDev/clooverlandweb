@@ -2,7 +2,8 @@
 	width: 100%;
 	height: 120px;
 	display: flex;
-	background: linear-gradient(to bottom, rgba(60, 35, 21, .25) 0%, rgba(60, 35, 21, 1) 100%);
+	/*background: linear-gradient(to bottom, rgba(60, 35, 21, .25) 0%, rgba(60, 35, 21, 1) 100%); /* hallow */
+	background: linear-gradient(to bottom, rgba(13, 7, 39, .25) 0%, rgba(13, 7, 39, 1) 100%); /* default */
 	overflow: hidden;
 	z-index: 1;
 	
@@ -32,7 +33,8 @@
 }
 
 .bottom_footer {
-	background: linear-gradient(to bottom, rgba(60, 35, 21, 1) 0%, rgba(60, 35, 21, .25) 100%);
+	/*background: linear-gradient(to bottom, rgba(60, 35, 21, 1) 0%, rgba(60, 35, 21, .25) 100%); /* hallow */
+	background: linear-gradient(to bottom, rgba(13, 7, 39, 1) 0%, rgba(13, 7, 39, .25) 100%); /* default */
 	
 	position: relative;
 	
