@@ -1,0 +1,65 @@
+#news_item {
+	display: block;
+	width: 80%;
+	min-width: 420px;
+	height: 100%;
+	
+	/* halloween
+	border: 5px inset #3c2315;
+	background: radial-gradient(circle, rgba(60, 35, 21,1) 0%, rgba(0,0,0,1) 100%);
+	*/
+	
+	/* default */
+	border: 5px inset #261575;
+	background: radial-gradient(circle, rgba(0,31,73,1) 0%, rgba(0,0,0,1) 100%);
+	
+	margin-left: auto;
+	margin-right: auto;
+	
+	margin-top: 15px;
+	margin-bottom: 15px;
+	
+	
+	overflow: hidden;
+}
+
+#news_item_date {
+	margin: 0; padding: 0; 
+	
+	transform: translate(-4px, -255px); 
+	
+	width: 14%;
+	height: 12px;
+	
+	/* halloween
+	border: 4px inset #3c2315;
+	background-color: #3c2315;
+	*/
+	
+	/* default */
+	border: 4px inset #261575;
+	background-color: #261575;
+	
+	position: absolute;
+	
+	font-family: 'Arima Madurai', sans-serif; 
+	color: white; 
+	text-align: center;
+	font-size: 10px;
+}
+
+#cool_block {
+	transform: translate(100%, 0) rotate(25deg);
+	filter: blur(60px);
+	
+	/* halloween
+	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(87, 50, 30,1) 25%, rgba(121, 70, 42,1) 50%, rgba(87, 50, 30,1) 75%, rgba(0,0,0,1) 100%);
+	*/
+	
+	/* default */
+	
+	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,31,73,1) 25%, rgba(0,70,164,1) 50%, rgba(0,31,73,1) 75%, rgba(0,0,0,1) 100%);
+	
+	width: 250px;
+	height: 250px;
+}
