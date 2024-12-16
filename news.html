@@ -6,7 +6,7 @@
 	<title>Clooverland Studios - News</title>
 	
 	<link href="https://fonts.cdnfonts.com/css/arima-koshi" rel="stylesheet">
-	<link rel="icon" type="image/x-icon" href="xmas.ico">
+	<link rel="icon" type="image/x-icon" href="default.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 	
@@ -63,16 +63,19 @@
 			min-width: 350px;
 			height: 60px;
 			
-			/*
-			halloween
+			/* halloween
 			border: 5px inset #3c2315;
 			background: radial-gradient(circle, rgba(60, 35, 21,1) 0%, rgba(0,0,0,1) 100%);
 			*/
 			
-			/*
-			default*/
+			/* default
 			border: 5px inset #261575;
 			background: radial-gradient(circle, rgba(0,31,73,1) 0%, rgba(0,0,0,1) 100%);
+			*/
+			
+			/* xmas */
+			border: 5px inset #cd2d3d;
+			background: radial-gradient(circle, rgba(205, 45, 61,1) 0%, rgba(0,0,0,1) 100%);
 			
 			margin-left: auto;
 			margin-right: auto;
@@ -97,9 +100,14 @@
 			background-color: #3c2315;
 			*/
 			
-			/* default*/
+			/* default
 			border: 4px inset #261575;
 			background-color: #261575;
+			*/
+			
+			/* xmas */
+			border: 4px inset #cd2d3d;
+			background-color: #cd2d3d;
 			
 			
 			position: absolute;
@@ -130,8 +138,11 @@
 			/* halloween
 			background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(87, 50, 30,1) 25%, rgba(121, 70, 42,1) 50%, rgba(87, 50, 30,1) 75%, rgba(0,0,0,1) 100%); */
 			
-			/* default */
-			background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,31,73,1) 25%, rgba(0,70,164,1) 50%, rgba(0,31,73,1) 75%, rgba(0,0,0,1) 100%);
+			/* default
+			background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,31,73,1) 25%, rgba(0,70,164,1) 50%, rgba(0,31,73,1) 75%, rgba(0,0,0,1) 100%); /*
+			
+			/* xmas */
+			background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(205, 45, 61,1) 25%, rgba(205, 45, 61,1) 50%, rgba(205, 45, 61 ,1) 75%, rgba(0,0,0,1) 100%);
 			
 			width: 250px;
 			height: 250px;
@@ -184,6 +195,8 @@
 			<img onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/about') } )()" class="header_icon_base" id="header_icon_about" src="resources/icons/dad.png">
 		</div>
 	</div>
+	
+	<div class="snow"></div>
 	
 	<div class="news_holder">
 		<div id="news_group">
@@ -281,7 +294,7 @@
 	}
 	
 	function open_youtube() { window.open("https://youtube.com/@clooverlandstudios", "_blank"); }
-	function open_twitter() { window.open("https://x.com/clooverland", "_blank"); }
+	function open_twitter() { window.open("https://x.com/clooverlandstudios", "_blank"); }
 	function open_server() { window.open("https://discord.com/invite/7YhtNaN95R", "_blank"); }
 	
 </script>

@@ -6,7 +6,7 @@
 	<title>Clooverland Studios - About</title>
 	
 	<link href="https://fonts.cdnfonts.com/css/arima-koshi" rel="stylesheet">
-	<link rel="icon" type="image/x-icon" href="xmas.ico">
+	<link rel="icon" type="image/x-icon" href="default.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 	
@@ -25,8 +25,8 @@
 			height: 650px;
 			
 			/* halloween background: radial-gradient(circle, rgba(60, 35, 21, 1) 0%, rgba(13, 7, 39, 0) 100%); */ 
-			/* default */ background: radial-gradient(circle, rgba(13, 7, 39, 1) 0%, rgba(13, 7, 39, 0) 100%);
-			
+			/* default background: radial-gradient(circle, rgba(13, 7, 39, 1) 0%, rgba(13, 7, 39, 0) 100%); */
+			/* xmas */ background: radial-gradient(circle, rgba(205, 45, 61, 1) 0%, rgba(205, 45, 61, 0) 32%, rgba(13, 7, 39, 0) 100%);
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -54,7 +54,7 @@
 			<h4 onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com') } )()"> HOME </h4>
 			<h4 onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/news') } )()"> NEWS </h4>
 			
-			<img src="resources/logos/whitexmas.png">
+			<img src="resources/logos/logo_white.png">
 			
 			<h4 onclick="javascript:( function() { window.open('https://arcade.clooverlandstudios.com', '_blank') } )()"> ARCADE </h4>
 			<h4 onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/about') } )()"> ABOUT </h4>
@@ -64,15 +64,17 @@
 			<img onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com') } )()" class="header_icon_base" id="header_icon_home" src="resources/icons/dad.png">
 			<img onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/news') } )()" class="header_icon_base" id="header_icon_news" src="resources/icons/dad.png">
 			
-			<img id="header_logo" src="resources/logos/whitexmas.png">
+			<img id="header_logo" src="resources/logos/logo_white.png">
 			
 			<img onclick="javascript:( function() { window.open('https://arcade.clooverlandstudios.com', '_blank') } )()" class="header_icon_base" id="header_icon_arcade" src="resources/icons/dad.png">
 			<img onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/about') } )()" class="header_icon_base" id="header_icon_about" src="resources/icons/dad.png">
 		</div>
 	</div>
 	
+	<div class="snow"></div>
+	
 	<div class="about_info">
-		<h3 style="text-align: center; font-size: 50px; width: 100%; margin-top: 25px;"> HOWDY BOYS AND GIRLS! </h3>
+		<h3 style="text-align: center; font-size: 50px; width: 100%; margin-top: 25px; color: gold;"> HOWDY BOYS AND GIRLS! </h3>
 		
 		<p style="text-align: center; font-size: 15px; width: 90%;"> 
 			Welcome to our new brand name, Clooverland Studios!, the new renovated version of TopHat Games that has been born!, the modern version of the old brand but the same stuff still being the same!, still doing games for fun and entertainment!
@@ -84,10 +86,10 @@
 
 			<br><br>
 
-			Contact: contact@clooverlandstudios.com
+			<span style="color:gold"> Contact: contact@clooverlandstudios.com </span>
 		</p>
 		
-		<img src="resources/coolgroup.png">
+		<img src="resources/xmas/coolgroup_xmas.png">
 	</div>
 	
 	<div class="footer" style="transform: translateY(100px);">
@@ -165,7 +167,7 @@
 	}
 	
 	function open_youtube() { window.open("https://youtube.com/@clooverlandstudios", "_blank"); }
-	function open_twitter() { window.open("https://x.com/clooverland", "_blank"); }
+	function open_twitter() { window.open("https://x.com/clooverlandstudios", "_blank"); }
 	function open_server() { window.open("https://discord.com/invite/7YhtNaN95R", "_blank"); }
 	
 </script>

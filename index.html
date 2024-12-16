@@ -55,10 +55,13 @@
 			height: 93%;
 			
 			/* border: 10px inset #3c2315; /* hallow */
-			border: 10px inset #0d0727; /* default */
+			/* border: 10px inset #0d0727; /* default */
+			border: 10px inset #54d95f; /* xmas */
+			
 			filter: blur(0.8px);
 			/* background: radial-gradient(circle, rgba(60, 35, 21,1) 0%, rgba(0,0,0,1) 47%); /* hallow */
-			background: radial-gradient(circle, rgba(0,31,73,1) 0%, rgba(0,0,0,1) 47%); /* default */
+			/* background: radial-gradient(circle, rgba(0,31,73,1) 0%, rgba(0,0,0,1) 47%); /* default */
+			background: radial-gradient(circle, rgba(84, 217, 95,1) 0%, rgba(0,0,0,1) 47%); /* xmas */
 			
 			display: flex;
 			align-content: center;
@@ -137,6 +140,7 @@
 		.arcade {
 			width: 90%;
 			height: 500px;
+			transform: translateY(20px);
 		}
 		
 		.inner_arcade {
@@ -151,7 +155,7 @@
 		
 		.arcade_machine {
 			margin-right: -160px;
-			
+			filter: drop-shadow(0 0 5px rgba(84, 217, 95, 1));
 			
 			width: 250px;
 		}
@@ -229,8 +233,10 @@
 		</div>
 	</div>
 	
+	<div class="snow"></div>
+	
 	<div class="big_painting">
-		<img src="resources/big_painting.png">
+		<img src="resources/xmas/big_painting_xm.png">
 		<h3 style="font-size: 35px; margin-bottom: 10px;">EVERYONE IS HERE! </h3>
 	</div>
 	
@@ -334,7 +340,7 @@
 	}
 	
 	function open_youtube() { window.open("https://youtube.com/@clooverlandstudios", "_blank"); }
-	function open_twitter() { window.open("https://x.com/clooverland", "_blank"); }
+	function open_twitter() { window.open("https://x.com/clooverlandstudios", "_blank"); }
 	function open_server() { window.open("https://discord.com/invite/7YhtNaN95R", "_blank"); }
 	
 </script>
