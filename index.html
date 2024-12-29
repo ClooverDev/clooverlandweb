@@ -204,6 +204,33 @@
 				display: none;
 			}
 		}
+		
+		.teaser_ad {
+			width: 800px;
+			height: 520px;
+			
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		.click_for_teaser {
+			margin-top: 15px;
+			margin-bottom: 20px;
+		
+			text-align: center; 
+			font-size: 25px; 
+			filter: drop-shadow(0 0 5px red);
+			transition: 0.15s ease;
+		}
+		
+		.click_for_teaser:hover {
+			cursor: pointer;
+			font-size: 27px;
+			color: yellow;
+			filter: drop-shadow(0 0 5px yellow);
+		}
 	
 	</style>
 
@@ -238,6 +265,16 @@
 	<div class="big_painting">
 		<img src="resources/xmas/big_painting_xm.png">
 		<h3 style="font-size: 35px; margin-bottom: 10px;">EVERYONE IS HERE! </h3>
+	</div>
+	
+	<div class="teaser_ad">
+		<h4 style="text-align: center; font-size: 25px; filter: drop-shadow(0 0 5px red);"> SUPER PLATFORM: REORIGINAL | TEASER </h4>
+	
+		<video style="border-radius: 25px; filter: drop-shadow(0 0 10px red);" width="600" height="400" controls>
+			<source src="resources/spr_teaser.mp4" type="video/mp4">
+		</video>
+		
+		<h4 class="click_for_teaser"> WATCH HERE </h4>
 	</div>
 	
 	<div class="newgame_banner">
@@ -279,7 +316,17 @@
 
 </body>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="delete_snow.js"></script>
+
 <script>
+	$(document).ready(function(){
+		$(".click_for_teaser").on("click", function(){
+			window.open("https://www.youtube.com/watch?v=gKEfsdfpqNA&t=1s", "_blank");
+		})
+	})
+
+
 	var current_arcade_game = 0;
 	const max_games = 7;
 	const domain = "https://arcade.clooverlandstudios.com/";
@@ -340,11 +387,8 @@
 	}
 	
 	function open_youtube() { window.open("https://youtube.com/@clooverlandstudios", "_blank"); }
-	function open_twitter() { window.open("https://x.com/clooverland", "_blank"); }
+	function open_twitter() { window.open("https://x.com/clooverlandstudios", "_blank"); }
 	function open_server() { window.open("https://discord.com/invite/7YhtNaN95R", "_blank"); }
 </script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="delete_snow.js"></script>
 
 </html>
