@@ -6,7 +6,7 @@
 	<title>Clooverland Studios - About</title>
 	
 	<link href="https://fonts.cdnfonts.com/css/arima-koshi" rel="stylesheet">
-	<link rel="icon" type="image/x-icon" href="xmas.ico">
+	<link rel="icon" type="image/x-icon" href="default.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 	
@@ -26,7 +26,8 @@
 			
 			/* halloween background: radial-gradient(circle, rgba(60, 35, 21, 1) 0%, rgba(13, 7, 39, 0) 100%); */ 
 			/* default background: radial-gradient(circle, rgba(13, 7, 39, 1) 0%, rgba(13, 7, 39, 0) 100%); */
-			/* xmas */ background: radial-gradient(circle, rgba(205, 45, 61, 1) 0%, rgba(205, 45, 61, 0) 32%, rgba(13, 7, 39, 0) 100%);
+			/* xmas background: radial-gradient(circle, rgba(205, 45, 61, 1) 0%, rgba(205, 45, 61, 0) 32%, rgba(13, 7, 39, 0) 100%); */
+			/* xmas */ background: radial-gradient(circle, rgba(13, 7, 39, 1) 0%, rgba(13, 7, 39, 0) 32%, rgba(13, 7, 39, 0) 100%);
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -54,7 +55,7 @@
 			<h4 onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com') } )()"> HOME </h4>
 			<h4 onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/news') } )()"> NEWS </h4>
 			
-			<img src="resources/logos/whitexmas.png">
+			<img src="resources/logos/logo_white.png">
 			
 			<h4 onclick="javascript:( function() { window.open('https://arcade.clooverlandstudios.com', '_blank') } )()"> ARCADE </h4>
 			<h4 onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/about') } )()"> ABOUT </h4>
@@ -64,15 +65,13 @@
 			<img onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com') } )()" class="header_icon_base" id="header_icon_home" src="resources/icons/dad.png">
 			<img onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/news') } )()" class="header_icon_base" id="header_icon_news" src="resources/icons/dad.png">
 			
-			<img id="header_logo" src="resources/logos/whitexmas.png">
+			<img id="header_logo" src="resources/logos/logo_white.png">
 			
 			<img onclick="javascript:( function() { window.open('https://arcade.clooverlandstudios.com', '_blank') } )()" class="header_icon_base" id="header_icon_arcade" src="resources/icons/dad.png">
 			<img onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/about') } )()" class="header_icon_base" id="header_icon_about" src="resources/icons/dad.png">
 		</div>
 	</div>
-	
-	<div class="snow"></div>
-	
+
 	<div class="about_info">
 		<h3 style="text-align: center; font-size: 50px; width: 100%; margin-top: 25px; color: gold;"> HOWDY BOYS AND GIRLS! </h3>
 		
@@ -89,7 +88,7 @@
 			<span style="color:gold"> Contact: contact@clooverlandstudios.com </span>
 		</p>
 		
-		<img src="resources/xmas/coolgroup_xmas.png">
+		<img src="resources/coolgroup.png">
 	</div>
 	
 	<div class="footer" style="transform: translateY(100px);">
@@ -109,70 +108,12 @@
 </body>
 
 <script>
-	var current_arcade_game = 0;
-	const max_games = 6;
-	const domain = "https://arcade.clooverlandstudios.com/";
-	const visuals_folder = "resources/arcade/";
-	
-	var can_update_arcade = true;
-	
-	const game_links = [
-		domain+"superplatformoriginal",
-		domain+"superplatformdemo",
-		domain+"lightsout",
-		domain+"poweroutage_olddemo",
-		domain+"friendshiptest",
-		domain+"crossworldsparty",
-		domain+"icecreamcatch",
-	]
-	
-	const game_visuals = [
-		visuals_folder+"sp_org.png",
-		visuals_folder+"sp_demo.png",
-		visuals_folder+"lo.png",
-		visuals_folder+"po_demo.png",
-		visuals_folder+"ft.png",
-		visuals_folder+"cw.png",
-		visuals_folder+"ic.png",
-	]
-	
-	function update_arcade_to_game() {
-		const machine = document.getElementById("a_machine");
-		const button = document.getElementById("a_button");
-		const analog = document.getElementById("a_analog");
-		
-		if (can_update_arcade) {
-			can_update_arcade = false;
-			current_arcade_game += 1;
-			
-			machine.src = "resources/arcade/changing.gif";
-			analog.src = "resources/arcade/assets/analog_pull.png";
-			
-			setTimeout(()=> {
-				if (current_arcade_game > max_games) {
-					current_arcade_game = 0;
-				}
-			
-				can_update_arcade = true;
-				machine.src = game_visuals[current_arcade_game];
-				analog.src = "resources/arcade/assets/analog_idle.png";
-			}, (500))
-		}
-	}
-	
-	function open_game_page() {
-		if (can_update_arcade) {
-			window.open(game_links[current_arcade_game], "_blank");
-		}
-	}
-	
 	function open_youtube() { window.open("https://youtube.com/@clooverlandstudios", "_blank"); }
-	function open_twitter() { window.open("https://x.com/clooverland", "_blank"); }
+	function open_twitter() { window.open("https://x.com/clooverlandstudios", "_blank"); }
 	function open_server() { window.open("https://discord.com/invite/7YhtNaN95R", "_blank"); }
 	
 </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="delete_snow.js"></script>
 
 </html>

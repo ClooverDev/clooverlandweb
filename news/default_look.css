@@ -9,14 +9,14 @@
 	background: radial-gradient(circle, rgba(60, 35, 21,1) 0%, rgba(0,0,0,1) 100%);
 	*/
 	
-	/* default
+	/* default */
 	border: 5px inset #261575;
 	background: radial-gradient(circle, rgba(0,31,73,1) 0%, rgba(0,0,0,1) 100%);
-	*/
 	
-	/* xmas */
+	/* xmas
 	border: 5px inset #cd2d3d;
 	background: radial-gradient(circle, rgba(205, 45, 61,1) 0%, rgba(0,0,0,1) 100%);
+	*/
 	
 	margin-left: auto;
 	margin-right: auto;
@@ -41,14 +41,14 @@
 	background-color: #3c2315;
 	*/
 	
-	/* default
+	/* default */
 	border: 4px inset #261575;
 	background-color: #261575;
-	*/
 	
-	/* xmas */
+	/* xmas
 	border: 4px inset #cd2d3d;
 	background-color: #cd2d3d;
+	*/
 	
 	position: absolute;
 	
