@@ -202,6 +202,14 @@
 		<div id="news_group">
 			<div id="news_item">
 				<div id="cool_block"></div>
+				<h3 id="news_item_date"> 01/02/2024 </h3>
+				<h3 id="news_item_title"> Happy 2025!</h3>
+				
+				<h2 id="news_item_click" onclick="javascript:( function() { window.top.location.replace('news/01-02-2025') } )()"> → </h2>
+			</div>
+		
+			<div id="news_item">
+				<div id="cool_block"></div>
 				<h3 id="news_item_date"> 12/16/2024 </h3>
 				<h3 id="news_item_title"> HoHoHo!, Christmas Arriving!</h3>
 				
@@ -244,65 +252,9 @@
 </body>
 
 <script>
-	var current_arcade_game = 0;
-	const max_games = 6;
-	const domain = "https://arcade.clooverlandstudios.com/";
-	const visuals_folder = "resources/arcade/";
-	
-	var can_update_arcade = true;
-	
-	const game_links = [
-		domain+"superplatformoriginal",
-		domain+"superplatformdemo",
-		domain+"lightsout",
-		domain+"poweroutage_olddemo",
-		domain+"friendshiptest",
-		domain+"crossworldsparty",
-		domain+"icecreamcatch",
-	]
-	
-	const game_visuals = [
-		visuals_folder+"sp_org.png",
-		visuals_folder+"sp_demo.png",
-		visuals_folder+"lo.png",
-		visuals_folder+"po_demo.png",
-		visuals_folder+"ft.png",
-		visuals_folder+"cw.png",
-		visuals_folder+"ic.png",
-	]
-	
-	function update_arcade_to_game() {
-		const machine = document.getElementById("a_machine");
-		const button = document.getElementById("a_button");
-		const analog = document.getElementById("a_analog");
-		
-		if (can_update_arcade) {
-			can_update_arcade = false;
-			current_arcade_game += 1;
-			
-			machine.src = "resources/arcade/changing.gif";
-			analog.src = "resources/arcade/assets/analog_pull.png";
-			
-			setTimeout(()=> {
-				if (current_arcade_game > max_games) {
-					current_arcade_game = 0;
-				}
-			
-				can_update_arcade = true;
-				machine.src = game_visuals[current_arcade_game];
-				analog.src = "resources/arcade/assets/analog_idle.png";
-			}, (500))
-		}
-	}
-	
-	function open_game_page() {
-		if (can_update_arcade) {
-			window.open(game_links[current_arcade_game], "_blank");
-		}
-	}
 	
 	function open_youtube() { window.open("https://youtube.com/@clooverlandstudios", "_blank"); }
-	function open_twitter() { window.open("https://x.com/clooverland", "_blank"); }
+	function open_twitter() { window.open("https://x.com/clooverlandstudios", "_blank"); }
 	function open_server() { window.open("https://discord.com/invite/7YhtNaN95R", "_blank"); }
 	
 </script>
