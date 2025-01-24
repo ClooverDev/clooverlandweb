@@ -32,55 +32,61 @@
 			align-items: center;
 			flex-direction: column;
 		}
-
-		@keyframes little_move {
-			from {
-				filter: blur(18px) drop-shadow(0 0 0.5px rgba(255, 255, 0, 0.5));
-				transform: translateX(-10px);
-			}
+		
+		.items {			
+			width: 350px;
+			height: 450px;
 			
-			to {
-				filter: blur(10px) drop-shadow(0 0 2px rgba(255, 255, 0, 0.5));
-				transform: translateX(10px);
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			flex-direction: column;
+			
+			transform: translateY(80px);
+		}
+		
+		#glowing_title {
+			animation: glow_up 4s linear infinite alternate;
+		}
+		
+		@keyframes glow_up {
+			from {
+				filter: drop-shadow(0 0 0 black);
 			}
-		}		
-	
-		.error_text {
-			position: absolute;
-			top: 25%;
-			left: 38%;
-			margin-top: -50px;
-			margin-left: -50px;
-			width: 600px;
-			height: 100px;
-			text-align: center;
+		
+			to {
+				filter: drop-shadow(0 0 15px red);
+			}
 		}
 		
 		#return_button {
-			font-size: 60px;
-			top: 25%;
-			left: 38%;
-			margin-top: -50px;
-			margin-left: -50px;
-			width: 600px;
-			height: 100px;
-			text-align: center;
-			
 			color: gray;
 			
+			transform: translateY(25px); 
+			font-size: 20px; 
+			line-height: 3;
 			transition: 0.15s ease;
-			
-			transform: translate(50px, 320px);
 		}
 		
 		#return_button:hover {
-			font-size: 62px;
-			
-			color: yellow;
 			cursor: pointer;
-			
+			color: yellow;
+			font-size: 21px;
 			filter: drop-shadow(0 0 5px yellow);
-			
+		}
+		
+		.moving_bg {
+			width: 10000px;
+			height: 10000px;
+			position: fixed;
+			animation: slide 90s ease-out infinite alternate;
+			background-image: url(resources/checkboard.png);
+		}
+		
+		@keyframes slide {
+			from { transform: translateY(-3000px); }
+			to { transform: translateY(3000px); }
 		}
 		
 	</style>
@@ -88,10 +94,15 @@
 </head>
 
 <body bgColor="black">
-	
-	<h4 class="error_text" style='filter: drop-shadow(0 0 5px red); font-size: 90px; line-height: 0.3; color: red;'> 404 ERROR <br> <span style="font-size: 25px;"> You tried to access a page that doesn't exist. <br></span></h4>
-	
-	<h4 id="return_button"> Return to Home </h4>
+	<div class="moving_bg"></div>
+
+	<div class="items">
+		<img style="width: 60%;" src="resources/error.png">
+		<h4 id="glowing_title" style="color: red; font-size: 50px; line-height: 1.2;"> 404 ERROR </h4>
+		<h4 style="font-size: 20px; line-height: 0.1;"> Sorry but this page does not exist.</h4>
+		<h4 id="return_button"> Go Back</h4>
+	</div>
+
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
