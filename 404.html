@@ -3,7 +3,7 @@
 <html>
 
 <head>
-	<title>Clooverland Studios - Home</title>
+	<title>Error</title>
 	
 	<link href="https://fonts.cdnfonts.com/css/arima-koshi" rel="stylesheet">
 	
@@ -11,13 +11,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 	
-	<link rel="stylesheet" href="main.css">
-	<link rel="stylesheet" href="header_css.css">
-	<link rel="stylesheet" href="footer_css.css">
-	
 	<style>
-		@import url('https://fonts.cdnfonts.com/css/evil-of-frankenstein-2');
-		
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			text-decoration: none;
+			color: white;
+			font-family: 'Arima Madurai', sans-serif;
+		}
+
+		*:hover {
+			cursor: default;
+		}
+
+		body {
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		@keyframes little_move {
+			from {
+				filter: blur(18px) drop-shadow(0 0 0.5px rgba(255, 255, 0, 0.5));
+				transform: translateX(-10px);
+			}
+			
+			to {
+				filter: blur(10px) drop-shadow(0 0 2px rgba(255, 255, 0, 0.5));
+				transform: translateX(10px);
+			}
+		}		
+	
 		.error_text {
 			position: absolute;
 			top: 25%;
