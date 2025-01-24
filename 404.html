@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Clooverland Studios - Home</title>
+	
+	<link href="https://fonts.cdnfonts.com/css/arima-koshi" rel="stylesheet">
+	
+	<link rel="icon" type="image/x-icon" href="default.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="header_css.css">
+	<link rel="stylesheet" href="footer_css.css">
+	
+	<style>
+		@import url('https://fonts.cdnfonts.com/css/evil-of-frankenstein-2');
+		
+		.error_text {
+			position: absolute;
+			top: 25%;
+			left: 38%;
+			margin-top: -50px;
+			margin-left: -50px;
+			width: 600px;
+			height: 100px;
+			text-align: center;
+		}
+		
+		#return_button {
+			font-size: 60px;
+			top: 25%;
+			left: 38%;
+			margin-top: -50px;
+			margin-left: -50px;
+			width: 600px;
+			height: 100px;
+			text-align: center;
+			
+			color: gray;
+			
+			transition: 0.15s ease;
+			
+			transform: translate(50px, 320px);
+		}
+		
+		#return_button:hover {
+			font-size: 62px;
+			
+			color: yellow;
+			cursor: pointer;
+			
+			filter: drop-shadow(0 0 5px yellow);
+			
+		}
+		
+	</style>
+
+</head>
+
+<body bgColor="black">
+	
+	<h4 class="error_text" style='filter: drop-shadow(0 0 5px red); font-size: 90px; line-height: 0.3; color: red;'> 404 ERROR <br> <span style="font-size: 25px;"> You tried to access a page that doesn't exist. <br></span></h4>
+	
+	<h4 id="return_button"> Return to Home </h4>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$("#return_button").on("click", function(){
+			window.location.replace("https://clooverlandstudios.com");
+		})
+	})
+</script>
+
+</html>
