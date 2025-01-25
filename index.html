@@ -336,6 +336,7 @@
 	const visuals_folder = "resources/arcade/";
 	
 	var can_update_arcade = true;
+	var on_secret = false;
 	
 	const game_links = [
 		domain+"superplatformoriginal",
@@ -364,6 +365,8 @@
 		const button = document.getElementById("a_button");
 		const analog = document.getElementById("a_analog");
 		
+		var number = Math.floor(Math.random() * 50);
+		
 		if (can_update_arcade) {
 			can_update_arcade = false;
 			current_arcade_game += 1;
@@ -375,9 +378,18 @@
 				if (current_arcade_game > max_games) {
 					current_arcade_game = 0;
 				}
+				
+				console.log(number);
+
+				if (number == 1) {
+					machine.src = "resources/arcade/secret.png";
+					on_secret=true;
+				} else {
+					machine.src = game_visuals[current_arcade_game];
+					on_secret=false;
+				}
 			
 				can_update_arcade = true;
-				machine.src = game_visuals[current_arcade_game];
 				analog.src = "resources/arcade/assets/analog_idle.png";
 			}, (500))
 		}
@@ -385,7 +397,11 @@
 	
 	function open_game_page() {
 		if (can_update_arcade) {
-			window.open(game_links[current_arcade_game], "_blank");
+			if (on_secret) {
+				window.open("https://clooverlandstudios.com/game/FATE", "_blank");
+			} else {
+				window.open(game_links[current_arcade_game], "_blank");
+			}
 		}
 	}
 	
