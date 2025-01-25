@@ -42,15 +42,6 @@
 				filter: drop-shadow(0 0 2px red);
             }
 			
-			.game {
-				animation: moving 5s ease infinite alternate;
-			}
-			
-			@keyframes moving {
-				from { transform: translate(5px, 400px); }
-				to { transform: translate(-5px, 400px); }
-			}
-			
             :-webkit-full-screen #canvas {
                 width: 100%;
                 height: 100%;
@@ -102,19 +93,15 @@
     
 
     <body>
-		<div class="game">
-	
-			<div class="gm4html5_div_class" id="gm4html5_div_id">
-				
-				<!-- Builtin injector for splash screen -->
-				
+		<div class="gm4html5_div_class" id="gm4html5_div_id">
+			
+			<!-- Builtin injector for splash screen -->
+			
 
-				<!-- Create the canvas element the game draws to -->
-				<canvas id="canvas" width="640" height="540" style="position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; transform: translate(-50%, -50%);">
-					<p>Your browser doesn't support HTML5 canvas.</p>
-				</canvas>
-			</div>
-		
+			<!-- Create the canvas element the game draws to -->
+			<canvas id="canvas" width="640" height="540" style="position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; transform: translate(-50%, -50%);">
+				<p>Your browser doesn't support HTML5 canvas.</p>
+			</canvas>
 		</div>
 
         <!-- Run the game code -->
