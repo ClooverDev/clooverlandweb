@@ -163,7 +163,7 @@
 		}
 		
 		#news_item_click:hover {
-			color: #53e93f;
+			color: yellow;
 			font-size: 85px;
 			cursor: pointer;
 			transform: translate(475%, -200%);
@@ -207,7 +207,7 @@
 				<h3 id="news_item_date"> 28/01/2025 <span id="__NEW"> [NEW!] </span> </h3>
 				<h3 id="news_item_title"> SCHEDULE!</h3>
 				
-				<h2 id="news_item_click" onclick="javascript:( function() { window.top.location.replace('news/28-01-2025') } )()"> → </h2>
+				<h2 class="click_05" id="news_item_click" onclick="javascript:( function() { setCookie('clicked_05_true', 'true', 244); window.top.location.replace('news/28-01-2025') } )()"> → </h2>
 			</div>
 		
 			<div id="news_item">
@@ -215,7 +215,7 @@
 				<h3 id="news_item_date"> 02/01/2025 </h3>
 				<h3 id="news_item_title"> Happy 2025!</h3>
 				
-				<h2 id="news_item_click" onclick="javascript:( function() { window.top.location.replace('news/02-01-2025') } )()"> → </h2>
+				<h2 class="click_04" id="news_item_click" onclick="javascript:( function() { window.top.location.replace('news/02-01-2025') } )()"> → </h2>
 			</div>
 		
 			<div id="news_item">
@@ -223,7 +223,7 @@
 				<h3 id="news_item_date"> 16/12/2024 </h3>
 				<h3 id="news_item_title"> HoHoHo!, Christmas Arriving!</h3>
 				
-				<h2 id="news_item_click" onclick="javascript:( function() { window.top.location.replace('news/16-12-2024') } )()"> → </h2>
+				<h2 class="click_03" id="news_item_click" onclick="javascript:( function() { window.top.location.replace('news/16-12-2024') } )()"> → </h2>
 			</div>
 		
 			<div id="news_item">
@@ -231,7 +231,7 @@
 				<h3 id="news_item_date"> 27/10/2024 </h3>
 				<h3 id="news_item_title"> HALLOWEEN PROJECT</h3>
 				
-				<h2 id="news_item_click" onclick="javascript:( function() { window.top.location.replace('news/27-10-2024') } )()"> → </h2>
+				<h2 class="click_02" id="news_item_click" onclick="javascript:( function() { window.top.location.replace('news/27-10-2024') } )()"> → </h2>
 			</div>
 		
 			<div id="news_item">
@@ -239,7 +239,7 @@
 				<h3 id="news_item_date"> 12/10/2024 </h3>
 				<h3 id="news_item_title"> OFFICIAL REBRAND</h3>
 				
-				<h2 id="news_item_click" onclick="javascript:( function() { window.top.location.replace('news/12-10-2024') } )()"> → </h2>
+				<h2 class="click_01" id="news_item_click" onclick="javascript:( function() { window.top.location.replace('news/12-10-2024') } )()"> → </h2>
 			</div>
 
 		</div>
@@ -261,7 +261,44 @@
 
 </body>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 <script>
+
+	function setCookie(name,value,days) {
+		var expires = "";
+		if (days) {
+			var date = new Date();
+			date.setTime(date.getTime() + (days*24*60*60*1000));
+			expires = "; expires=" + date.toUTCString();
+		}
+		document.cookie = name + "=" + (value || "")  + expires + "; domain=.clooverlandstudios.com path=/";
+	}
+	function getCookie(name) {
+		var nameEQ = name + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0;i < ca.length;i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') c = c.substring(1,c.length);
+			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+		}
+		return null;
+	}
+	function eraseCookie(name) {   
+		document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+	}
+	
+	function checkForClicks() {
+		const check_click_5 = getCookie('clicked_05_true');
+		
+		if (check_click_5 == true) {
+			$(".click_05").css("color", "dark_blue");
+		}
+	}
+	
+	$(document).ready(function(){
+		checkForClicks();
+	})
 	
 	function open_youtube() { window.open("https://youtube.com/@clooverlandstudios", "_blank"); }
 	function open_twitter() { window.open("https://x.com/clooverland", "_blank"); }
