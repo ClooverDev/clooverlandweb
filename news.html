@@ -272,7 +272,7 @@
 			date.setTime(date.getTime() + (days*24*60*60*1000));
 			expires = "; expires=" + date.toUTCString();
 		}
-		document.cookie = name + "=" + (value || "")  + expires + "; Domain=clooverlandstudios.com; SameSite: none; Secure; path=/";
+		document.cookie = name + "=" + (value || "")  + expires + "; Domain=clooverlandstudios.com; SameSite: Lax; Secure; path=/";
 	}
 	function getCookie(name) {
 		var nameEQ = name + "=";
@@ -291,7 +291,7 @@
 	function checkForClicks() {
 		const check_click_5 = getCookie('clicked_05_true');
 		
-		if (check_click_5 == true) {
+		if (check_click_5) {
 			$(".click_05").css("color", "dark_blue");
 		}
 	}
