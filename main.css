@@ -41,3 +41,18 @@ body {
 		transform: translateX(10px);
 	}
 }
+
+.slidingbg {
+	width: 100000px;
+	height: 100000px;
+	position: fixed;
+	background-image: url(resources/checkboard.png);
+	z-index: -3;
+	opacity: 0.5;
+	animation: scroll 120s ease infinite alternate;
+}
+
+@keyframes scroll {
+	from { transform: translateY(-10000px); }
+	to { transform: translateY(0px); }
+}
