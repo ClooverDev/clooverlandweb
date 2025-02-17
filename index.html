@@ -266,6 +266,10 @@
 			<img onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/about') } )()" class="header_icon_base" id="header_icon_about" src="resources/icons/dad.png">
 		</div>
 	</div>
+	
+	<div class="loading_game" style="display: none;">
+		<h3 style="font-size: 35px; margin-top: 100px; text-align: center; line-height: 1;">LOADING GAME <br> <span style="color:yellow; font-size: 60px;" id="text"> > GAMENAME < </span> </h3>
+	</div>
 
 	<div class="big_painting">
 		<img src="resources/big_painting.png">
@@ -338,6 +342,7 @@
 	
 	var can_update_arcade = true;
 	var on_secret = false;
+	var clicked = false;
 	
 	const game_links = [
 		domain+"superplatformoriginal",
@@ -360,6 +365,19 @@
 		visuals_folder+"ic.png",
 		visuals_folder+"sp_r.png",
 	]
+	
+	const game_names = [
+		"Super Platform: Original",
+		"Super Platform: Chapter 2 Demo",
+		"Lights Out",
+		"Power Outage: Old Demo",
+		"Friendship Test",
+		"Cross-Worlds Party",
+		"IceCream CATCH!",
+		"Super Platform: Reoriginal",
+	]
+	
+	const current_game_name = game_names[current_arcade_game];
 	
 	function update_arcade_to_game() {
 		const machine = document.getElementById("a_machine");
@@ -384,9 +402,11 @@
 
 				if (number == 1) {
 					machine.src = "resources/arcade/secret.png";
+					current_game_name = "???";
 					on_secret=true;
 				} else {
 					machine.src = game_visuals[current_arcade_game];
+					current_game_name = game_names[current_arcade_game];
 					on_secret=false;
 				}
 			
@@ -396,14 +416,66 @@
 		}
 	}
 	
+	function update_visibility(bool) {
+		if (bool == true) {
+			$(".big_painting").css("display", "flex");
+			$(".header").css("display", "flex");
+			$(".arcade").css("display", "flex");
+			$(".newgame_banner").css("display", "flex");
+			$(".teaser_ad").css("display", "flex");
+			$(".footer").css("display", "flex");
+			$(".bottom_footer").css("display", "flex");
+			$(".loading_game").css("display", "none");
+		} else {
+			$(".big_painting").css("display", "none");
+			$(".header").css("display", "none");
+			$(".arcade").css("display", "none");
+			$(".newgame_banner").css("display", "none");
+			$(".teaser_ad").css("display", "none");
+			$(".footer").css("display", "none");
+			$(".bottom_footer").css("display", "none");
+			$(".loading_game").css("display", "block");
+			$("#text").html(current_game_name);
+		}
+	}
+	
 	function open_game_page() {
+		clicked = true;
+		
+		update_visibility(false);
+		
+		document.title = "Loading..."
+	
 		if (can_update_arcade) {
 			if (on_secret) {
-				window.open("https://clooverlandstudios.com/game/FATE", "_blank");
+				can_update_arcade = false;
+				
+				function open_game() {
+					window.open("https://clooverlandstudios.com/game/FATE", "_blank");
+					
+					update_visibility(true);
+					
+					document.title = "Clooverland Studios - Home";
+				}
+				
+				setTimeout(open_game, 3000);
+				
 			} else {
-				window.open(game_links[current_arcade_game], "_blank");
+				can_update_arcade = false;
+				
+				function open_game() {
+					window.open(game_links[current_arcade_game], "_blank");
+					
+					update_visibility(true);
+					
+					document.title = "Clooverland Studios - Home";
+				}
+				
+				setTimeout(open_game, 3000);
 			}
 		}
+		
+		
 	}
 	
 	function open_youtube() { window.open("https://youtube.com/@clooverlandstudios", "_blank"); }
