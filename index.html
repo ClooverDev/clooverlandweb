@@ -380,9 +380,9 @@
 	var current_game_name = game_names[current_arcade_game];
 	
 	function update_arcade_to_game() {
-		const machine = document.getElementById("a_machine");
-		const button = document.getElementById("a_button");
-		const analog = document.getElementById("a_analog");
+		const machine = $("#a_machine");
+		const button = $("#a_button");
+		const analog = $("#a_analog");
 		
 		var number = Math.floor(Math.random() * 50);
 		
@@ -390,29 +390,30 @@
 			can_update_arcade = false;
 			current_arcade_game += 1;
 			
-			machine.src = "resources/arcade/changing.gif";
-			analog.src = "resources/arcade/assets/analog_pull.png";
+			machine.attr("src", "resources/arcade/changing.gif");
+			analog.attr("src",  "resources/arcade/assets/analog_pull.png");
 			
-			setTimeout(()=> {
-				if (current_arcade_game > max_games) {
-					current_arcade_game = 0;
-				}
+			function update_current_to_new() {
+				if (current_arcade_game > max_games) { current_arcade_game = 0; }
 				
 				console.log(number);
-
+				
 				if (number == 1) {
-					machine.src = "resources/arcade/secret.png";
-					current_game_name = "???";
-					on_secret=true;
+					machine.attr("src", "resources/arcade/secret.png");
+					current_game_name = "F473";
+					on_secret = true;
 				} else {
-					machine.src = game_visuals[current_arcade_game];
+					machine.attr("src", game_visuals[current_arcade_game]);
 					current_game_name = game_names[current_arcade_game];
-					on_secret=false;
+					on_secret = false;
 				}
-			
+				
 				can_update_arcade = true;
-				analog.src = "resources/arcade/assets/analog_idle.png";
-			}, (500))
+				
+				analog.attr("src", "resources/arcade/assets/analog_idle.png");
+			}
+			
+			setTimeout(update_current_to_new, 750);
 		}
 	}
 	
