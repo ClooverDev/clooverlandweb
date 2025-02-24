@@ -237,6 +237,40 @@
 				display: none;
 			}
 		}
+		
+		@media only screen and (min-width: 720px) {
+			#_partner {
+				width: 360px;
+				transform: translate(0px, 25px);
+				display: flex;
+				transition: 0.25s ease;
+			}
+			
+			#_partner:hover {
+				width: 430px;
+				cursor: pointer;
+				transform: translate(-30px, 0px) rotate(360deg);
+				filter: drop-shadow(0 0 10px yellow);
+			}
+		}
+		
+		@media only screen and (max-width: 720px) {
+			#_partner {
+				width: 360px;
+				transform: translate(15px, 20px);
+				display: flex;
+				transition: 0.25s ease;
+			}
+			
+			#_partner:hover {
+				width: 380px;
+				cursor: pointer;
+				transform: translate(5px, 15px) rotate(360deg);
+				filter: drop-shadow(0 0 10px yellow);
+			}
+		}
+		
+		
 	
 	</style>
 
@@ -265,6 +299,11 @@
 			<img onclick="javascript:( function() { window.open('https://arcade.clooverlandstudios.com', '_blank') } )()" class="header_icon_base" id="header_icon_arcade" src="resources/icons/dad.png">
 			<img onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/about') } )()" class="header_icon_base" id="header_icon_about" src="resources/icons/dad.png">
 		</div>
+	</div>
+	
+	<div class="__partnership" style="width: 400px; height: 400px;">
+		<img src="resources/partnership/bright_divider.png" style="height: 500px; position: absolute; top:0; left:0; width: 100%; z-index: -1; transform: translateY(30px); filter: blur(50px);">
+		<img id="_partner" align="center" src="resources/partnership/partner.png">
 	</div>
 	
 	<div class="loading_game" style="display: none;">
@@ -330,9 +369,13 @@
 <script>
 
 	$(document).ready(function(){
+		$("#_partner").on('click', function() {
+			window.open("https://wm.clooverlandstudios.com", "_blank");
+		});
+	
 		$(".click_for_teaser").on("click", function(){
 			window.open("https://www.youtube.com/watch?v=gKEfsdfpqNA&t=1s", "_blank");
-		})
+		});
 	})
 
 	var current_arcade_game = 0;
