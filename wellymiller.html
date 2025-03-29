@@ -18,8 +18,8 @@
 		@import url('https://fonts.cdnfonts.com/css/evil-of-frankenstein-2');
 	
 		.about_info {
-			
-			margin-top: 80px;
+		
+			margin-top: 60px;
 			
 			width: 100%;
 			height: 650px;
@@ -40,8 +40,12 @@
 		}
 		
 		@media only screen and (max-width: 900px) {
+		`	.about_info {
+				margin-top: 0px;
+			}
+		
 			.about_info img {
-				width: 45%;
+				width: 70%;
 			}
 		}
 	</style>
@@ -65,7 +69,7 @@
 			<h4 onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com') } )()"> 13 </h4>
 			<h4 onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/news') } )()"> 06 </h4>
 			
-			<img src="resources/logos/logo_white_wm.png">
+			<img id="header_logo" src="resources/logos/logo_white_wm.png">
 			
 			<h4 onclick="javascript:( function() { window.open('https://arcade.clooverlandstudios.com', '_blank') } )()"> 20 </h4>
 			<h4 onclick="javascript:( function() { window.location.replace('https://clooverlandstudios.com/about') } )()"> 05 </h4>
