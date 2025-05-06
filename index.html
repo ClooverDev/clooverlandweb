@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Clooverland Studios - Home</title>
+
+        <link href="https://fonts.cdnfonts.com/css/pixeloid-sans" rel="stylesheet">
+        <link rel="icon" href="default.ico">
+
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+
+    <body bgcolor="black">
+        <div class="__web_background"></div>
+
+        <header>
+            <div class="book_ad">
+                <img id="ad" src="resources/book_ad/partner.png">
+            </div>
+
+            <div class="__header_logo">
+                <img src="resources/logos/logo_white.png">
+            </div>
+
+            <nav class="__header_items">
+                <ul>
+                    <li><h1 id="_HOME"> HOME</h1></li>
+                    <li><h1 id="_ARCADE"> ARCADE</h1></li>
+                    <li><h1 id="_ABOUT" style="color:red"> ABOUT</h1></li>
+                </ul>
+            </nav>
+
+            <div class="__header_shadow"></div>
+        </header>
+
+        <div class="start">
+            <div class="group_info" id="text_group">
+
+                <h1>What is "Clooverland Studios"?</h1>
+                <p> Clooverland Studios is a group that I've started over 4 years ago with the goal in mind show off my projects, projects that I use to express my creativity and love in certain genres, with the objective to get better in each project, share ideas and show off my love to these genres that I've grown up with.
+                    This group is about games that I've done in the past and will still do in the future, with genres like Platformer, Horror and some other genres that I try to make.<br>
+                    I've started this group by the name of TopHat Games, later becoming Clooverland Studios on 2024 due to a rebranding that I choosed to do due to the fact that I stopped using "TopHats" as a main icon for the group, specially the fact that I found alot of groups with the same name, I looked for a unique name for the group.<br><br>
+                    Hope you can find any games that you like, help this group to grow up and get more recognized!
+                </p>
+
+                <p style="color:yellow; transform: translate(-90px, 50px)">
+                    <-- This is Cloverok, our mascot based on my irl cat called Sherlock.
+                </p>
+
+                <img id="cloverok" src="resources/cloverok.png">
+            </div>
+
+        </div>
+
+        <main>
+            <div class="double_group">
+                <div class="arcade_group" id="text_group" style="background-color:rgb(15, 5, 27); border: 12px solid rgb(0, 140, 255);">
+                    <h1> == ARCADE</h1>
+
+                    <div class="new_game_banner">
+                        <img src="resources/new_game/fg.png">
+                        <h1 id="game_ad"> PLAY NOW!</h1>
+                    </div>
+
+                    <div class="arcade_main">
+                        <img class="_arc_analog" src="resources/arcade/assets/analog_idle.png">
+                        <img class="_arc_button" src="resources/arcade/assets/button.png">
+                        <img class="_arc_mach" src="resources/arcade/changing.gif">
+                    </div>
+                </div>
+
+                <div class="news_group" id="text_group" style="background-color:rgb(44, 71, 122); border: 12px solid rgb(0, 0, 0);">
+                    <h1> NEWS ==<br><br> This is the sound of emptiness... </h1>
+                </div>
+            </div>
+           
+        </main>
+
+        <footer>
+            <p> Clooverland Studios <br> Doing games for entertainment since 2021. </p>
+            
+            <div class="social_media">
+                <p id="SM_YTBE" style="color:rgb(131, 25, 25)">YOUTUBE</p>
+                <p id="SM_XTW" style="color:rgb(83, 151, 214)">TWITTER/X</p>
+                <p id="SM_DSV" style="color: rgb(113, 61, 255)">DISCORD SERVER</p>
+            </div>
+        </footer>
+    </body>
+    
+    <script>
+
+        $(document).ready(function(){
+            console.log("ready")
+
+            // START
+
+            /// HEADER \\\
+            const B_HOME = $("#_HOME")
+            const B_ARC = $("#_ARCADE")
+            const B_ABOUT = $("#_ABOUT")
+            
+            B_HOME.click(function() {
+                window.location.href = "https://clooverlandstudios.com"
+            })
+
+            B_ARC.click(function() {
+                open("https://arcade.clooverlandstudios.com", "_blank");
+            })
+
+            $("#ad").click(function() {
+                open("https://wm.clooverlandstudios.com", "_blank")
+            })
+
+            /// SOCIAL MEDIAS \\\
+            $("#SM_YTBE").click(function(){
+                open("https://youtube.com/@clooverlandstudios", "_blank")
+            })
+
+            $("#SM_XTW").click(function(){
+                open("https://x.com/clooverland", "_blank")
+            })
+
+            $("#SM_DSV").click(function(){
+                open("https://discord.com/invite/7YhtNaN95R", "_blank")
+            })
+
+            /// ARCADE \\\
+            $("#game_ad").click(function(){
+                open("https://arcade.clooverlandstudios.com/superplatformreoriginal", "_blank")
+            })
+
+            var current_game = 0;
+            var limit_game = 8;
+
+            const arcade_path = "resources/arcade/"
+            const web_path = "https://arcade.clooverlandstudios.com/"
+
+            const games = [
+                // 0: Game Name | 1: Arcade Image Path | 2: Redirect Path
+                ["Super Platform: Original", arcade_path+"sp_org.png", web_path+"superplatformoriginal"],
+                ["Super Platform: Demo", arcade_path+"sp_demo.png", web_path+"superplatformdemo"],
+                ["Lights Out", arcade_path+"lo.png", web_path+"lightsout"],
+                ["Power Outage", arcade_path+"po_demo.png", web_path+"poweroutageold"],
+                ["Friendship Test", arcade_path+"ft.png", web_path+"friendshiptest"],
+                ["Cross-Worlds Party", arcade_path+"cw.png", web_path+"crossworldsparty"],
+                ["IceCream CATCH!", arcade_path+"ic.png", web_path+"icecreamcatch"],
+                ["Super Platform: Reoriginal", arcade_path+"sp_r.png", web_path+"superplatformreoriginal"],
+
+            ]
+            
+            const rare_game = ["FATE", arcade_path+"secret.png", "https://clooverlandstudios.com/game/FATE"]
+            var rare_game_active = false;
+
+            const arcade = $("._arc_mach");
+            const arc_button = $("._arc_button");
+            const arc_analog = $("._arc_analog");
+
+            arcade.attr("src", games[current_game][1]);
+
+            var on_changing = false;
+            var number = Math.floor(Math.random() * 50);
+
+            arc_button.click(function(){
+                open(games[current_game][2], "_blank")
+            })
+
+            arc_analog.click(function(){
+                if (!on_changing) {
+                    current_game += 1;
+
+                    number = Math.floor(Math.random() * 50);
+
+                    if (number == 1) {
+                        rare_game_active=true;
+                    }
+
+                    if ((current_game+1) > limit_game) {
+                        current_game = 0;
+                    }
+
+                    on_changing=true;
+                    arcade.attr("src", arcade_path+"changing.gif");
+                    arc_analog.attr("src", arcade_path+"assets/analog_pull.png");
+
+                    function end_change() {
+                        
+                        if (!rare_game_active) {
+                            arcade.attr("src", games[current_game][1]);
+                        } else {
+                            arcade.attr("src", rare_game[1]);
+                            rare_game_active = false;
+                        }
+
+                        arc_analog.attr("src", arcade_path+"assets/analog_idle.png");
+
+                        on_changing=false;
+                    }
+
+                    setTimeout(end_change, 500);
+                }
+            })
+        })
+
+    </script>
+
+</html>
