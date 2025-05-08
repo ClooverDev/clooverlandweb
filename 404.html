@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Clooverland Studios - ERROR 404</title>
+
+        <link href="https://fonts.cdnfonts.com/css/pixeloid-sans" rel="stylesheet">
+        <link rel="icon" href="https://clooverlandstudios.com/default.ico">
+
+        <link rel="stylesheet" href="https://clooverlandstudios.com/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+
+    <body bgcolor="black">
+        <div class="__web_background" style="background-image: url('https://clooverlandstudios.com/resources/background_error.png');"></div>
+
+        <main style="margin-top: 120px; display: flex; flex-direction: column;">
+
+            <div class="group_info" style="margin-top: 20px; margin-bottom: 20px; height: 150px; border: 12px solid rgb(37, 0, 0); background-color:rgb(71, 0, 0);" id="text_group">
+
+                <h1 style="color: rgb(255, 114, 114);">PAGE DOES NOT EXIST</h1>
+                <p id="return_home"> Return to Home</p>
+            </div>
+
+        </main>
+    </body>
+    
+    <script>
+
+        $(document).ready(function(){
+            $("#return_home").click(function(){
+                window.location.href = "https://clooverlandstudios.com"
+            })
+        })
+
+    </script>
+
+</html>
