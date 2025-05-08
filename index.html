@@ -82,7 +82,7 @@
         $(document).ready(function(){
             console.log("ready")
 
-            const developer_enabled = false;
+            const developer_enabled = true;
 
             /// NEWS \\\
             const NEWS_TEMPLATE = "#NEWS-"
@@ -175,7 +175,7 @@
             var number = Math.floor(Math.random() * 50);
 
             arc_button.click(function(){
-                if (rare_game_active=true) {
+                if (rare_game_active == true) {
                     open(rare_game[2], "_blank")
                 } else {
                     open(games[current_game][2], "_blank")                    
@@ -186,7 +186,9 @@
                 if (!on_changing) {
                     current_game += 1;
 
-                    number = Math.floor(Math.random() * 50);
+                    number = Math.floor(Math.random() * 2);
+
+                    rare_game_active = false;
 
                     if (number == 1) {
                         rare_game_active=true;
@@ -206,7 +208,6 @@
                             arcade.attr("src", games[current_game][1]);
                         } else {
                             arcade.attr("src", rare_game[1]);
-                            rare_game_active = false;
                         }
 
                         arc_analog.attr("src", arcade_path+"assets/analog_idle.png");
