@@ -27,33 +27,14 @@
                 <ul>
                     <li><h1 id="_HOME"> HOME</h1></li>
                     <li><h1 id="_ARCADE"> ARCADE</h1></li>
-                    <li><h1 id="_ABOUT" style="color:red"> ABOUT</h1></li>
+                    <li><h1 id="_ABOUT"> ABOUT</h1></li>
                 </ul>
             </nav>
-
-            <div class="__header_shadow"></div>
         </header>
 
-        <div class="start">
-            <div class="group_info" id="text_group">
-
-                <h1>What is "Clooverland Studios"?</h1>
-                <p> Clooverland Studios is a group that I've started over 4 years ago with the goal in mind show off my projects, projects that I use to express my creativity and love in certain genres, with the objective to get better in each project, share ideas and show off my love to these genres that I've grown up with.
-                    This group is about games that I've done in the past and will still do in the future, with genres like Platformer, Horror and some other genres that I try to make.<br>
-                    I've started this group by the name of TopHat Games, later becoming Clooverland Studios on 2024 due to a rebranding that I choosed to do due to the fact that I stopped using "TopHats" as a main icon for the group, specially the fact that I found alot of groups with the same name, I looked for a unique name for the group.<br><br>
-                    Hope you can find any games that you like, help this group to grow up and get more recognized!
-                </p>
-
-                <p style="color:yellow; transform: translate(-90px, 50px)">
-                    <-- This is Cloverok, our mascot based on my irl cat called Sherlock.
-                </p>
-
-                <img id="cloverok" src="resources/cloverok.png">
-            </div>
-
-        </div>
-
         <main>
+            <img class="big_painting" src="resources/big_painting.png">
+
             <div class="double_group">
                 <div class="arcade_group" id="text_group" style="background-color:rgb(15, 5, 27); border: 12px solid rgb(0, 140, 255);">
                     <h1> == ARCADE</h1>
@@ -71,7 +52,15 @@
                 </div>
 
                 <div class="news_group" id="text_group" style="background-color:rgb(44, 71, 122); border: 12px solid rgb(0, 0, 0);">
-                    <h1> NEWS ==<br><br> This is the sound of emptiness... </h1>
+                    <h1> NEWS ==<br><span style="font-size: 18px;">The 8 most recent news, after 8 months the news get archived, which you can access in the Archived page (does not exist yet since no news got archived).</span></h1>
+
+                    <div class="featured_news">
+                        <div class="news_row">
+                            <div class="news_item">
+                                <img id="NEWS-08-05-2025" src="news/2025/news/08-05-2025.png">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
            
@@ -93,6 +82,18 @@
         $(document).ready(function(){
             console.log("ready")
 
+            const developer_enabled = true;
+
+            /// NEWS \\\
+            const NEWS_TEMPLATE = "#NEWS-"
+            $(NEWS_TEMPLATE+"08-05-2025").click(function(){
+                if (!developer_enabled) {
+                    window.location.href = "https://clooverlandstudios.com/news/2025/08-05"
+                } else {
+                    window.location.href = "news/2025/08-05.html"
+                }
+            })
+
             // START
 
             /// HEADER \\\
@@ -101,7 +102,19 @@
             const B_ABOUT = $("#_ABOUT")
             
             B_HOME.click(function() {
-                window.location.href = "https://clooverlandstudios.com"
+                if (!developer_enabled) {
+                    window.location.href = "https://clooverlandstudios.com"
+                } else {
+                    window.location.href = "index.html"
+                }
+            })
+
+            B_ABOUT.click(function() {
+                if (!developer_enabled) {
+                    window.location.href = "https://clooverlandstudios.com/about"
+                } else {
+                    window.location.href = "about.html"
+                }
             })
 
             B_ARC.click(function() {
@@ -162,7 +175,11 @@
             var number = Math.floor(Math.random() * 50);
 
             arc_button.click(function(){
-                open(games[current_game][2], "_blank")
+                if (rare_game_active=true) {
+                    open(rare_game[2], "_blank")
+                } else {
+                    open(games[current_game][2], "_blank")                    
+                }
             })
 
             arc_analog.click(function(){

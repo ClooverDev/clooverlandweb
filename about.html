@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Clooverland Studios - About</title>
+
+        <link href="https://fonts.cdnfonts.com/css/pixeloid-sans" rel="stylesheet">
+        <link rel="icon" href="default.ico">
+
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+
+    <body bgcolor="black">
+        <div class="__web_background"></div>
+
+        <header>
+            <div class="__header_logo">
+                <img src="resources/logos/logo_white.png">
+            </div>
+
+            <nav class="__header_items">
+                <ul>
+                    <li><h1 id="_HOME"> HOME</h1></li>
+                    <li><h1 id="_ARCADE"> ARCADE</h1></li>
+                    <li><h1 id="_ABOUT"> ABOUT</h1></li>
+                </ul>
+            </nav>
+
+            <div class="__header_shadow"></div>
+        </header>
+
+        <main style="margin-top: 120px; display: flex; flex-direction: column;">
+            <div class="group_info" id="text_group">
+
+                <h1>What is "Clooverland Studios"?</h1>
+                <p> Clooverland Studios is a group that I've started over 4 years ago with the goal in mind show off my projects, projects that I use to express my creativity and love in certain genres, with the objective to get better in each project, share ideas and show off my love to these genres that I've grown up with.
+                    This group is about games that I've done in the past and will still do in the future, with genres like Platformer, Horror and some other genres that I try to make.<br>
+                    I've started this group by the name of TopHat Games, later becoming Clooverland Studios on 2024 due to a rebranding that I choosed to do due to the fact that I stopped using "TopHats" as a main icon for the group, specially the fact that I found alot of groups with the same name, I looked for a unique name for the group.<br><br>
+                    Hope you can find any games that you like, help this group to grow up and get more recognized!
+                </p>
+
+                <p style="color:yellow; transform: translate(-90px, 50px)">
+                    <-- This is Cloverok, our mascot based on my irl cat called Sherlock.
+                </p>
+
+                <img id="cloverok" src="resources/cloverok.png">
+            </div>
+
+            <div class="group_info" style="margin-top: 20px; margin-bottom: 20px; height: 150px; border: 12px solid black; background-color:rgb(32, 32, 32);" id="text_group">
+
+                <h1>CONTACT</h1>
+                <p> For contacting you can go through our Discord Server or sent a e-mail to support@clooverlandstudios.com
+                </p>
+
+                <img id="cloverok" style="filter: drop-shadow(0 0 0 black); margin-top: -90px; width: 150px;" src="resources/mail_icon.png">
+            </div>
+
+        </main>
+
+        <footer>
+            <p> Clooverland Studios <br> Doing games for entertainment since 2021. </p>
+            
+            <div class="social_media">
+                <p id="SM_YTBE" style="color:rgb(131, 25, 25)">YOUTUBE</p>
+                <p id="SM_XTW" style="color:rgb(83, 151, 214)">TWITTER/X</p>
+                <p id="SM_DSV" style="color: rgb(113, 61, 255)">DISCORD SERVER</p>
+            </div>
+        </footer>
+    </body>
+    
+    <script>
+
+        $(document).ready(function(){
+            console.log("ready")
+
+            const developer_enabled = true;
+
+            // START
+
+            /// HEADER \\\
+            const B_HOME = $("#_HOME")
+            const B_ARC = $("#_ARCADE")
+            const B_ABOUT = $("#_ABOUT")
+            
+            B_HOME.click(function() {
+                if (!developer_enabled) {
+                    window.location.href = "https://clooverlandstudios.com"
+                } else {
+                    window.location.href = "index.html"
+                }
+            })
+
+            B_ABOUT.click(function() {
+                if (!developer_enabled) {
+                    window.location.href = "https://clooverlandstudios.com/about"
+                } else {
+                    window.location.href = "about.html"
+                }
+            })
+
+
+            B_ARC.click(function() {
+                open("https://arcade.clooverlandstudios.com", "_blank");
+            })
+
+            $("#ad").click(function() {
+                open("https://wm.clooverlandstudios.com", "_blank")
+            })
+
+            /// SOCIAL MEDIAS \\\
+            $("#SM_YTBE").click(function(){
+                open("https://youtube.com/@clooverlandstudios", "_blank")
+            })
+
+            $("#SM_XTW").click(function(){
+                open("https://x.com/clooverland", "_blank")
+            })
+
+            $("#SM_DSV").click(function(){
+                open("https://discord.com/invite/7YhtNaN95R", "_blank")
+            })
+        })
+
+    </script>
+
+</html>
