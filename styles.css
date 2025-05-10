@@ -1,0 +1,473 @@
+*, *::before, *::after {
+    color: white;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    cursor: default;
+    user-select: none;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Alvifont', sans-serif;
+}
+
+h2 {
+    font-family: 'Alvifont', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: clip;
+    overflow-clip-margin: 0.5rem;
+    background-image: url("resources/bg_bottom.png");
+    background-size: contain;
+
+    @media (max-width: 480px) {
+        overflow-x: hidden;
+        overflow-clip-margin: 0;
+    }
+}
+
+.__web_background {
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    z-index: -2;
+
+    & img {
+        width: 100%;
+        margin: auto;
+    }
+
+    @media (max-width:412px) {
+        width: 99vw;
+    }
+}
+
+header {
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    width: 100%;
+
+    overflow-x: hidden;
+
+    @media (max-width: 1206px) {
+        & .header_img {
+            width: 100%;
+        }
+    }
+
+    @media (max-width:412px) {
+        & .header_img {
+            margin-left: -200px;
+            width: 800px;
+        }
+    }
+}
+
+main {
+
+    & .new_book {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+
+        width: 100%;
+        height: 800px;
+
+        & h1 {
+            color: white;
+            filter: drop-shadow(0 0 10px yellow);
+        };
+
+        & h2 {
+            color: yellow;
+            font-size: 46px;
+            filter: drop-shadow(0 0 10px gold);
+            text-decoration: underline;
+        };
+
+        & .book_icon {
+            width: 300px;
+            animation: goIn 2s ease-in-out infinite alternate;
+        };
+
+        & .buy_new_book {
+            width: 500px;
+            margin-top: -120px;
+            transition: 0.25s ease;
+            animation: goIn_buy 2s ease-in-out infinite alternate;
+        }
+
+        & .buy_new_book:hover {
+            cursor: pointer;
+            width: 520px;
+            filter: drop-shadow(0 0 10px yellow);
+            animation: none;
+        }
+
+        @media (max-width: 480px) {
+            & h1 {
+                font-size: 25px;
+            }
+
+            & h2 {
+                font-size: 28px;
+            }
+
+            & .book_icon {
+                animation: goIn_smaller 2s ease-in-out infinite alternate;
+            }
+
+            & .buy_new_book {
+                animation: goIn_buy_smaller 2s ease-in-out infinite alternate;
+            }
+
+            margin-bottom: -200px;
+        }
+    }
+
+    & .divider {
+        margin-top: 10px;
+
+        & img {
+            width: 1300px;
+        }
+
+        @media (max-width: 1206px) {
+            & img {
+                margin-top: -50px;
+                margin-bottom: -20px;
+                width: 100%;
+            }
+        }
+    }
+
+    & .estante {
+        margin: auto;
+        width: 100%;
+
+        margin-top: 40px;
+
+        @media (max-width: 1206px) {
+            margin-top: -60px;
+            transform: scale(0.8);
+        }
+        
+        & .titulo {
+            margin: auto;
+            width: 600px;
+        }
+
+        & img {
+            width: 250px;
+        }
+
+        & .livros {
+            height: 100%;
+            width: 100%;
+            margin-left: -50px;
+
+            & .livro {
+                transition: 100ms ease;
+                margin-right: -140px;
+                z-index: 2;
+            }
+    
+            & .livro:hover {
+                cursor: pointer;
+                filter: drop-shadow(0 0 10px gold);
+                transform: scale(1.05);
+                margin-right: 20px;
+                margin-left: 20px;
+                z-index: 3;
+            }
+
+            & .livro_solo {
+                transition: 100ms ease;
+                z-index: 2;
+            }
+    
+            & .livro_solo:hover {
+                cursor: pointer;
+                filter: drop-shadow(0 0 10px gold);
+                transform: scale(1.05);
+                z-index: 3;
+            }
+        }
+
+        & .livro_selec {
+            width: 50%;
+            height: 100%;
+        }
+
+        & .descricao {
+            margin-top: -20px;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        @media (max-width: 480px) {
+            margin-top: -40px;
+
+            & .titulo {
+                width: 400px;
+            }
+
+            & .descricao {
+                font-size: 20px;
+            }
+
+            & .livros {
+                height: 100%;
+                width: 100%;
+                margin-top: -80px;
+                margin-left: -80px;
+    
+                & .livro {
+                    transition: 100ms ease;
+                    margin-right: -160px;
+                    transform: scale(.68);
+                    z-index: 2;
+                }
+
+                & .livro:hover {
+                    cursor: pointer;
+                    filter: drop-shadow(0 0 10px gold);
+                    transform: scale(0.6);
+                    margin-right: -150px;
+                    z-index: 3;
+                }
+
+                & .livro_solo {
+                    margin-top: 80px;
+                    transform: scale(1);
+                }
+
+                & .livro_solo:hover {
+                    cursor: pointer;
+                    filter: drop-shadow(0 0 10px gold);
+                    transform: scale(0.9);
+                    z-index: 3;
+                }
+            }
+        }
+    }
+
+   
+
+    & .biografia {
+        margin: auto;
+        margin-top: 40px;
+        width: 100%;
+        height: 700px;
+        margin-bottom: 80px;
+
+
+        @media (max-width: 1206px) {
+            margin-top: -40px;
+            transform: scale(0.8);
+        }
+
+        @media (max-width: 480px) {
+            margin-bottom: -100px;
+
+            & h1 { 
+                font-size: 64px;
+                text-decoration: underline;
+                filter: drop-shadow(0 0 10px gold);
+                color: gold; 
+                margin-bottom: -100px;
+            }
+        }
+
+        & .bio {
+            margin: auto;
+            z-index: 1;
+
+            background-image: url("resources/black_paper.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+
+            width: 100%;
+            height: 130%;
+
+            & .inner_bio {
+                width: 100%;
+                height: 100%;
+                transform: translateY(-60px);
+
+                & h1 {
+                    margin: auto;
+                    font-family: 'Morning Coffee', sans-serif;
+                    font-size: 50px;
+                    filter: drop-shadow(0 0 10px yellow);
+                    color: gold;
+                }
+    
+                & p {
+                    margin: auto;
+                    width: 600px;
+                    font-size: 20px;
+                    font-family: 'Mali', sans-serif;
+
+                    @media (max-width:1335px) {
+                        width: 65%;
+                        font-size: 1rem;
+                    }
+
+                    @media (min-height:1390px) {
+                        font-size: 1rem;
+                    }
+                }
+    
+                & .foto {
+                    width: 400px;
+                }
+            }
+            
+            @media (max-width: 480px) {
+                width: 100%;
+
+                margin-top: 50px;
+
+                background-size: 500px;
+
+                transform: scale(1.2);
+
+                & .inner_bio {
+
+                    transform: translate(0, 20px) scale(0.8);
+                    width: 100%;
+
+                    & .foto {
+                        width: 340px;
+                    }
+
+                    & h1 {
+                        font-size: 35px;
+                    }
+    
+                    & p {
+                        width: 100%;
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1206px) {
+        #outra_estate_2 {
+            margin-top: -160px;
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: 110px;
+    background-color: rgb(32, 32, 32);
+    filter: drop-shadow(0 -15px 1px rgb(20, 20, 20));
+    margin-top: 250px;
+
+    @media (max-width: 1206px) {
+        margin-top: 150px;
+    }
+
+    @media (max-width: 480px) {
+        height: 170px;
+    }
+
+    & .social_medias {
+        margin: auto;
+        transform: translateY(-30px);
+        width: 80%;
+
+        & .sm {
+            width: 95px;
+            transition: 100ms ease;
+            margin-right: 20px;
+        }
+
+        & .sm:hover {
+            cursor: pointer;
+            filter: drop-shadow(0 0 15px rgb(17, 17, 17));
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        & .sm:active {
+            filter: drop-shadow(0 0 15px rgb(91, 126, 167));
+            transform: scale(1.15) rotate(0deg);
+        }
+
+        @media (max-width: 480px) {
+            width: 100%;
+
+            & .sm {
+                margin-right: 10px;
+                width: 80px;
+            }
+        }
+    }
+}
+
+
+@keyframes goIn {
+    from {
+        margin-top: 20px;
+        transform: scale(1);
+    }
+
+    to {
+        margin-top: 10px;
+        transform: scale(1.02);
+        filter: drop-shadow(0 0 10000px lightblue);
+    }
+}
+
+@keyframes goIn_smaller {
+    from {
+        margin-top: -80px;
+        transform: scale(0.7);
+    }
+
+    to {
+        margin-top: -85px;
+        transform: scale(.72);
+        filter: drop-shadow(0 0 10000px lightblue);
+    }
+}
+
+@keyframes goIn_buy {
+    from {
+        margin-top: -120px;
+        transform: scale(1);
+    }
+
+    to {
+        margin-top: -120px;
+        transform: scale(1.02);
+    }
+}
+
+@keyframes goIn_buy_smaller {
+    from {
+        margin-top: -190px;
+        transform: scale(0.7);
+    }
+
+    to {
+        margin-top: -190px;
+        transform: scale(0.72);
+    }
+}
