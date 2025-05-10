@@ -1,139 +1,223 @@
 <!DOCTYPE html>
 
 <html>
-
     <head>
-        <title> Estante da Welly Miller </title>
+        <title> Clooverland Studios - Home</title>
 
-        <link rel="icon" href="icon.ico">
-        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.cdnfonts.com/css/pixeloid-sans" rel="stylesheet">
+        <link rel="icon" href="default.ico">
+
+        <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-		<link href="https://fonts.cdnfonts.com/css/morning-coffee" rel="stylesheet">
-		<link href="https://fonts.cdnfonts.com/css/alvifont" rel="stylesheet">
-        <link href="https://fonts.cdnfonts.com/css/mali" rel="stylesheet">
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-
     </head>
 
-    <body bgcolor="#222222">
-        <div class="__web_background">
-            <img class="__wb_top" src="resources/bg.png">
-        </div>
+    <body bgcolor="black">
+        <div class="__web_background"></div>
 
         <header>
-            <img class="header_img" src="resources/header.png">
+            <div class="book_ad">
+                <img id="ad" src="resources/book_ad/partner.png">
+            </div>
+
+            <div class="__header_logo">
+                <img src="resources/logos/logo_white.png">
+            </div>
+
+            <nav class="__header_items">
+                <ul>
+                    <li><h1 id="_HOME"> HOME</h1></li>
+                    <li><h1 id="_ARCADE"> ARCADE</h1></li>
+                    <li><h1 id="_ABOUT"> ABOUT</h1></li>
+                </ul>
+            </nav>
         </header>
 
         <main>
-            <div class="new_book">
-                <h1>NOVIDADE!</h1>
-                <h2>A Minha Noite Estrelada</h2>
-                <img class="book_icon" src="resources/capas/a_minha_noite_estrelada_3d.png">
-                <img class="buy_new_book" id="A_MINHA_NOITE_ESTRELADA" src="resources/comprar_agora.png">
-            </div>
+            <img class="big_painting" src="resources/big_painting.png">
 
-            <div class="divider"><img src="resources/divider.png"></div>
+            <div class="double_group">
+                <div class="arcade_group" id="text_group" style="background-color:rgb(15, 5, 27); border: 12px solid rgb(0, 140, 255);">
+                    <h1> == ARCADE</h1>
 
-            <div class="estante">
-                <img class="titulo" src="resources/dentrodasparedes.png">
-                <h1 class="descricao" style="font-family: 'Mali', sans-serif;"> Livros de poesias sobre romance, tragédias e decepções amorosas.</h1>
+                    <div class="new_game_banner">
+                        <img src="resources/new_game/fg.png">
+                        <h1 id="game_ad"> PLAY NOW!</h1>
+                    </div>
 
-                <div class="livros">
-                    <img class="livro" id="A_QUARTA_PAREDE" src="resources/capas/a_quarta_parede_3d.png">
-                    <img class="livro" id="A_DIMENSAO_DO_VIDRO_COL" src="resources/capas/a_dimensao_do_vidro_3d.png">
-                    <img class="livro" id="A_DIMENSAO_DO_VIDRO_PB" src="resources/capas/a_dimensao_do_vidro_3d_pb.png">
-                    <img class="livro" id="CONTRA_PAREDE" src="resources/capas/contra_parede_3d.png">
-                </div>
-            </div>
-
-            <div class="estante" id="outra_estate_2">
-                <img class="titulo" src="resources/outroslivros.png">
-                <h1 class="descricao" style="font-family: 'Mali', sans-serif; margin-top:0px;"> Outros livros feitos.</h1>
-
-                <div class="livros" style="margin-left: 10px;">
-                    <img class="livro_solo" id="CANDY_THE_DOG" src="resources/capas/candy_the_dog_3d.png">
-                </div>
-            </div>
-
-            <div class="divider"><img src="resources/divider.png"></div>
-
-            <div class="biografia">
-                <h1> BIOGRAFIA</h1>
-
-                <div class="bio">
-                    <div class="inner_bio">
-                        <img class="foto" src="resources/foto.png">
-                        <h1> ISABELLY RODRIGUES</h1>
-                        <p>
-                            Isabelly, conhecida pelo seu nome artístico Welly Miller, é uma poeta, escritora e uma pessoa muito apaixonada por livros. Durante sua infância ela explorava vários tipos de habilidades até alcançar seu caminho de hoje, já optou em se tornar uma fotógrafa, que por fim não houve tanto progresso, até perceber seu dom na escrita, onde começou a trilhar seu caminho como escritora de 2021 para os dias de hoje. Foi onde explorou vários temas e gêneros, onde gêneros de romance chamou muito sua atenção, e virou um tema principal para os seus livros. Seu primeiro livro e o mais importante é A Quarta Parede, foi onde sua jornada mudou para melhor! <br><br>
-        
-                            <span>Aos 16 anos, Isabelly é uma jovem com um longo caminho, mas ela procura escrever vários livros!, ela acredita em suas habilidades e se esforça para alcançar seus sonhos! </span>
-                        </p>
+                    <div class="arcade_main">
+                        <img class="_arc_analog" src="resources/arcade/assets/analog_idle.png">
+                        <img class="_arc_button" src="resources/arcade/assets/button.png">
+                        <img class="_arc_mach" src="resources/arcade/changing.gif">
                     </div>
                 </div>
 
+                <div class="news_group" id="text_group" style="background-color:rgb(44, 71, 122); border: 12px solid rgb(0, 0, 0);">
+                    <h1> NEWS ==<br><span style="font-size: 18px;">The 8 most recent news, after 8 months the news get archived, which you can access in the Archived page (does not exist yet since no news got archived).</span></h1>
+
+                    <div class="featured_news">
+                        <div class="news_row">
+                            <div class="news_item">
+                                <img id="NEWS-08-05-2025" src="news/2025/news/08-05-2025.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+           
         </main>
 
         <footer>
-            <div class="social_medias">
-                <img class="sm" id="ttk" src="resources/socialmedia/tiktok.png">
-                <img class="sm" id="inst" src="resources/socialmedia/instagram.png">
-                <img class="sm" id="bsk" src="resources/socialmedia/bluesky.png">
-                <img class="sm" id="twt" src="resources/socialmedia/twitter.png">
+            <p> Clooverland Studios <br> Doing games for entertainment since 2021. </p>
+            
+            <div class="social_media">
+                <p id="SM_YTBE" style="color:rgb(131, 25, 25)">YOUTUBE</p>
+                <p id="SM_XTW" style="color:rgb(83, 151, 214)">TWITTER/X</p>
+                <p id="SM_DSV" style="color: rgb(113, 61, 255)">DISCORD SERVER</p>
             </div>
         </footer>
-
     </body>
-
+    
     <script>
 
         $(document).ready(function(){
-            console.log('ready')
+            console.log("ready")
 
-            // START \\
+            const developer_enabled = false;
+
+            /// NEWS \\\
+            const NEWS_TEMPLATE = "#NEWS-"
+            $(NEWS_TEMPLATE+"08-05-2025").click(function(){
+                if (!developer_enabled) {
+                    window.location.href = "https://clooverlandstudios.com/news/2025/08-05"
+                } else {
+                    window.location.href = "news/2025/08-05.html"
+                }
+            })
+
+            // START
+
+            /// HEADER \\\
+            const B_HOME = $("#_HOME")
+            const B_ARC = $("#_ARCADE")
+            const B_ABOUT = $("#_ABOUT")
+            
+            B_HOME.click(function() {
+                if (!developer_enabled) {
+                    window.location.href = "https://clooverlandstudios.com"
+                } else {
+                    window.location.href = "index.html"
+                }
+            })
+
+            B_ABOUT.click(function() {
+                if (!developer_enabled) {
+                    window.location.href = "https://clooverlandstudios.com/about"
+                } else {
+                    window.location.href = "about.html"
+                }
+            })
+
+            B_ARC.click(function() {
+                open("https://arcade.clooverlandstudios.com", "_blank");
+            })
+
+            $("#ad").click(function() {
+                open("https://wm.clooverlandstudios.com", "_blank")
+            })
 
             /// SOCIAL MEDIAS \\\
-            const __social_medias = [
-                [$("#ttk"), "https://www.tiktok.com/@wellymi7"],
-                [$("#inst"), "https://www.instagram.com/welly.escritora/"],
-                [$("#bsk"), "https://bsky.app/profile/bwelly.bsky.social"],
-                [$("#twt"), "https://x.com/Bey7w7"],
+            $("#SM_YTBE").click(function(){
+                open("https://youtube.com/@clooverlandstudios", "_blank")
+            })
+
+            $("#SM_XTW").click(function(){
+                open("https://x.com/clooverland", "_blank")
+            })
+
+            $("#SM_DSV").click(function(){
+                open("https://discord.com/invite/7YhtNaN95R", "_blank")
+            })
+
+            /// ARCADE \\\
+            $("#game_ad").click(function(){
+                open("https://arcade.clooverlandstudios.com/superplatformreoriginal", "_blank")
+            })
+
+            var current_game = 0;
+            var limit_game = 8;
+
+            const arcade_path = "resources/arcade/"
+            const web_path = "https://arcade.clooverlandstudios.com/"
+
+            const games = [
+                // 0: Game Name | 1: Arcade Image Path | 2: Redirect Path
+                ["Super Platform: Original", arcade_path+"sp_org.png", web_path+"superplatformoriginal"],
+                ["Super Platform: Demo", arcade_path+"sp_demo.png", web_path+"superplatformdemo"],
+                ["Lights Out", arcade_path+"lo.png", web_path+"lightsout"],
+                ["Power Outage", arcade_path+"po_demo.png", web_path+"poweroutageold"],
+                ["Friendship Test", arcade_path+"ft.png", web_path+"friendshiptest"],
+                ["Cross-Worlds Party", arcade_path+"cw.png", web_path+"crossworldsparty"],
+                ["IceCream CATCH!", arcade_path+"ic.png", web_path+"icecreamcatch"],
+                ["Super Platform: Reoriginal", arcade_path+"sp_r.png", web_path+"superplatformreoriginal"],
+
             ]
+            
+            const rare_game = ["FATE", arcade_path+"secret.png", "https://clooverlandstudios.com/game/FATE"]
+            var rare_game_active = false;
 
-            function open_social_media(__url) {
-                console.log("social_media function called")
-                open(__url, "_blank");
-            }
+            const arcade = $("._arc_mach");
+            const arc_button = $("._arc_button");
+            const arc_analog = $("._arc_analog");
 
-            __social_medias[0][0].click(function(){ open_social_media(__social_medias[0][1]) }); // TIKTOK
-            __social_medias[1][0].click(function(){ open_social_media(__social_medias[1][1]) }); // INSTAGRAM
-            __social_medias[2][0].click(function(){ open_social_media(__social_medias[2][1]) }); // BLUESKY
-            __social_medias[3][0].click(function(){ open_social_media(__social_medias[3][1])}); // TWITTER/X
+            arcade.attr("src", games[current_game][1]);
 
+            var on_changing = false;
+            var number = Math.floor(Math.random() * 50);
 
-            /// BOOKS \\\
-            const books = [
-                [$("#A_QUARTA_PAREDE"), "https://wm.clooverlandstudios.com/livros/aquartaparede"],
-                [$("#A_DIMENSAO_DO_VIDRO_COL"), "https://wm.clooverlandstudios.com/livros/adimensaodovidro"],
-                [$("#A_DIMENSAO_DO_VIDRO_PB"), "https://wm.clooverlandstudios.com/livros/preto-e-branco/adimensaodovidro"],
-                [$("#CONTRA_PAREDE"), "https://wm.clooverlandstudios.com/livros/contraparede"],
-                [$("#A_MINHA_NOITE_ESTRELADA"), "https://wm.clooverlandstudios.com/livros/aminhanoiteestrelada"],
-                [$("#CANDY_THE_DOG"), "https://wm.clooverlandstudios.com/livros/candythedog"],
-            ]
+            arc_button.click(function(){
+                if (rare_game_active == true) {
+                    open(rare_game[2], "_blank")
+                } else {
+                    open(games[current_game][2], "_blank")                    
+                }
+            })
 
-            function open_book_page(__url) { open(__url, "_blank"); }
+            arc_analog.click(function(){
+                if (!on_changing) {
+                    current_game += 1;
 
-            books[0][0].click(function(){ open_book_page(books[0][1]) })
-            books[1][0].click(function(){ open_book_page(books[1][1]) })
-            books[2][0].click(function(){ open_book_page(books[2][1]) })
-            books[3][0].click(function(){ open_book_page(books[3][1]) })
-            books[4][0].click(function(){ open_book_page(books[4][1]) })
-            books[5][0].click(function(){ open_book_page(books[5][1]) })
+                    number = Math.floor(Math.random() * 50);
 
+                    rare_game_active = false;
+
+                    if (number == 1) {
+                        rare_game_active=true;
+                    }
+
+                    if ((current_game+1) > limit_game) {
+                        current_game = 0;
+                    }
+
+                    on_changing=true;
+                    arcade.attr("src", arcade_path+"changing.gif");
+                    arc_analog.attr("src", arcade_path+"assets/analog_pull.png");
+
+                    function end_change() {
+                        
+                        if (!rare_game_active) {
+                            arcade.attr("src", games[current_game][1]);
+                        } else {
+                            arcade.attr("src", rare_game[1]);
+                        }
+
+                        arc_analog.attr("src", arcade_path+"assets/analog_idle.png");
+
+                        on_changing=false;
+                    }
+
+                    setTimeout(end_change, 500);
+                }
+            })
         })
 
     </script>
