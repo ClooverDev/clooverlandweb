@@ -28,7 +28,7 @@
             
             let GetPingCount = 0
 
-            $.getJSON("bot_data.json", function(data) {
+            $.getJSON("http://api.clooverlandstudios.com/data/bot_data.json", function(data) {
                 GetPingCount = data["ping-count"];
                 update_texts()
             })
