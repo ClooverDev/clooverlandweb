@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <link rel="icon" href="https://clooverlandstudios.com/default.ico">
+
+        <title> API - PUBLIC BUNGUS DATA </title>
+
+        <style>
+            p {
+                color: white;
+                font-family: 'Courier New', sans-serif;
+            }
+        </style>
+
+    </head>
+
+    <body bgColor="black">
+        <p class="data__ping_count">Pinged globally over <span style="font-family: 'Arial Bold', sans-serif;">0</span> times.</p>
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            
+            let GetPingCount = 0
+
+            $.getJSON("bot_data.json", function(data) {
+                GetPingCount = data["ping-count"];
+                update_texts()
+            })
+
+            function update_texts() {
+                $(".data__ping_count").html("Pinged globally over <span style='font-family: 'Arial Bold', sans-serif;'>"+GetPingCount+"</span> times.")
+            }
+        })
+
+    </script>
+
+</html>
