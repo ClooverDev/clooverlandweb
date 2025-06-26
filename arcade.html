@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title> Clooverland Studios - Arcade </title>
+
+        <link rel="icon" href="https://images.clooverlandstudios.com/favicons/arcade.ico">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+        <link type='text/css' href="css/style.css" rel="stylesheet">
+        <link type='text/css' href="css/arcade.css" rel="stylesheet">
+                
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.cdnfonts.com/css/pixeloid-sans" rel="stylesheet">
+
+        <style>
+
+                * {
+                    user-select: none;
+                    cursor: default;
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Pixeloid Sans', sans-serif;
+                    color: white;
+                    text-align: center;
+                    /*border:1px solid red;*/
+                }
+
+                body {
+                    background-color: black;
+                    --bs-body-font-family: var(--bs-font-monospace);
+                    --bs-body-line-height: 1.4;
+                    --bs-body-bg: var(--bs-gray-100);
+
+                    overflow-x: hidden;
+                }
+
+                #nav-1 {
+                    background-color: #8d863b;
+                }
+
+                #nav-2 {
+                    background-color: #65602c;
+                    filter: drop-shadow(0 10px 0 #46431f)
+                }
+
+                #hd-btn {
+                    border: 0;
+                    background-color: #383619;
+                    transform: scale(1.5);
+                    filter: drop-shadow(0 2px 0 #1d1c0d);
+                    transition: 0.25s ease;
+                    margin-right: 40px;
+                }
+
+                #hd-btn:hover {
+                    filter: drop-shadow(0 4px 0 #1d1c0d);
+                    color: gray;
+                    transform: scale(1.4);
+                }
+
+                #hd-btn:active {
+                    color: gold;
+                    transform: scale(1.43);
+                }
+
+                #ad-btn {
+                    background-image: url('/images/book_ad/bg.png');
+                    border-radius: 0 0 80px 80px;
+                    border: 4px solid white;
+                    transform: scale(1.2);
+                    filter: drop-shadow(0 2px 0 #305d3d);
+                    transition: 0.25s ease;
+                }
+
+                #ad-btn:hover {
+                    cursor: pointer;
+                    filter: drop-shadow(0 0 10px gold);
+                    transform: scale(1.22);
+                }
+
+                .__web_background {
+                    width: 100%;
+                    height: 100000px;
+                    opacity: 0.5;
+                    background-position-x: center;
+                    background-image: url("images/background_arc.png");
+                    background-size: 40%;
+                    animation: slideIn 200s ease-out infinite alternate;
+                    z-index: -1;
+                    position: fixed;
+                }
+
+                @keyframes slideIn {
+                    from {
+                        transform: translateY(-10000px);
+                    }
+
+                    to {
+                        transform: translateY(-5000px);
+                    }
+                }
+
+                #games_container {
+                    margin-top: 20px;
+
+                }   
+
+                #game_child {
+                    height: 200px;
+                    transition: .10s ease;
+                    filter: drop-shadow(0 5px 0 black);
+                    margin-right: 5px;
+                    margin-left: 5px;
+                    margin-bottom: 20px;
+                }
+
+                #game_child:hover {
+                    cursor: pointer;
+                    transform: scale(1.02);
+                    filter: drop-shadow(0 5px 5px black);
+
+                    & img:hover {
+                        cursor: pointer;
+                    }
+
+                    & h5 {
+                        cursor: pointer;
+                    }
+                }
+
+                #game_child:active {
+                    cursor: pointer;
+                    transform: scale(1.03);
+                    filter: drop-shadow(0 5px 7px gold);                    
+                }
+
+            </style>
+
+    </head>
+
+    <body>
+        <div class="__web_background"></div>
+
+        <header>
+            <nav id='nav-1' class="navbar stick-top navbar-expand-lg py-1">
+                <div class="container-fluid justify-content-center">
+                    <img src="https://images.clooverlandstudios.com/logos/logo_white.png" class="d-inline-block align-text-top" style='max-width: 100%; height: auto; filter: drop-shadow(0 0 5px white)' alt="" width="250" height="45">
+                </div>
+            </nav>
+            <nav id='nav-2' class="navbar stick-top navbar-expand-lg py-3 justify-content-center">
+                <div class="btn-group" role="group" aria-label="Header" style="margin-left: 40px;">
+                    <button type="button" id="hd-btn" class="btn btn-primary BTN-HOME">HOME</button>
+                    <button type="button" id="hd-btn" class="btn btn-primary BTN-ARCADE">ARCADE</button>
+                    <button type="button" id="hd-btn" style="margin-left: 2px" class="btn btn-primary BTN-ABOUT">ABOUT</button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="justify-content-center">
+            <div class='py-md-5 container-sm justify-content-center d-inline-flex flex-row'>
+                <img src="images/arcade/logo_default.png" class="img-fluid mt-3" style="margin-bottom: -40px;" width=500>
+            </div>
+
+            <div id="games_container" class="py-md-5  container-sm justify-content-center d-inline-flex flex-row p-2 row">
+                <div id="game_child" class="gchild-active-SPR py-md-5 container-me justify-content-center d-inline-flex flex-column" style='width: 250px; background-color: rgb(132, 50, 50); border: 5px inset darkred;'>
+                    <img src="images/new_game/fg.png" class="mx-auto d-block img-fluid" width=260 style="border: 6px outset darkred;">
+                    <h5 class='text-justify' style="margin-top: 2px; filter: drop-shadow(0 3px 0 black)"> SUPER PLATFORM: REORIGINAL<br>!-----☆-----! </h5>
+                </div>
+
+                <div id="game_child" class="gchild-active-IC py-md-5 container-me justify-content-center d-inline-flex flex-column" style='width: 250px; background-color: rgb(132, 50, 116); border: 5px inset rgb(163, 50, 141);'>
+                    <img src="images/new_game/fg.png" class="mx-auto d-block img-fluid" width=260 style="border: 6px outset rgb(163, 50, 141);">
+                    <h5 class='text-justify' style="margin-top: 2px; filter: drop-shadow(0 3px 0 black)"> [SM4LL] ICECREAM CATCH<br>!-----☆-----! </h5>
+                </div>
+
+                <div id="game_child" class="gchild-active-CWP py-md-5 container-me justify-content-center d-inline-flex flex-column" style='width: 250px; background-color: rgb(132, 50, 116); border: 5px inset rgb(163, 50, 141);'>
+                    <img src="images/new_game/fg.png" class="mx-auto d-block img-fluid" width=260 style="border: 6px outset rgb(163, 50, 141);">
+                    <h5 class='text-justify' style="margin-top: 2px; filter: drop-shadow(0 3px 0 black)"> CROSS-WORLDS PARTY<br>!-----☆-----! </h5>
+                </div>
+
+                <div id="game_child" class="gchild-active-FT py-md-5 container-me justify-content-center d-inline-flex flex-column" style='width: 250px; background-color: rgb(134, 134, 134); border: 5px inset rgb(82, 82, 82);'>
+                    <img src="images/new_game/fg.png" class="mx-auto d-block img-fluid" width=260 style="border: 6px outset rgb(82, 82, 82);">
+                    <h5 class='text-justify' style="margin-top: 2px; filter: drop-shadow(0 3px 0 black)"> [SM4LL] FRIENDSHIP TEST<br>!-----☆-----! </h5>
+                </div>
+
+                <div id="game_child" class="gchild-active-PODEMO py-md-5 container-me justify-content-center d-inline-flex flex-column" style='width: 250px; background-color: rgb(138, 117, 33); border: 5px inset rgb(91, 77, 22);'>
+                    <img src="images/new_game/fg.png" class="mx-auto d-block img-fluid" width=260 style="border: 6px outset rgb(91, 77, 22);">
+                    <h5 class='text-justify' style="margin-top: 2px; filter: drop-shadow(0 3px 0 black)"> POWER OUTAGE: DEMO<br>!-----☆-----! </h5>
+                </div>
+
+                <div id="game_child" class="gchild-active-LOC py-md-5 container-me justify-content-center d-inline-flex flex-column" style='width: 250px; background-color: rgb(138, 117, 33); border: 5px inset rgb(91, 77, 22);'>
+                    <img src="images/new_game/fg.png" class="mx-auto d-block img-fluid" width=260 style="border: 6px outset rgb(91, 77, 22);">
+                    <h5 class='text-justify' style="margin-top: 2px; filter: drop-shadow(0 3px 0 black)"> LIGHTS OUT: CLASSIC<br>!-----☆-----! </h5>
+                </div>
+
+                <div id="game_child" class="gchild-active-SPD py-md-5 container-me justify-content-center d-inline-flex flex-column" style='width: 250px; background-color: rgb(132, 50, 50); border: 5px inset darkred;'>
+                    <img src="images/new_game/fg.png" class="mx-auto d-block img-fluid" width=260 style="border: 6px outset darkred;">
+                    <h5 class='text-justify' style="margin-top: 2px; filter: drop-shadow(0 3px 0 black)"> SUPER PLATFORM: DEMO<br>!-----☆-----! </h5>
+                </div>
+
+                <div id="game_child" class="gchild-active-SPOG py-md-5 container-me justify-content-center d-inline-flex flex-column" style='width: 250px; background-color: rgb(132, 50, 50); border: 5px inset darkred;'>
+                    <img src="images/new_game/fg.png" class="mx-auto d-block img-fluid" width=260 style="border: 6px outset darkred;">
+                    <h5 class='text-justify' style="margin-top: 2px; filter: drop-shadow(0 3px 0 black)"> SUPER PLATFORM: ORIGINAL<br>!-----☆-----! </h5>
+                </div>
+
+                <div class='py-md-5 container-lg d-flex justify-content-center flex-column w-75'>
+                    <div id="PROGRESSBAR-ICON">
+                        <img src="images/arcade/art/super_platform_reorg.png" class='img-fluid' width="75%">
+                    </div>
+
+                    <div id="PROGRESSBAR-CONTENT" class="w-100">
+                        <h3 id="PROGRESSBAR-TITLE" class="w-100"> NONAME </h3>
+
+                        <div id="PROGRESSBAR-OUTSIDE" class="w-100">
+                            <div id="PROGRESSBAR-INNER"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+ 
+        <footer class='py-2 mt-5 w-100 fixed-bottom' style="background-color: #65602c; filter: drop-shadow(0 -6px 0 #46431f);">
+            <div class='container text-light text-center'>
+                <p class='display-8 mb-1'> Doing games for entertainment since 2021. </p>
+
+                <div class="d-flex justify-content-center" style="align-items: center">
+                    <p class='me-3 display-8 mb-1 SM-BTN-YOUTUBE SM-BTN' style="color: rgb(255, 3, 66)"> YOUTUBE </p>
+                    <p class='me-3 display-8 mb-1 SM-BTN-TWITTER SM-BTN' style="color: rgb(107, 220, 255)"> TWITTER/X </p>
+                    <p class='display-8 mb-1 SM-BTN-DISCORD SM-BTN' style="color: rgb(136, 120, 255)"> DISCORD SERVER </p>
+                </div>
+
+                <!-- <small class='text-white-50'>&copy; Copyright by Clooverland Studios. All rights reserved.</small> -->
+                
+            </div>
+        </footer>
+
+    </body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+    <script src="main.js"></script>
+
+    <script>
+        
+        $(document).ready(function(){
+            console.log('ready')
+
+            const CURRENT_PROGRESS_INT = 100; // CHANGE PROGRESS HERE
+
+            // GAME CHILDS
+            const CHILD_TEMPLATE = ".gchild-active-"
+
+            const GET_GAME_CHILDS = {
+                'SUPER-PLATFORM-ORG' : $(CHILD_TEMPLATE+"SPOG"),
+                'SUPER-PLATFORM-OLDEMO' : $(CHILD_TEMPLATE+"SPD"),
+                'LIGHTS-OUT-CLASSIC' : $(CHILD_TEMPLATE+"LOC"),
+                'POWER-OUTAGE-OLDEMO' : $(CHILD_TEMPLATE+"PODEMO"),
+                'FRIENDSHIP-TEST' : $(CHILD_TEMPLATE+"FT"),
+                'CROSS-WORLDS-PARTY' : $(CHILD_TEMPLATE+"CWP"),
+                'ICECREAM-CATCH' : $(CHILD_TEMPLATE+"IC"),
+                'SUPER-PLATFORM-REOG' : $(CHILD_TEMPLATE+"SPR"),
+            }
+
+            function OPEN_GAME_REDIR(link_path, sub_path) {
+                const REDIR_TEMPLATE = 'https://play.clooverlandstudios.com/'
+
+                if (sub_path != undefined) {
+                    window.open(REDIR_TEMPLATE+sub_path+"/"+link_path)
+                } else {
+                    window.open(REDIR_TEMPLATE+link_path)
+                }
+
+                console.log("[DEVELOPER PRINT] Opening link from path "+link_path)
+            }
+
+            GET_GAME_CHILDS['SUPER-PLATFORM-ORG'].click(function(){
+                OPEN_GAME_REDIR("superplatform-original")
+            })
+
+            GET_GAME_CHILDS['SUPER-PLATFORM-OLDEMO'].click(function(){
+                OPEN_GAME_REDIR("superplatform-old", 'demo')
+            })
+
+            GET_GAME_CHILDS['LIGHTS-OUT-CLASSIC'].click(function(){
+                OPEN_GAME_REDIR("lights-out-classic")
+            })
+
+            GET_GAME_CHILDS['POWER-OUTAGE-OLDEMO'].click(function(){
+                OPEN_GAME_REDIR("poweroutage-old", 'demo')
+            })
+
+            GET_GAME_CHILDS['FRIENDSHIP-TEST'].click(function(){
+                OPEN_GAME_REDIR("friendship-test", 'sm4lls')
+            })
+
+            GET_GAME_CHILDS['CROSS-WORLDS-PARTY'].click(function(){
+                OPEN_GAME_REDIR("crossworlds-party")
+            })
+
+            GET_GAME_CHILDS['ICECREAM-CATCH'].click(function(){
+                OPEN_GAME_REDIR("icecream-catch", 'sm4lls')
+            })
+
+            GET_GAME_CHILDS['SUPER-PLATFORM-REOG'].click(function(){
+                OPEN_GAME_REDIR("superplatform-reoriginal")
+            })
+
+            ///////////////////////////////// PROGRESS BAR CODE
+
+            var prog_on_scrn = false;
+
+            $.fn.isInViewport = function() {
+                var elementTop = $(this).offset().top;
+                var elementBottom = elementTop + $(this).outerHeight();
+
+                var viewportTop = $(window).scrollTop();
+                var viewportBottom = viewportTop + $(window).height();
+
+                return elementBottom > viewportTop && elementTop < viewportBottom;
+            };
+
+            $(window).on('resize scroll', function() {
+                if ($("#PROGRESSBAR-INNER").isInViewport() && !(prog_on_scrn)) {
+                    prog_on_scrn = true;
+                    update_progress_bar();
+                }
+            });
+
+            var PROGRESSIVE_INT_COUNT = 0;
+            const CURRENT_PROGRESS_TITLE = "SUPER PLATFORM: REORIGINAL [FROZEN]";
+
+            function increase_int() { 
+                if (PROGRESSIVE_INT_COUNT <= CURRENT_PROGRESS_INT) {
+                    PROGRESSIVE_INT_COUNT += 1;
+
+                    setTimeout(function() {
+                        increase_int();
+                    }, 25);
+                    
+                    if (PROGRESSIVE_INT_COUNT > CURRENT_PROGRESS_INT) {
+                        PROGRESSIVE_INT_COUNT = CURRENT_PROGRESS_INT;
+                    }
+                    
+                    update_main_info();
+                }
+                
+            }
+
+            const inner_bar = $("#PROGRESSBAR-INNER");
+            const bar_title = $("#PROGRESSBAR-TITLE");
+
+            function update_main_info() {
+                inner_bar.width(PROGRESSIVE_INT_COUNT+"%");
+                bar_title.html(CURRENT_PROGRESS_TITLE+" <br><span style='color:white; font-size: 32px;'>["+PROGRESSIVE_INT_COUNT+"%]</span>")
+            }
+
+            function update_progress_bar() {
+                increase_int();
+                inner_bar.width(PROGRESSIVE_INT_COUNT+"%");
+                bar_title.html(CURRENT_PROGRESS_TITLE+" <br><span style='color:white; font-size: 32px;'>["+PROGRESSIVE_INT_COUNT+"%]</span>")
+            }
+
+            update_main_info()
+                
+        })
+
+    </script>
+
+</html>

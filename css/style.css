@@ -1,0 +1,46 @@
+#arc-btns {
+  margin-left: 55px;
+  margin-top: -40px;
+  position: absolute;
+}
+#arc-btns #arc-button {
+  transition: 0.15s ease;
+  transform: translate(-15px, 20px);
+}
+#arc-btns #arc-button:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+  transform: translate(-15px, 18px) scale(1.08);
+}
+#arc-btns #arc-button:active {
+  cursor: default;
+  filter: brightness(80%);
+  transform: translate(-15px, 20px) scale(1.02);
+}
+#arc-btns #arc-analog {
+  transition: 0.15s ease;
+}
+#arc-btns #arc-analog:hover {
+  cursor: pointer;
+  transform: translateY(-5px) scale(1.08);
+}
+#arc-btns #arc-analog:active {
+  cursor: default;
+  transform: scale(1);
+}
+
+.analog-active {
+  transition: 0s linear;
+}
+
+/* SOCIAL MEDIAS */
+.SM-BTN {
+    transition: 0.25s ease;
+    cursor: pointer;
+    filter: drop-shadow(0 3px 0 black);
+}
+
+.SM-BTN:hover {
+    filter: drop-shadow(0 3px 0 rgb(96, 96, 96));
+    font-size: 32px;
+}

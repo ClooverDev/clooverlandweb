@@ -1,0 +1,34 @@
+#PROGRESSBAR-OUTSIDE {
+    border-radius: 0 0 20px 20px;
+    background-color: black;
+    border: 5px solid black;
+}
+
+#PROGRESSBAR-TITLE {
+    color: gold;
+    filter: drop-shadow(0 4px 3px black)
+}
+
+#PROGRESSBAR-INNER {
+    background-image: url("../images/arcade/assets/bar-background.png");
+    background-size: contain;
+    background-color: rgb(150,0,0);
+    height: 30px;
+    border-radius: 0px 0 20px 20px;
+}
+
+#PROGRESSBAR-OUTSIDE {
+    border: 6px inset rgb(0, 0, 0);
+}
+
+#PROGRESSBAR-CONTENT {
+    border-radius: 0 0 40px 40px;
+    background-color: rgba(0, 0, 0, .5);
+    border: 8px inset black;
+}
+
+#PROGRESSBAR-ICON {
+    border-radius: 40px 40px 0 0;
+    background-color: rgba(0, 0, 0, .5);
+    border: 8px outset black;
+}

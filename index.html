@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title> Clooverland Studios </title>
+
+        <link rel="icon" href="https://images.clooverlandstudios.com/favicons/default.ico">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+        <link type='text/css' href="css/style.css" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                
+        <link href="https://fonts.cdnfonts.com/css/pixeloid-sans" rel="stylesheet">
+
+        <style>
+
+                * {
+                    user-select: none;
+                    cursor: default;
+                    margin: none;
+                    padding: none;
+                    font-family: 'Pixeloid Sans', sans-serif;
+                    color: white;
+                    text-align: center;
+                    /* border:1px solid red; */
+                }
+
+                body {
+                    background-color: black;
+                    --bs-body-font-family: var(--bs-font-monospace);
+                    --bs-body-line-height: 1.4;
+                    --bs-body-bg: var(--bs-gray-100);
+
+                    overflow-x: hidden;
+                }
+
+                #nav-1 {
+                    background-color: #3e6e4a;
+                }
+
+                #nav-2 {
+                    background-color: #27472e;
+                    filter: drop-shadow(0 10px 0 #1b3221)
+                }
+
+                #hd-btn {
+                    border: 0;
+                    background-color: #15281a;
+                    transform: scale(1.5);
+                    filter: drop-shadow(0 2px 0 #305d3d);
+                    transition: 0.25s ease;
+                    margin-right: 40px;
+                }
+
+                #hd-btn:hover {
+                    filter: drop-shadow(0 4px 0 #305d3d);
+                    color: gray;
+                    transform: scale(1.4);
+                }
+
+                #hd-btn:active {
+                    color: gold;
+                    transform: scale(1.43);
+                }
+
+                #ad-btn {
+                    background-image: url('images/book_ad/bg.png');
+                    border-radius: 0 0 80px 80px;
+                    border: 4px solid white;
+                    transform: scale(1.2);
+                    filter: drop-shadow(0 2px 0 #305d3d);
+                    transition: 0.25s ease;
+                }
+
+                #ad-btn:hover {
+                    cursor: pointer;
+                    filter: drop-shadow(0 0 10px gold);
+                    transform: scale(1.22);
+                }
+
+                .__web_background {
+                    width: 100%;
+                    height: 100000px;
+                    opacity: 0.5;
+                    background-position-x: center;
+                    background-image: url("images/background.png");
+                    background-size: 40%;
+                    animation: slideIn 200s ease-out infinite alternate;
+                    z-index: -1;
+                    position: fixed;
+                }
+
+                @keyframes slideIn {
+                    from {
+                        transform: translateY(-10000px);
+                    }
+
+                    to {
+                        transform: translateY(-5000px);
+                    }
+                }
+
+                #arcade-container {
+                    border-radius: 0 0 0 150px;
+
+                    margin-left: 20px;
+
+                    height: 550px;
+                    width: 360px;
+
+                    background-color: black;
+
+                    border: 12px solid rgb(0, 140, 255);
+
+                    background-image: url("images/arcade_bg.png");
+
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+
+                }
+
+                #news-container {
+                    border-radius: 0 0 40px 0;
+
+                    height: 550px;
+                    width: 450px;
+
+                    background-color:rgb(44, 71, 122); 
+                    border: 12px solid rgb(0, 0, 0);
+
+                    background-image: url("images/news_bg.png");
+                    background-position: 80% 50%;
+                    background-size: 150%;
+                    background-blend-mode: multiply; 
+
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+
+                }
+
+                #nav-ad {
+                    filter: drop-shadow(0 -10px 0 gray);
+                    margin-top: 14px;
+                    margin-bottom: 10px;
+                }
+
+                #inner-cont-news {
+                    margin-top: -60px;
+                    width: 100%;
+                    height: 70%;
+                }
+
+                #inner-cont-news img {
+                    transition: 0.15s ease;
+                }
+
+                #inner-cont-news img:hover {
+                    filter: drop-shadow(0 0 8px white);
+                    cursor:pointer;
+                    transform: scale(1.05); 
+                }
+
+                #inner-cont-news img:active {
+                    filter: drop-shadow(0 0 10px gold);
+                    transform: scale(1.07);
+                }
+
+                #cont-main {
+                    background-color: rgba(0, 0, 0, .5);
+                    border: 8px inset black;
+
+                    & h4 {
+                        filter: drop-shadow(0 3px 0 black);
+                    }
+                }
+
+            </style>
+
+    </head>
+
+    <body>
+        <div class="__web_background"></div>
+
+        <header>
+            <nav id='nav-1' class="navbar stick-top navbar-expand-lg py-1">
+                <div class="container-fluid justify-content-center">
+                    <img src="https://images.clooverlandstudios.com/logos/logo_white.png" class="d-inline-block align-text-top" style='max-width: 100%; height: auto; filter: drop-shadow(0 0 5px white)' alt="" width="250" height="45">
+                </div>
+            </nav>
+            <nav id='nav-2' class="navbar stick-top navbar-expand-lg py-3 justify-content-center">
+                <div class="btn-group" role="group" aria-label="Header" style="margin-left: 40px;">
+                    <button type="button" id="hd-btn" class="btn btn-primary BTN-HOME">HOME</button>
+                    <button type="button" id="hd-btn" class="btn btn-primary BTN-ARCADE">ARCADE</button>
+                    <button type="button" id="hd-btn" style="margin-left: 2px" class="btn btn-primary BTN-ABOUT">ABOUT</button>
+                </div>
+            </nav>
+            <nav id="nav-ad" class="navbar navbar-expand-lg py-3 justify-content-center">
+                <img src="images/book_ad/partner.png" class="img-fluid" id="ad-btn" width=200>
+            </nav>
+        </header>
+
+        <main style="margin-bottom: 90px;">
+            <div class='container-lg d-flex justify-content-center'>
+                <img class="img-fluid mx-auto d-block" src="images/big_painting.png" width=650>
+            </div>
+
+
+            <div id='main-container' class='container-lg justify-content-center'>
+                <div id="cont-main" class="container-lg d-flex justify-content-center w-75">
+                    <div id="cont-arc" class="container-me me-5">
+                        <h4 class="mt-2" style="color: gold"> GO TO GAMES DIRECTLY</h4>
+                    </div>
+
+                    <div id="cont-news" class="container-me">
+                        <h4 class="mt-2"> OR CHECK OUT RECENT NEWS</h4>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <div id="arcade-container" class='container-me justify-content-center'>
+                        <img id="arc-main" class="img-fluid mx-auto d-block" style="margin-top: 10px;" src="images/arcade/changing.gif" width=230>
+                        <div id="arc-btns">
+                            <img id="arc-analog" class="img-fluid" src="images/arcade/assets/analog_idle.png" width=80>
+                            <img id='arc-button' class="img-fluid" src="images/arcade/assets/button.png" width=40>
+                        </div>
+                    </div>
+                    
+                    <div id='news-container' class="container-me justify-content-center w-45 p-3">
+                        <div id="inner-cont-info" class="column">
+                            <h1> NEWS</h1>
+                            <p> News from the past 8 months.</p>
+                        </div>
+
+                        <div id="inner-cont-news" class="column-top">
+                            <img class="NEWS-08052025" src="news/2025/05/ASSETS/0805-IMAGE.png" width=370>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class='py-2 5 w-100 fixed-bottom' style="background-color: #1f3625; filter: drop-shadow(0 -6px 0 #132117);">
+            <div class='container text-light text-center'>
+                <p class='display-8 mb-1'> Doing games for entertainment since 2021. </p>
+
+                <div class="d-flex justify-content-center" style="align-items: center">
+                    <p class='me-3 display-8 mb-1 SM-BTN-YOUTUBE SM-BTN' style="color: rgb(255, 3, 66)"> YOUTUBE </p>
+                    <p class='me-3 display-8 mb-1 SM-BTN-TWITTER SM-BTN' style="color: rgb(107, 220, 255)"> TWITTER/X </p>
+                    <p class='display-8 mb-1 SM-BTN-DISCORD SM-BTN' style="color: rgb(136, 120, 255)"> DISCORD SERVER </p>
+                </div>
+
+                <!-- <small class='text-white-50'>&copy; Copyright by Clooverland Studios. All rights reserved.</small> -->
+                
+            </div>
+        </footer>
+
+    </body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+
+    <script>
+        
+        $(document).ready(function(){
+            console.log('ready')
+
+            function CHECK_HOST_NAME() {
+                if (window.location.hostname == 'https://clooverlandstudios.com') {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            /////// NEWS \\\\\\\\
+            const NDEFAULT='.NEWS-'
+            const NEWS_PATH = 'news/'
+
+            const AVAILABLE_NEWS = {
+                '08/05/2025' : $(NDEFAULT+"08052025"),
+            }
+
+            function OPEN_NEWS_PAGE(YEAR, MONTH, DAY) {
+                if (CHECK_HOST_NAME()) {
+                    window.open(NEWS_PATH+YEAR+"/"+MONTH+"/"+DAY, '_blank')
+                } else {
+                    window.open(NEWS_PATH+YEAR+"/"+MONTH+"/"+DAY+'.html', '_blank')
+                }
+            }
+
+            AVAILABLE_NEWS['08/05/2025'].click(function(){
+                OPEN_NEWS_PAGE('2025', '05', '08');
+            })
+
+            /////// ARCADE \\\\\\\\
+            // MAIN
+            var ARCADE_CURRENT=0;
+            const ARCADE_MAX=(8-1); // I'm lazy to count the index 0, so I'll just make it subtract one to the total of games
+            
+            // ASSETS
+            const ASSET_ARCADE_MAIN = $("#arc-main");
+            const ASSET_ARCADE_ANALOG = $("#arc-analog");
+            const ASSET_ARCADE_BTN = $("#arc-button");
+
+            // PATHS
+            const PATH_ARCADE_ASSET = "images/arcade/"
+            const PATH_GAME_REDIR = 'https://play.clooverlandstudios.com/'
+
+            const PATHS_GAMES = [
+                // 0: REDIRECT LINK | 1: IMAGE PATH
+                [PATH_GAME_REDIR+"superplatform-original", PATH_ARCADE_ASSET+'sp_org.png'],
+                [PATH_GAME_REDIR+"demo/superplatform", PATH_ARCADE_ASSET+'sp_demo.png'],
+                [PATH_GAME_REDIR+"lightsout", PATH_ARCADE_ASSET+'lo.png'],
+                [PATH_GAME_REDIR+"demo/poweroutage", PATH_ARCADE_ASSET+'po_demo.png'],
+                [PATH_GAME_REDIR+"smalls/friendshiptest", PATH_ARCADE_ASSET+'ft.png'],
+                [PATH_GAME_REDIR+"crossworldsparty", PATH_ARCADE_ASSET+'cw.png'],
+                [PATH_GAME_REDIR+"smalls/icecreamcatch", PATH_ARCADE_ASSET+'ic.png'],
+                [PATH_GAME_REDIR+"superplatform-reoriginal", PATH_ARCADE_ASSET+'sp_r.png'],
+            ]
+
+            // CHANGE CODE
+            var transiting = false;
+
+            // EASTER EGG
+            const PATH_SECRET = [
+                ['game/FATE/FATE.html', PATH_ARCADE_ASSET+"secret.png"]
+            ]
+            var GET_RANDOM_NUM = 0;
+            var ARCADE_SECRET_ACTIVE = false;
+
+            function FUNC_UPDATE_ARCADE_ASSET(bool) {
+                if (bool) {
+
+                    if (GET_RANDOM_NUM == 1) {
+                        ARCADE_SECRET_ACTIVE = true;
+                        ASSET_ARCADE_MAIN.attr('src', PATH_SECRET[0][1]);
+                        
+                    } else {
+                        ARCADE_SECRET_ACTIVE = false;
+                        ASSET_ARCADE_MAIN.attr('src', PATHS_GAMES[ARCADE_CURRENT][1]);
+                    }
+
+                    ASSET_ARCADE_ANALOG.attr('src', PATH_ARCADE_ASSET+'assets/analog_idle.png')
+                } else {
+                    ASSET_ARCADE_MAIN.attr('src', PATH_ARCADE_ASSET+'changing.gif');
+                    ASSET_ARCADE_ANALOG.attr('src', PATH_ARCADE_ASSET+'assets/analog_pull.png')
+                }
+            }
+
+            function FUNC_OPEN_REDIRECT() {
+                if (ARCADE_SECRET_ACTIVE) {
+                    window.open(PATH_SECRET[0][0], '_blank');
+                } else {
+                    window.open(PATHS_GAMES[ARCADE_CURRENT][0], '_blank');
+                }
+            }
+
+            function FUNC_UPDATE_ARCADE() {
+                if (!transiting) {
+                    console.log('called')
+
+                    transiting = true
+
+                    GET_RANDOM_NUM=Math.floor(Math.random() * 50);
+
+                    console.log(GET_RANDOM_NUM)
+
+                    FUNC_UPDATE_ARCADE_ASSET(false);
+
+                    function END_FUNC(){
+                        if (transiting) {
+                            transiting = false
+                            FUNC_UPDATE_ARCADE_ASSET(true);
+                        }
+                    }
+
+                    ARCADE_CURRENT += 1;
+
+                    if (ARCADE_CURRENT>ARCADE_MAX){ARCADE_CURRENT=0}
+
+                    setTimeout(END_FUNC, 500);
+                }
+            }
+
+            if (!transiting) {
+                ASSET_ARCADE_ANALOG.click(function(){
+                    FUNC_UPDATE_ARCADE();
+                })
+
+                ASSET_ARCADE_BTN.click(function(){
+                    FUNC_OPEN_REDIRECT();
+                })
+            }
+
+            FUNC_UPDATE_ARCADE_ASSET(true);
+        })
+
+    </script>
+
+</html>

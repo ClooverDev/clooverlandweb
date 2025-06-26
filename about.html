@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title> Clooverland Studios - About </title>
+
+        <link rel="icon" href="https://images.clooverlandstudios.com/favicons/default.ico">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+        <link type='text/css' href="css/style.css" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                
+        <link href="https://fonts.cdnfonts.com/css/pixeloid-sans" rel="stylesheet">
+
+        <style>
+
+                * {
+                    user-select: none;
+                    cursor: default;
+                    margin: none;
+                    padding: none;
+                    font-family: 'Pixeloid Sans', sans-serif;
+                    color: white;
+                    text-align: center;
+                    /* border:1px solid red; */
+                }
+
+                body {
+                    background-color: black;
+                    --bs-body-font-family: var(--bs-font-monospace);
+                    --bs-body-line-height: 1.4;
+                    --bs-body-bg: var(--bs-gray-100);
+
+                    overflow-x: hidden;
+                }
+
+                #nav-1 {
+                    background-color: #3e6e4a;
+                }
+
+                #nav-2 {
+                    background-color: #27472e;
+                    filter: drop-shadow(0 10px 0 #1b3221)
+                }
+
+                #hd-btn {
+                    border: 0;
+                    background-color: #15281a;
+                    transform: scale(1.5);
+                    filter: drop-shadow(0 2px 0 #305d3d);
+                    transition: 0.25s ease;
+                    margin-right: 40px;
+                }
+
+                #hd-btn:hover {
+                    filter: drop-shadow(0 4px 0 #305d3d);
+                    color: gray;
+                    transform: scale(1.4);
+                }
+
+                #hd-btn:active {
+                    color: gold;
+                    transform: scale(1.43);
+                }
+
+                #ad-btn {
+                    background-image: url('/images/book_ad/bg.png');
+                    border-radius: 0 0 80px 80px;
+                    border: 4px solid white;
+                    transform: scale(1.2);
+                    filter: drop-shadow(0 2px 0 #305d3d);
+                    transition: 0.25s ease;
+                }
+
+                #ad-btn:hover {
+                    cursor: pointer;
+                    filter: drop-shadow(0 0 10px gold);
+                    transform: scale(1.22);
+                }
+
+                .__web_background {
+                    width: 100%;
+                    height: 100000px;
+                    opacity: 0.5;
+                    background-position-x: center;
+                    background-image: url("/images/background.png");
+                    background-size: 40%;
+                    animation: slideIn 200s ease-out infinite alternate;
+                    z-index: -1;
+                    position: fixed;
+                }
+
+                @keyframes slideIn {
+                    from {
+                        transform: translateY(-10000px);
+                    }
+
+                    to {
+                        transform: translateY(-5000px);
+                    }
+                }
+
+                #TEXT-MAILTO:hover { cursor: pointer; }
+                
+            </style>
+
+    </head>
+
+    <body>
+        <div class="__web_background"></div>
+
+        <header>
+            <nav id='nav-1' class="navbar stick-top navbar-expand-lg py-1">
+                <div class="container-fluid justify-content-center">
+                    <img src="https://images.clooverlandstudios.com/logos/logo_white.png" class="d-inline-block align-text-top" style='max-width: 100%; height: auto; filter: drop-shadow(0 0 5px white)' alt="" width="250" height="45">
+                </div>
+            </nav>
+            <nav id='nav-2' class="navbar stick-top navbar-expand-lg py-3 justify-content-center">
+                <div class="btn-group" role="group" aria-label="Header" style="margin-left: 40px;">
+                    <button type="button" id="hd-btn" class="btn btn-primary BTN-HOME">HOME</button>
+                    <button type="button" id="hd-btn" class="btn btn-primary BTN-ARCADE">ARCADE</button>
+                    <button type="button" id="hd-btn" style="margin-left: 2px" class="btn btn-primary BTN-ABOUT">ABOUT</button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div id="container-main" class="container-me mt-4 d-inline-flex flex-column justify-content-center" style="align-items: center;">
+                <div id="ABOUT-INFO-MAIN" class="container-me w-75 p-3" style="border: 8px inset rgb(87, 148, 103); background-color: rgb(26, 45, 32); border-radius: 0 0 250px 0;">
+                    <h3 class="ms-3 mt-3" style="font-family: 'Pixeloid Mono', sans-serif; text-align: left; color: gold; filter: drop-shadow(-3px 3px 0 black)"> What is "Clooverland Studios"?</h3>
+
+                    <p class="ms-3 mt-3" style="text-align: left; filter: drop-shadow(-3px 3px 0 black)">
+                            Clooverland Studios is a group that I've started over 4 years ago with the goal in mind show off my projects, projects that I use to express my creativity and love in certain genres, with the objective to get better in each project, share ideas and show off my love to these genres that I've grown up with.
+                            This group is about games that I've done in the past and will still do in the future, with genres like Platformer, Horror and some other genres that I try to make.<br>
+                            I've started this group by the name of TopHat Games, later becoming Clooverland Studios on 2024 due to a rebranding that I choosed to do due to the fact that I stopped using "TopHats" as a main icon for the group, specially the fact that I found alot of groups with the same name, I looked for a unique name for the group.<br><br>
+                            Hope you can find any games that you like, help this group to grow up and get more recognized!.
+                    </p>
+
+                    <div id="ABOUT-SHERLOCK" class="container-lg w-100 d-flex" style="margin-left: -60px;"> 
+                         <img src="images/cloverok.png" class="img-fluid ms-5 mb-4" style="transform: rotate(15deg);" width=180 height="auto">
+                         <h4 class="ms-3 mt-4" style="color: gold; text-align: left; filter: drop-shadow(-3px 3px 0 black);">
+                            <-- This is Cloverok, our mascot based on my cat called Sherlock.
+                         </h4> 
+                    </div>
+                </div>
+
+                <div id="ABOUT-INFO-CONTACT" class="mt-3 container-me w-75 d-flex p-3" style="border: 8px inset rgb(39, 39, 39); background-color: rgb(55, 55, 55); border-radius: 0 0 250px 0;">
+                    <div>
+                        <img src="images/mail_icon.png" class="img-fluid" width=150 height="auto">
+                    </div>
+
+                    <div>
+                        <h3 class="ms-3 mt-3 w-75" style="font-family: 'Pixeloid Mono', sans-serif; text-align: left; color: gold; filter: drop-shadow(-3px 3px 0 black)"> CONTACT</h3>
+
+                        <p class="ms-3 mt-3 w-75" style="text-align: left; filter: drop-shadow(-3px 3px 0 black);">
+                            For contacting you can go through our Discord Server or sent a e-mail to  <a href="mailto:support@clooverlandstudios.com" style="text-decoration: none;"> <span id="TEXT-MAILTO" style="text-decoration: underline; color: gold;"> support@clooverlandstudios.com </span> </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class='py-2 mt-5 w-100 fixed-bottom' style="background-color: #1f3625; filter: drop-shadow(0 -6px 0 #132117);">
+            <div class='container text-light text-center'>
+                <p class='display-8 mb-1'> Doing games for entertainment since 2021. </p>
+                
+                <div class="d-flex justify-content-center" style="align-items: center">
+                    <p class='me-3 display-8 mb-1 SM-BTN-YOUTUBE SM-BTN' style="color: rgb(255, 3, 66)"> YOUTUBE </p>
+                    <p class='me-3 display-8 mb-1 SM-BTN-TWITTER SM-BTN' style="color: rgb(107, 220, 255)"> TWITTER/X </p>
+                    <p class='display-8 mb-1 SM-BTN-DISCORD SM-BTN' style="color: rgb(136, 120, 255)"> DISCORD SERVER </p>
+                </div>
+
+                <!-- <small class='text-white-50'>&copy; Copyright by Clooverland Studios. All rights reserved.</small> -->
+                
+            </div>
+        </footer>
+
+    </body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+
+    <script>
+        
+        $(document).ready(function(){
+            console.log('ready')
+
+            /////// ARCADE \\\\\\\\
+            // MAIN
+            var ARCADE_CURRENT=0;
+            const ARCADE_MAX=(8-1); // I'm lazy to count the index 0, so I'll just make it subtract one to the total of games
+            
+            // ASSETS
+            const ASSET_ARCADE_MAIN = $("#arc-main");
+            const ASSET_ARCADE_ANALOG = $("#arc-analog");
+            const ASSET_ARCADE_BTN = $("#arc-button");
+
+            // PATHS
+            const PATH_ARCADE_ASSET = "images/arcade/"
+            const PATH_GAME_REDIR = 'https://play.clooverlandstudios.com/'
+
+            const PATHS_GAMES = [
+                // 0: REDIRECT LINK | 1: IMAGE PATH
+                [PATH_GAME_REDIR+"superplatform-original", PATH_ARCADE_ASSET+'sp_org.png'],
+                [PATH_GAME_REDIR+"demo/superplatform", PATH_ARCADE_ASSET+'sp_demo.png'],
+                [PATH_GAME_REDIR+"lightsout", PATH_ARCADE_ASSET+'lo.png'],
+                [PATH_GAME_REDIR+"demo/poweroutage", PATH_ARCADE_ASSET+'po_demo.png'],
+                [PATH_GAME_REDIR+"smalls/friendshiptest", PATH_ARCADE_ASSET+'ft.png'],
+                [PATH_GAME_REDIR+"crossworldsparty", PATH_ARCADE_ASSET+'cw.png'],
+                [PATH_GAME_REDIR+"smalls/icecreamcatch", PATH_ARCADE_ASSET+'ic.png'],
+                [PATH_GAME_REDIR+"superplatform-reoriginal", PATH_ARCADE_ASSET+'sp_r.png'],
+            ]
+
+            // CHANGE CODE
+            var transiting = false;
+
+            // EASTER EGG
+            const PATH_SECRET = [
+                ['game/FATE/FATE.html', PATH_ARCADE_ASSET+"secret.png"]
+            ]
+            var GET_RANDOM_NUM = 0;
+            var ARCADE_SECRET_ACTIVE = false;
+
+            function FUNC_UPDATE_ARCADE_ASSET(bool) {
+                if (bool) {
+
+                    if (GET_RANDOM_NUM == 1) {
+                        ARCADE_SECRET_ACTIVE = true;
+                        ASSET_ARCADE_MAIN.attr('src', PATH_SECRET[0][1]);
+                        
+                    } else {
+                        ARCADE_SECRET_ACTIVE = false;
+                        ASSET_ARCADE_MAIN.attr('src', PATHS_GAMES[ARCADE_CURRENT][1]);
+                    }
+
+                    ASSET_ARCADE_ANALOG.attr('src', PATH_ARCADE_ASSET+'assets/analog_idle.png')
+                } else {
+                    ASSET_ARCADE_MAIN.attr('src', PATH_ARCADE_ASSET+'changing.gif');
+                    ASSET_ARCADE_ANALOG.attr('src', PATH_ARCADE_ASSET+'assets/analog_pull.png')
+                }
+            }
+
+            function FUNC_OPEN_REDIRECT() {
+                if (ARCADE_SECRET_ACTIVE) {
+                    window.open(PATH_SECRET[0][0], '_blank');
+                } else {
+                    window.open(PATHS_GAMES[ARCADE_CURRENT][0], '_blank');
+                }
+            }
+
+            function FUNC_UPDATE_ARCADE() {
+                if (!transiting) {
+                    console.log('called')
+
+                    transiting = true
+
+                    GET_RANDOM_NUM=Math.floor(Math.random() * 50);
+
+                    console.log(GET_RANDOM_NUM)
+
+                    FUNC_UPDATE_ARCADE_ASSET(false);
+
+                    function END_FUNC(){
+                        if (transiting) {
+                            transiting = false
+                            FUNC_UPDATE_ARCADE_ASSET(true);
+                        }
+                    }
+
+                    ARCADE_CURRENT += 1;
+
+                    if (ARCADE_CURRENT>ARCADE_MAX){ARCADE_CURRENT=0}
+
+                    setTimeout(END_FUNC, 500);
+                }
+            }
+
+            if (!transiting) {
+                ASSET_ARCADE_ANALOG.click(function(){
+                    FUNC_UPDATE_ARCADE();
+                })
+
+                ASSET_ARCADE_BTN.click(function(){
+                    FUNC_OPEN_REDIRECT();
+                })
+            }
+
+            FUNC_UPDATE_ARCADE_ASSET(true);
+        })
+
+    </script>
+
+</html>
