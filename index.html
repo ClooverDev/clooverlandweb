@@ -215,7 +215,7 @@
     <body>
         <div class="__web_background"></div>
 
-        <header style="width: 100%">
+        <header style="width: 100%" loading="lazy">
             <nav id='nav-1' class="navbar stick-top navbar-expand-lg py-1">
                 <div class="container-fluid justify-content-center">
                     <img src="https://images.clooverlandstudios.com/logos/logo_white.png" class="d-inline-block align-text-top" style='max-width: 100%; height: auto; filter: drop-shadow(0 0 5px white)' alt="" width="250" height="45">
@@ -391,6 +391,38 @@
             ]
             var GET_RANDOM_NUM = 0;
             var ARCADE_SECRET_ACTIVE = false;
+
+            // Define an array of image paths to preload
+            var imagesToPreload = [
+                PATHS_GAMES[0][1],
+                PATHS_GAMES[1][1],
+                PATHS_GAMES[2][1],
+                PATHS_GAMES[3][1],
+                PATHS_GAMES[4][1],
+                PATHS_GAMES[5][1],
+                PATHS_GAMES[6][1],
+                PATHS_GAMES[7][1],
+                PATH_SECRET[0][0],
+                PATH_ARCADE_ASSET+'changing.gif',
+                PATH_ARCADE_ASSET+'assets/analog_idle.png',
+                PATH_ARCADE_ASSET+'assets/analog_pull.png',
+            ];
+
+            // Loop through the array and create new Image objects
+            $.each(imagesToPreload, function(index, imageUrl) {
+                // Create a new Image object
+                var img = new Image();
+                // Set its src attribute to trigger the download and caching
+                img.src = imageUrl;
+                // Optionally, you can attach load or error handlers for more control
+                $(img).on('load', function() {
+                    // Image loaded successfully
+                    console.log("Image preloaded: " + imageUrl);
+                }).on('error', function() {
+                    // Error loading image
+                    console.error("Error preloading image: " + imageUrl);
+                });
+            });
 
             function FUNC_UPDATE_ARCADE_ASSET(bool) {
                 if (bool) {

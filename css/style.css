@@ -42,7 +42,7 @@
 
 .SM-BTN:hover {
     filter: drop-shadow(0 3px 0 rgb(96, 96, 96));
-    font-size: 32px;
+    font-size: 26px;
 }
 
 .__web_background {
