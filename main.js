@@ -53,3 +53,17 @@ GET_SOCIAL_MEDIAS['TWITTER-X'][0].click(function(){
 GET_SOCIAL_MEDIAS['DISCORD'][0].click(function(){
     OPEN_SOCIAL(GET_SOCIAL_MEDIAS['DISCORD'][1])
 })
+
+function is_mobile() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    return /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(userAgent) || /android|ipad|playbook|silk/i.test(userAgent);
+
+    // RETURN FALSE = IS ON DESKTOP
+    // RETURN TRUE = IS ON MOBILE
+}
+
+if (!is_mobile()) {
+    $(".mobile-version").remove()
+} else {
+    $(".desktop-version").remove()
+}
