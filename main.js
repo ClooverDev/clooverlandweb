@@ -11,7 +11,7 @@ function HEADER_REDIR_TO(__LINK) {
         if (__LINK == 'index') {
             window.open("https://"+DOMAIN, '_self')
         } else {
-            window.open('https://'+DOMAIN+"/"__LINK, '_self')
+            window.open('https://'+DOMAIN+"/"+__LINK, '_self')
         }
     } else {
         window.open(__LINK+'.html', '_self')
