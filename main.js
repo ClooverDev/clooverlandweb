@@ -9,7 +9,7 @@ const DOMAIN = 'clooverlandstudios.com'
 function HEADER_REDIR_TO(__LINK) {
     if (HOSTNAME == DOMAIN) {
         if (__LINK == 'index') {
-            window.open(DOMAIN, '_self')
+            window.open("https://"+DOMAIN, '_self')
         } else {
             window.open(LINK, '_self')
         }
