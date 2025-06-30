@@ -11,10 +11,26 @@
         <link type='text/css' href="css/style.css" rel="stylesheet">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                
-        <link href="https://fonts.cdnfonts.com/css/pixeloid-sans" rel="stylesheet">
-
         <style>
+
+                @font-face {
+                    font-family: 'Pixeloid Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    src: local('Pixeloid Sans'), url('https://fonts.cdnfonts.com/s/66737/PixeloidSans-nR3g1.woff') format('woff');
+                }
+                @font-face {
+                    font-family: 'Pixeloid Sans';
+                    font-style: normal;
+                    font-weight: 700;
+                    src: local('Pixeloid Sans'), url('https://fonts.cdnfonts.com/s/66737/PixeloidSansBold-RpeJo.woff') format('woff');
+                }
+                @font-face {
+                    font-family: 'Pixeloid Mono';
+                    font-style: normal;
+                    font-weight: 400;
+                    src: local('Pixeloid Mono'), url('https://fonts.cdnfonts.com/s/66737/PixeloidMono-1G8ae.woff') format('woff');
+                }
 
                 * {
                     user-select: none;
@@ -80,28 +96,6 @@
                     transform: scale(1.22);
                 }
 
-                .__web_background {
-                    width: 100%;
-                    height: 100000px;
-                    opacity: 0.5;
-                    background-position-x: center;
-                    background-image: url("images/background.png");
-                    background-size: 40%;
-                    animation: slideIn 200s ease-out infinite alternate;
-                    z-index: -1;
-                    position: fixed;
-                }
-
-                @keyframes slideIn {
-                    from {
-                        transform: translateY(-10000px);
-                    }
-
-                    to {
-                        transform: translateY(-5000px);
-                    }
-                }
-
                 #arcade-container {
                     border-radius: 0 0 0 150px;
 
@@ -127,6 +121,25 @@
 
                     height: 550px;
                     width: 450px;
+
+                    background-color:rgb(44, 71, 122); 
+                    border: 12px solid rgb(0, 0, 0);
+
+                    background-image: url("images/news_bg.png");
+                    background-position: 80% 50%;
+                    background-size: 150%;
+                    background-blend-mode: multiply; 
+
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+
+                }
+
+                #news-container-mob {
+                    border-radius: 0 0 40px 40px;
+
+                    height: 550px;
 
                     background-color:rgb(44, 71, 122); 
                     border: 12px solid rgb(0, 0, 0);
@@ -178,6 +191,23 @@
                     }
                 }
 
+                .mobile-version {
+                    display:none;
+                    visibility: hidden;
+                }
+
+                @media (max-width: 750px) {
+                    .desktop-version {
+                        display: none;
+                        visibility: hidden;
+                    }
+
+                    .mobile-version {
+                        display:block;
+                        visibility: visible;
+                    }
+                }
+
             </style>
 
     </head>
@@ -185,7 +215,7 @@
     <body>
         <div class="__web_background"></div>
 
-        <header>
+        <header style="width: 104.5%">
             <nav id='nav-1' class="navbar stick-top navbar-expand-lg py-1">
                 <div class="container-fluid justify-content-center">
                     <img src="https://images.clooverlandstudios.com/logos/logo_white.png" class="d-inline-block align-text-top" style='max-width: 100%; height: auto; filter: drop-shadow(0 0 5px white)' alt="" width="250" height="45">
@@ -203,13 +233,14 @@
             </nav>
         </header>
 
-        <main style="margin-bottom: 90px;">
+        <main style="margin-bottom: 100px;">
             <div class='container-lg d-flex justify-content-center'>
                 <img class="img-fluid mx-auto d-block" src="images/big_painting.png" width=650>
             </div>
 
+            <!-- DESKTOP VERSION -->
 
-            <div id='main-container' class='container-lg justify-content-center'>
+            <div id='main-container' class='container-lg justify-content-center desktop-version'>
                 <div id="cont-main" class="container-lg d-flex justify-content-center w-75">
                     <div id="cont-arc" class="container-me me-5">
                         <h4 class="mt-2" style="color: gold"> GO TO GAMES DIRECTLY</h4>
@@ -230,6 +261,29 @@
                     </div>
                     
                     <div id='news-container' class="container-me justify-content-center w-45 p-3">
+                        <div id="inner-cont-info" class="column">
+                            <h1> NEWS</h1>
+                            <p> News from the past 8 months.</p>
+                        </div>
+
+                        <div id="inner-cont-news" class="column-top">
+                            <img class="NEWS-08052025" src="news/2025/05/ASSETS/0805-IMAGE.png" width=370>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOBILE VERSION -->
+
+            <div id='main-container' class='container-lg justify-content-center mobile-version'>
+                <div id="cont-main" class="container-lg d-flex justify-content-center w-75">
+                    <div id="cont-news" class="container-me">
+                        <h4 class="mt-2"> CHECK OUT RECENT NEWS</h4>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <div id='news-container-mob' class="container-me justify-content-center w-45 p-3">
                         <div id="inner-cont-info" class="column">
                             <h1> NEWS</h1>
                             <p> News from the past 8 months.</p>
@@ -277,6 +331,10 @@
                     return false;
                 }
             }
+
+            $("#ad-btn").click(function(){
+                window.open("https://wm.clooverlandstudios.com", "_blank")
+            })
 
             /////// NEWS \\\\\\\\
             const NDEFAULT='.NEWS-'

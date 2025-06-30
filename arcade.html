@@ -80,29 +80,7 @@
                     filter: drop-shadow(0 0 10px gold);
                     transform: scale(1.22);
                 }
-
-                .__web_background {
-                    width: 100%;
-                    height: 100000px;
-                    opacity: 0.5;
-                    background-position-x: center;
-                    background-image: url("images/background_arc.png");
-                    background-size: 40%;
-                    animation: slideIn 200s ease-out infinite alternate;
-                    z-index: -1;
-                    position: fixed;
-                }
-
-                @keyframes slideIn {
-                    from {
-                        transform: translateY(-10000px);
-                    }
-
-                    to {
-                        transform: translateY(-5000px);
-                    }
-                }
-
+                
                 #games_container {
                     margin-top: 20px;
 
@@ -137,6 +115,10 @@
                     filter: drop-shadow(0 5px 7px gold);                    
                 }
 
+                .__web_background {
+                    background-image: url('https://images.clooverlandstudios.com/bgs/arcade.png')
+                }
+
             </style>
 
     </head>
@@ -159,7 +141,7 @@
             </nav>
         </header>
 
-        <main class="justify-content-center">
+        <main class="justify-content-center" style="margin-bottom: 80px;">
             <div class='py-md-5 container-sm justify-content-center d-inline-flex flex-row'>
                 <img src="images/arcade/logo_default.png" class="img-fluid mt-3" style="margin-bottom: -40px;" width=500>
             </div>

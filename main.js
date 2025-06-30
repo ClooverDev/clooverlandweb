@@ -4,7 +4,7 @@ const GET_ARCADE = $('.BTN-ARCADE')
 const GET_ABOUT = $('.BTN-ABOUT')
 
 const HOSTNAME = window.location.hostname
-const DOMAIN = 'https://clooverlandstudios.com'
+const DOMAIN = 'clooverlandstudios.com'
 
 function HEADER_REDIR_TO(__LINK) {
     if (HOSTNAME == DOMAIN) {
