@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Custom PreHead code is injected here -->
+    
+
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta charset="utf-8"/>
+		<link rel="icon" type="image/x-icon" href="gameicon.ico">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <!-- Builtin injector for disabling cache -->
+        <meta http-equiv="pragma" content="no-cache"/>
+
+        <!-- Set the title bar of the page -->
+        <title>Bring him to his fate</title>
+
+        <!-- Custom PreStyle code is injected here -->
+        
+
+        <!-- Set the background colour of the document -->
+        <style>
+            body {
+                background: black;
+                color: #cccccc;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                margin-top: -5px;
+                overflow: none;
+            }
+
+            canvas {
+                image-rendering: optimizeSpeed;
+                -webkit-interpolation-mode: nearest-neighbor;
+                -ms-touch-action: none;
+                touch-action: none;
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+
+            }
+            :-webkit-full-screen #canvas {
+                width: 100%;
+                height: 100%;
+            }
+            :-webkit-full-screen {
+                width: 100%;
+                height: 100%;
+            }
+            
+            /* Custom Runner Styles */
+            div.gm4html5_div_class {
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+            }
+            div.gm4html5_login {
+                padding: 20px;
+                position: absolute;
+                border: solid 2px #000000;
+                background-color: #404040;
+                color:#00ff00;
+                border-radius: 15px;
+                box-shadow: #101010 20px 20px 40px;
+            }
+            div.gm4html5_cancel_button {
+                float: right;
+            }
+            div.gm4html5_login_button {
+                float: left;
+            }
+            div.gm4html5_login_header {
+                text-align: center;
+            }
+            /* END - Custom Runner Styles */
+            
+            .hands {
+                animation: shakeyshakey .25s linear infinite alternate;
+            }
+
+            .face {
+                transform: translate(-50%, -50%);
+
+                & img {
+                    animation: supershakey 20ms linear infinite alternate;
+                }
+            }
+
+            @keyframes supershakey {
+                from {
+                    transform: translate(-50%, -50%) skew(-5deg) rotateY(15deg) rotate(-5deg); 
+                }
+
+                to {
+                    transform: translate(-50%, -50%) skew(10deg) rotateY(-15deg) rotate(25deg); 
+                }
+            }
+
+            @keyframes shakeyshakey {
+               0% { 
+                transform: translate(-50%, -50%) rotate(8deg);
+               } 
+
+               50% {
+                transform: translate(-50%, -50%) skew(8deg);
+               }
+
+               100% {
+                transform: translate(-50%, -50%) rotate(-8deg);
+               }
+            }
+
+        </style>
+
+        <!-- Custom PostStyle code is injected here -->
+        
+
+        <!-- Builtin injector for injecting flurry analytics code -->
+        
+    </head>
+
+    <!-- Custom PostHead code is injected here -->
+    
+
+    <!-- Custom PreBody code is injected here -->
+    
+
+    <body>
+
+        <div class="gm4html5_div_class" id="gm4html5_div_id">
+            
+            <!-- Builtin injector for splash screen -->
+            
+            <audio loop id="screamAudio" src="sounds/scream.wav"></audio>
+
+            <h4 style="width: 100%; height: 100%;"></h4>
+
+            <!-- Create the canvas element the game draws to -->
+            <canvas id="canvas" width="640" height="540" style="z-index: -1; position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; transform: translate(-50%, -50%);">
+                <p>Your browser doesn't support HTML5 canvas.</p>
+            </canvas>
+
+            <div class="hands" style="z-index: -2; position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; width: 700px; height: 600px">
+                <img src="images/hand.png" style="position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; transform: translate(45%, -50%) rotate(60deg) rotateX(-50deg); width: 400px;">
+                <img src="images/hand.png" style="position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; transform: translate(-150%, -50%) rotate(-60deg) rotateX(50deg) scaleX(-1); width: 400px;">
+            </div>
+
+            <div class="face" style="display: none; z-index: 2; position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; width: 700px; height: 600px">
+                <img id="victim_face" src="images/face1.png" style="position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; transform: translate(-50%, -50%); width: 300px;">
+            </div>
+
+            <img id="tv" src="images/tv.png" style="z-index: 0; position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; transform: translate(-50%, -50%); width: 700px; height: 600px">
+        </div>
+
+        <!-- Run the game code -->
+        <script type="text/javascript" src="game_files/HELIESTHERE.js?cachebust=1571966244"></script>
+
+        <!-- Builtin injector for injecting runner path -->
+        
+
+        <script>window.onload = GameMaker_Init;</script>
+
+        <!-- Builtin injector for injecting google analytics code -->
+        
+
+    </body>
+
+    <!-- Custom PostBody code is injected here -->
+
+    <script>
+
+        const END = is_on_end
+
+        var txtSpd = 500;
+        var incCount = 0;
+
+        var currentAppea = false;
+
+        $(document).ready(function(){
+
+            function triggerEnd() {
+                $("#screamAudio")[0].play();
+                $(".hands").css("display", "none")
+                $(".face").css("display", "block")
+                $("#canvas").css("display", "none")
+                $("body").addClass("SHAKE")
+
+                $("#tv").attr("src", "images/tv_alt.png")
+
+                function add_up() {
+                    incCount += 1;
+
+                    var H4=$("h4")
+
+                    H4.append(" YOUR FAULT ")
+
+                    if (incCount >= 15 && incCount <= 30) {
+                        txtSpd = 350;
+                    }
+
+                    if (incCount >= 30 && incCount <= 80) {
+                        txtSpd = 100;
+                    }
+
+                    if (incCount > 80) {
+                        $("h4").css("color", "red")
+                        $("h4").css("font-size", "24px")
+                        txtSpd = 0;
+                    }
+
+                    function the_end() {
+                        alert("I'll never forgive you.")
+                        window.close()
+                    }
+
+                    if (incCount < 360) {
+                        setTimeout(add_up, txtSpd)
+                    } else {
+                        setTimeout(the_end, 5000)
+                    }
+                }
+
+                function update_appearence() {
+                    currentAppea = !currentAppea
+
+                    if (currentAppea == true) {
+                        $("#victim_face").attr("src", "images/face1.png")
+                    } else {
+                        $("#victim_face").attr("src", "images/face2.png")
+                    }
+
+
+                    setTimeout(update_appearence, 1000)
+                }
+
+                add_up()
+                update_appearence()
+                
+            }
+
+            function check() {
+                console.log("check")
+
+                if (is_on_end != END) {
+                    setTimeout(triggerEnd, 10000);
+                } else {
+                    setTimeout(check, 1000);
+                }
+            }
+
+            check()
+            
+        })
+
+    </script>
+    
+</html>
