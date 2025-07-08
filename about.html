@@ -82,7 +82,11 @@
 
                 #TEXT-MAILTO:hover { cursor: pointer; }
 
-                @media (max-width: 450px) {
+                .mobile-version {
+                    display: none;
+                }
+
+                @media (max-width: 750px) {
                     #CONT-MAILICON {
                         display: none;
                     }
@@ -101,13 +105,7 @@
                     #CLOVEROK-TXT {
                         font-size: 14px;
                     }
-                }
 
-                .mobile-version {
-                    display: none;
-                }
-
-                @media (min-width: 750px) {
                     .desktop-version {
                         display: none;
                     }
@@ -161,7 +159,7 @@
                     </div>
                 </div>
 
-                <div id="ABOUT-INFO-CONTACT" class="mt-3 container-me w-100 d-flex p-3" style="border: 8px inset rgb(39, 39, 39); background-color: rgb(55, 55, 55);">
+                <div id="ABOUT-INFO-CONTACT" class="mt-3 container-me w-75 d-flex p-3" style="border: 8px inset rgb(39, 39, 39); background-color: rgb(55, 55, 55);">
                     <div id='CONT-MAILICON'>
                         <img src="images/mail_icon.png" class="img-fluid" width=150 height="auto">
                     </div>

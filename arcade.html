@@ -82,17 +82,19 @@
                 }
                 
                 #games_container {
+                    width: 100%;
                     margin-top: 20px;
 
                 }   
 
                 #game_child {
                     height: 200px;
+                    width: 250px;
                     transition: .10s ease;
                     filter: drop-shadow(0 5px 0 black);
                     margin-right: 5px;
                     margin-left: 5px;
-                    margin-bottom: 20px;
+                    margin-bottom: 25px;
                 }
 
                 #game_child:hover {
@@ -119,6 +121,29 @@
                     background-image: url('https://images.clooverlandstudios.com/bgs/arcade.png')
                 }
 
+                main {
+                    margin-bottom: 10px;
+                }
+
+                .PROGRESS-DIV {
+                    width: 75%;
+                }
+
+                @media (max-width : 750px) {
+                    #game_child {
+                        height: 170px;
+                        width: 175px;
+                    }
+
+                    main {
+                        margin-bottom: 100px;
+                    }
+
+                    .PROGRESS-DIV {
+                        width: 100%;
+                    }
+                }
+
             </style>
 
     </head>
@@ -141,53 +166,53 @@
             </nav>
         </header>
 
-        <main class="justify-content-center" style="margin-bottom: 80px;">
+        <main class="justify-content-center">
             <div class='py-md-5 container-sm justify-content-center d-inline-flex flex-row'>
                 <img src="images/arcade/logo_default.png" class="img-fluid mt-3" style="margin-bottom: -40px;" width=500>
             </div>
 
             <div id="games_container" class="py-md-5  container-sm justify-content-center d-inline-flex flex-row p-2 row">
-                <div id="game_child" class="gchild-active-SPR py-md-5 container-me justify-content-center d-inline-flex flex-column" style='width: 250px; background-color: rgb(132, 50, 50); border: 5px inset darkred;'>
+                <div id="game_child" class="gchild-active-SPR py-md-5 container-me justify-content-center d-inline-flex flex-column" style='background-color: rgb(132, 50, 50); border: 5px inset darkred;'>
                     <img src="images/arcade/games/superplatformreorg.png" class="mx-auto d-block img-fluid" width=260 style="border: 6px outset darkred;">
                     <h5 class='text-justify' style="margin-top: 2px; filter: drop-shadow(0 3px 0 black)"> SUPER PLATFORM: REORIGINAL<br>!-----☆-----! </h5>
                 </div>
 
-                <div id="game_child" class="gchild-active-IC py-md-5 container-me justify-content-center d-inline-flex flex-column" style='width: 250px; background-color: rgb(132, 50, 116); border: 5px inset rgb(163, 50, 141);'>
+                <div id="game_child" class="gchild-active-IC py-md-5 container-me justify-content-center d-inline-flex flex-column" style='background-color: rgb(132, 50, 116); border: 5px inset rgb(163, 50, 141);'>
                     <img src="images/arcade/games/icecreamcatch.png" class="mx-auto d-block img-fluid" width=260 style="border: 6px outset rgb(163, 50, 141);">
                     <h5 class='text-justify' style="margin-top: 2px; filter: drop-shadow(0 3px 0 black)"> [SM4LL] ICECREAM CATCH<br>!-----☆-----! </h5>
                 </div>
 
-                <div id="game_child" class="gchild-active-CWP py-md-5 container-me justify-content-center d-inline-flex flex-column" style='width: 250px; background-color: rgb(132, 50, 116); border: 5px inset rgb(163, 50, 141);'>
+                <div id="game_child" class="gchild-active-CWP py-md-5 container-me justify-content-center d-inline-flex flex-column" style='background-color: rgb(132, 50, 116); border: 5px inset rgb(163, 50, 141);'>
                     <img src="images/arcade/games/crossworldsparty.png" class="mx-auto d-block img-fluid" width=260 style="border: 6px outset rgb(163, 50, 141);">
                     <h5 class='text-justify' style="margin-top: 2px; filter: drop-shadow(0 3px 0 black)"> CROSS-WORLDS PARTY<br>!-----☆-----! </h5>
                 </div>
 
-                <div id="game_child" class="gchild-active-FT py-md-5 container-me justify-content-center d-inline-flex flex-column" style='width: 250px; background-color: rgb(134, 134, 134); border: 5px inset rgb(82, 82, 82);'>
+                <div id="game_child" class="gchild-active-FT py-md-5 container-me justify-content-center d-inline-flex flex-column" style='background-color: rgb(134, 134, 134); border: 5px inset rgb(82, 82, 82);'>
                     <img src="images/arcade/games/friendshiptest.png" class="mx-auto d-block img-fluid" width=260 style="border: 6px outset rgb(82, 82, 82);">
                     <h5 class='text-justify' style="margin-top: 2px; filter: drop-shadow(0 3px 0 black)"> [SM4LL] FRIENDSHIP TEST<br>!-----☆-----! </h5>
                 </div>
 
-                <div id="game_child" class="gchild-active-PODEMO py-md-5 container-me justify-content-center d-inline-flex flex-column" style='width: 250px; background-color: rgb(138, 117, 33); border: 5px inset rgb(91, 77, 22);'>
+                <div id="game_child" class="gchild-active-PODEMO py-md-5 container-me justify-content-center d-inline-flex flex-column" style='background-color: rgb(138, 117, 33); border: 5px inset rgb(91, 77, 22);'>
                     <img src="images/arcade/games/poweroutageold.png" class="mx-auto d-block img-fluid" width=260 style="border: 6px outset rgb(91, 77, 22);">
                     <h5 class='text-justify' style="margin-top: 2px; filter: drop-shadow(0 3px 0 black)"> POWER OUTAGE: DEMO<br>!-----☆-----! </h5>
                 </div>
 
-                <div id="game_child" class="gchild-active-LOC py-md-5 container-me justify-content-center d-inline-flex flex-column" style='width: 250px; background-color: rgb(138, 117, 33); border: 5px inset rgb(91, 77, 22);'>
+                <div id="game_child" class="gchild-active-LOC py-md-5 container-me justify-content-center d-inline-flex flex-column" style='background-color: rgb(138, 117, 33); border: 5px inset rgb(91, 77, 22);'>
                     <img src="images/arcade/games/lightsoutold.png" class="mx-auto d-block img-fluid" width=260 style="border: 6px outset rgb(91, 77, 22);">
                     <h5 class='text-justify' style="margin-top: 2px; filter: drop-shadow(0 3px 0 black)"> LIGHTS OUT: CLASSIC<br>!-----☆-----! </h5>
                 </div>
 
-                <div id="game_child" class="gchild-active-SPD py-md-5 container-me justify-content-center d-inline-flex flex-column" style='width: 250px; background-color: rgb(132, 50, 50); border: 5px inset darkred;'>
+                <div id="game_child" class="gchild-active-SPD py-md-5 container-me justify-content-center d-inline-flex flex-column" style='background-color: rgb(132, 50, 50); border: 5px inset darkred;'>
                     <img src="images/arcade/games/superplatformold.png" class="mx-auto d-block img-fluid" width=260 style="border: 6px outset darkred;">
                     <h5 class='text-justify' style="margin-top: 2px; filter: drop-shadow(0 3px 0 black)"> SUPER PLATFORM: DEMO<br>!-----☆-----! </h5>
                 </div>
 
-                <div id="game_child" class="gchild-active-SPOG py-md-5 container-me justify-content-center d-inline-flex flex-column" style='width: 250px; background-color: rgb(132, 50, 50); border: 5px inset darkred;'>
+                <div id="game_child" class="gchild-active-SPOG py-md-5 container-me justify-content-center d-inline-flex flex-column" style='background-color: rgb(132, 50, 50); border: 5px inset darkred;'>
                     <img src="images/arcade/games/superplatformorg.png" class="mx-auto d-block img-fluid" width=260 style="border: 6px outset darkred;">
                     <h5 class='text-justify' style="margin-top: 2px; filter: drop-shadow(0 3px 0 black)"> SUPER PLATFORM: ORIGINAL<br>!-----☆-----! </h5>
                 </div>
 
-                <div class='py-md-5 container-lg d-flex justify-content-center flex-column w-75'>
+                <div class='py-md-5 container-lg d-flex justify-content-center flex-column PROGRESS-DIV'>
                     <div id="PROGRESSBAR-ICON">
                         <img src="images/arcade/art/lights_out.png" class='img-fluid' width="75%">
                     </div>
