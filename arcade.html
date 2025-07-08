@@ -189,7 +189,7 @@
 
                 <div class='py-md-5 container-lg d-flex justify-content-center flex-column w-75'>
                     <div id="PROGRESSBAR-ICON">
-                        <img src="images/arcade/art/super_platform_reorg.png" class='img-fluid' width="75%">
+                        <img src="images/arcade/art/lights_out.png" class='img-fluid' width="75%">
                     </div>
 
                     <div id="PROGRESSBAR-CONTENT" class="w-100">
@@ -231,6 +231,7 @@
             console.log('ready')
 
             const CURRENT_PROGRESS_INT = 0; // CHANGE PROGRESS HERE
+            const CURRENT_PROGRESS_TITLE = "LIGHTS OUT: RELIGHT"; // CHANGE PROGRESS TITLE HERE
 
             // GAME CHILDS
             const CHILD_TEMPLATE = ".gchild-active-"
@@ -312,7 +313,6 @@
             });
 
             var PROGRESSIVE_INT_COUNT = 0;
-            const CURRENT_PROGRESS_TITLE = "SUPER PLATFORM: REORIGINAL [FROZEN]";
 
             function increase_int() { 
                 if (PROGRESSIVE_INT_COUNT <= CURRENT_PROGRESS_INT) {
