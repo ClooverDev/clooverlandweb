@@ -37,7 +37,7 @@
 .SM-BTN {
     transition: 0.25s ease;
     cursor: pointer;
-    filter: drop-shadow(0 3px 0 black);
+    filter: drop-shadow(0 2px 0 black);
 }
 
 .SM-BTN:hover {
