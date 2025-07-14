@@ -130,9 +130,10 @@
             </nav>
             <nav id='nav-2' class="navbar stick-top navbar-expand-lg py-3 justify-content-center">
                 <div class="btn-group" role="group" aria-label="Header" style="margin-left: 40px;">
-                    <button type="button" id="hd-btn" class="btn btn-primary BTN-HOME">HOME</button>
-                    <button type="button" id="hd-btn" class="btn btn-primary BTN-ARCADE">ARCADE</button>
-                    <button type="button" id="hd-btn" style="margin-left: 2px" class="btn btn-primary BTN-ABOUT">ABOUT</button>
+                    <button type="button" id="hd-btn" class="btn btn-primary BTN-HOME"> HOME</button>
+                    <button type="button" id="hd-btn" class="btn btn-primary BTN-ARCADE" style="margin-left: -1px">ARCADE</button>
+                    <button type="button" id="hd-btn" style="margin-left: -1px" class="btn btn-primary BTN-ABOUT">ABOUT</button>
+                    <button type="button" id="hd-btn" style="margin-left: -10px" class="btn btn-primary BTN-TRANS"><img class="trans-img trans-inactive" src="images/icons/translate.png" title="Translate to PT-BR" width=16></button>
                 </div>
             </nav>
         </header>
@@ -142,9 +143,9 @@
 
             <div id="container-main" class="desktop-version container-me mt-4 d-inline-flex flex-column justify-content-center" style="align-items: center;">
                 <div id="ABOUT-INFO-MAIN" class="container-me w-75 p-3" style="border: 8px inset rgb(87, 148, 103); background-color: rgb(26, 45, 32);">
-                    <h3 class="ms-3 mt-3" style="font-family: 'Pixeloid Mono', sans-serif; text-align: left; color: gold; filter: drop-shadow(-3px 3px 0 black)"> What is "Clooverland Studios"?</h3>
+                    <h3 class="ms-3 mt-3" style="font-family: 'Pixeloid Mono', sans-serif; text-align: left; color: gold; filter: drop-shadow(-3px 3px 0 black)" id="ABOUT-TITLE"> What is "Clooverland Studios"?</h3>
 
-                    <p class="ms-3 mt-3 w-100" style="text-align: left; filter: drop-shadow(-3px 3px 0 black);">
+                    <p class="ms-3 mt-3 w-100" style="text-align: left; filter: drop-shadow(-3px 3px 0 black);" id="ABOUT-INFO">
                             Clooverland Studios is a group that I've started over 4 years ago with the goal in mind show off my projects, projects that I use to express my creativity and love in certain genres, with the objective to get better in each project, share ideas and show off my love to these genres that I've grown up with.
                             This group is about games that I've done in the past and will still do in the future, with genres like Platformer, Horror and some other genres that I try to make.<br>
                             I've started this group by the name of TopHat Games, later becoming Clooverland Studios on 2024 due to a rebranding that I choosed to do due to the fact that I stopped using "TopHats" as a main icon for the group, specially the fact that I found alot of groups with the same name, I looked for a unique name for the group.<br><br>
@@ -167,7 +168,7 @@
                     <div id="TEXT-MAIL">
                         <h3 class="ms-3 mt-3 w-75" style="font-family: 'Pixeloid Mono', sans-serif; text-align: left; color: gold; filter: drop-shadow(-3px 3px 0 black)"> CONTACT</h3>
 
-                        <p class="ms-3 mt-3 w-75" style="text-align: left; filter: drop-shadow(-3px 3px 0 black);">
+                        <p class="ms-3 mt-3 w-75" style="text-align: left; filter: drop-shadow(-3px 3px 0 black);" id="CONTACT-INFO">
                             For contacting you can go through our Discord Server or sent a e-mail to  <a href="mailto:support@clooverlandstudios.com" style="text-decoration: none;"> <span id="TEXT-MAILTO" style="text-decoration: underline; color: gold;"> support@clooverlandstudios.com </span> </a>
                         </p>
                     </div>
@@ -178,9 +179,9 @@
 
             <div id="container-main-mob" class="mobile-version container-me mt-4 d-inline-flex flex-column justify-content-center" style="align-items: center;">
                 <div id="ABOUT-INFO-MAIN" class="container-me w-100 p-3" style="border: 8px inset rgb(87, 148, 103); background-color: rgb(26, 45, 32);">
-                    <h3 class="ms-3 mt-3" style="font-family: 'Pixeloid Mono', sans-serif; text-align: left; color: gold; filter: drop-shadow(-3px 3px 0 black)"> What is "Clooverland Studios"?</h3>
+                    <h3 class="ms-3 mt-3" style="font-family: 'Pixeloid Mono', sans-serif; text-align: left; color: gold; filter: drop-shadow(-3px 3px 0 black)" id="ABOUT-TITLE"> What is "Clooverland Studios"?</h3>
 
-                    <p class="ms-3 mt-3 w-100" style="text-align: left; filter: drop-shadow(-3px 3px 0 black);">
+                    <p class="ms-3 mt-3 w-100" style="text-align: left; filter: drop-shadow(-3px 3px 0 black);" id="ABOUT-INFO">
                             Clooverland Studios is a group that I've started over 4 years ago with the goal in mind show off my projects, projects that I use to express my creativity and love in certain genres, with the objective to get better in each project, share ideas and show off my love to these genres that I've grown up with.
                             This group is about games that I've done in the past and will still do in the future, with genres like Platformer, Horror and some other genres that I try to make.<br>
                             I've started this group by the name of TopHat Games, later becoming Clooverland Studios on 2024 due to a rebranding that I choosed to do due to the fact that I stopped using "TopHats" as a main icon for the group, specially the fact that I found alot of groups with the same name, I looked for a unique name for the group.<br><br>
@@ -189,7 +190,7 @@
 
                     <div id="ABOUT-SHERLOCK" class="container-lg w-100 d-flex" style="margin-left: -60px;"> 
                             <img id="CLOVEROK-IMG" src="images/cloverok.png" class="img-fluid ms-5 mb-4" style="transform: rotate(15deg); width: 150px; height: 130px;">
-                            <h4 id="CLOVEROK-TXT" class="ms-3 mt-4" style="color: gold; text-align: left; filter: drop-shadow(-3px 3px 0 black);">
+                            <h4 id="CLOVEROK-TXT" class="ms-3 mt-4" style="color: gold; text-align: left; filter: drop-shadow(-3px 3px 0 black);" id="CLOVEROK-INFO">
                             <-- This is Cloverok, our mascot based on my cat called Sherlock.
                             </h4> 
                     </div>
@@ -203,7 +204,7 @@
                     <div id="TEXT-MAIL">
                         <h3 class="ms-3 mt-3 w-75" style="font-family: 'Pixeloid Mono', sans-serif; text-align: left; color: gold; filter: drop-shadow(-3px 3px 0 black)"> CONTACT</h3>
 
-                        <p class="ms-3 mt-3 w-75" style="text-align: left; filter: drop-shadow(-3px 3px 0 black);">
+                        <p class="ms-3 mt-3 w-75" style="text-align: left; filter: drop-shadow(-3px 3px 0 black);" id="CONTACT-INFO">
                             For contacting you can go through our Discord Server or sent a e-mail to  <a href="mailto:support@clooverlandstudios.com" style="text-decoration: none;"> <span id="TEXT-MAILTO" style="text-decoration: underline; color: gold;"> support@clooverlandstudios.com </span> </a>
                         </p>
                     </div>
@@ -213,12 +214,12 @@
 
         <footer class='py-2 mt-5 w-100 fixed-bottom' style="background-color: #1f3625; filter: drop-shadow(0 -6px 0 #132117);">
             <div class='container text-light text-center'>
-                <p class='display-8 mb-1'> Doing games for entertainment since 2021. </p>
-                
+                <p class='display-8 mb-1' id="FOOTER-MAINTEXT"> Doing games for entertainment since 2021. </p>
+
                 <div class="d-flex justify-content-center" style="align-items: center">
-                    <p class='me-3 display-8 mb-1 SM-BTN-YOUTUBE SM-BTN' style="color: rgb(255, 3, 66)"> YOUTUBE </p>
-                    <p class='me-3 display-8 mb-1 SM-BTN-TWITTER SM-BTN' style="color: rgb(107, 220, 255)"> TWITTER/X </p>
-                    <p class='display-8 mb-1 SM-BTN-DISCORD SM-BTN' style="color: rgb(136, 120, 255)"> DISCORD SERVER </p>
+                    <p class='me-3 display-8 mb-1 SM-BTN-YOUTUBE SM-BTN' style="color: rgb(255, 3, 66)" id="FOOTER-SM-YOUTUBE"> YOUTUBE </p>
+                    <p class='me-3 display-8 mb-1 SM-BTN-TWITTER SM-BTN' style="color: rgb(107, 220, 255)" id="FOOTER-SM-TWITTER"> TWITTER/X </p>
+                    <p class='display-8 mb-1 SM-BTN-DISCORD SM-BTN' style="color: rgb(136, 120, 255)" id="FOOTER-SM-DISCORD"> DISCORD SERVER </p>
                 </div>
 
                 <!-- <small class='text-white-50'>&copy; Copyright by Clooverland Studios. All rights reserved.</small> -->
@@ -237,6 +238,9 @@
         
         $(document).ready(function(){
             console.log('ready');
+
+            CURRENT_PAGE = 'ABOUT'
+            TRANSLATE_PAGE(CURRENT_PAGE)
 
             /////// ARCADE \\\\\\\\
             // MAIN

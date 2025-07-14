@@ -1,10 +1,15 @@
+// MAIN \\
+
 // HEADER \\
 const GET_HOME = $('.BTN-HOME')
 const GET_ARCADE = $('.BTN-ARCADE')
 const GET_ABOUT = $('.BTN-ABOUT')
+const GET_TRANS = $('.BTN-TRANS')
 
 const HOSTNAME = window.location.hostname
 const DOMAIN = 'clooverlandstudios.com'
+
+function DEBUGF(TXT) { console.log(TXT) }
 
 function HEADER_REDIR_TO(__LINK) {
     if (HOSTNAME == DOMAIN) {
@@ -28,6 +33,129 @@ GET_ARCADE.click(function(){
 
 GET_ABOUT.click(function(){
     HEADER_REDIR_TO('about')
+})
+
+var is_translated = false;
+
+if (localStorage.getItem("translate") !== null) {
+    is_translated = localStorage.getItem("translate");
+}
+
+const STORE_DEFAULT_ABOUT = {
+    'STORED-TITLE' : $("#ABOUT-TITLE").html(),
+    'STORED-INFO' : $('#ABOUT-INFO').html(),
+    'STORED-CLOVEROK' : $("#CLOVEROK-TXT").html(),
+    'STORED-CONTACT' : $("#CONTACT-INFO").html()
+}
+
+function TRANSLATE_PAGE(current_page_id) {
+    DEBUGF('TRANSLATING...')
+
+    const get_elements_global = {
+        'HOME-BTN' : $(".BTN-HOME"),
+        'ARCADE-BTN' : $(".BTN-ARCADE"),
+        'ABOUT-BTN' : $(".BTN-ABOUT"),
+        'FOOTER-MAIN' : $("#FOOTER-MAINTEXT"),
+        'FOOTER-SOCIAL-DISCORD' : $("#FOOTER-SM-DISCORD"),
+    }
+
+    const btn_img = $(".trans-img")
+    
+    is_translated=!is_translated;   
+
+    DEBUGF("IS TRANSLATED?: "+is_translated)
+
+    function translate_global() {
+        if (is_translated) {
+            get_elements_global['HOME-BTN'].html("INICIO");
+            get_elements_global['ARCADE-BTN'].html("FLIPERAMA");
+            get_elements_global['ABOUT-BTN'].html("SOBRE");
+            get_elements_global['FOOTER-MAIN'].html("Fazendo jogos por entretenimento desde 2021.");
+            get_elements_global['FOOTER-SOCIAL-DISCORD'].html("SERVER DO DISCORD");
+            $("html").attr("lang", "pt-BR");
+
+            btn_img.removeClass("trans-inactive");
+            btn_img.addClass("trans-active");
+
+        } else {
+            
+            get_elements_global['HOME-BTN'].html("HOME");
+            get_elements_global['ARCADE-BTN'].html("ARCADE");
+            get_elements_global['ABOUT-BTN'].html("ABOUT");
+            get_elements_global['FOOTER-MAIN'].html("Doing games for entertainment since 2021.");
+            get_elements_global['FOOTER-SOCIAL-DISCORD'].html("DISCORD SERVER");
+            $("html").attr("lang", "en-US");
+
+            btn_img.addClass("trans-inactive");
+            btn_img.removeClass("trans-active");
+        }
+    }
+
+    if (current_page_id=="HOME") {
+       const get_elements = {
+            'TEXT-1' : $("#MAINCONTAINER-TEXT-1"),
+            'TEXT-2' : $("#MAINCONTAINER-TEXT-2"),
+            'NEWS-TITLE' : $("#NEWS-TEXT-TITLE"),
+            'NEWS-DESC' : $("#NEWS-TEXT-DESC"),
+            'TEXT-2-MOBILE' : $("#MAINCONTAINER-TEXT-2-MOBILE"),
+       }
+
+        if (is_translated) {
+            translate_global();
+            get_elements['TEXT-1'].html("VÁ PARA OS JOGOS DIRETAMENTE");
+            get_elements['TEXT-2'].html("OU LEIA AS NOTÍCIAS RECENTES");
+            get_elements['NEWS-TITLE'].html("NOTÍCIAS");
+            get_elements['NEWS-DESC'].html("Notícias dos últimos 8 meses.");
+            get_elements['TEXT-2-MOBILE'].html("LEIA AS NOTÍCIAS RECENTES");
+
+        } else {
+            translate_global();
+            get_elements['TEXT-1'].html("GO TO GAMES DIRECTLY");
+            get_elements['TEXT-2'].html("OR CHECK OUT RECENT NEWS");
+            get_elements['NEWS-TITLE'].html("NEWS");
+            get_elements['NEWS-DESC'].html("News from the past 8 months.");
+            get_elements['TEXT-2-MOBILE'].html("CHECK OUT RECENT NEWS");
+        }
+
+    } else if (current_page_id=='ARCADE') {
+        if (is_translated) {
+            translate_global();
+            document.title = 'Clooverland Studios - Fliperama'
+        } else {
+            translate_global();
+            document.title = 'Clooverland Studios - Arcade'
+        }
+
+    } else if (current_page_id=='ABOUT') {
+        const get_elements = {
+            'TITLE' : $("#ABOUT-TITLE"),
+            'INFO' : $('#ABOUT-INFO'),
+            'CLOVEROK' : $("#CLOVEROK-TXT"),
+            'CONTACT' : $("#CONTACT-INFO"),
+        }
+
+        if (is_translated) {
+            translate_global();
+            get_elements['TITLE'].html('O que é o "Clooverland Studios"?')
+            get_elements['INFO'].html('Clooverland Studios é um grupo que eu comecei a mais de 4 anos atrás com o objetivo em mente de mostrar meus projetos, projetos que eu uso para expressar minha criatividade e amor em certos gêneros, com o objetivo de melhorar in cada projeto, divulgar ideias e mostrar meu amor por esses gêneros que eu cresci com. Esse grupo é sobre jogos que eu fiz no passado e ainda irei fazer no futuro, com gêneros como Plataforma, Terror e alguns outros gêneros que eu tento fazer. <br> Eu comecei esse grupo com o nome de TopHat Games, depois se chamando Clooverland Studios em 2024 por causa da renomeação que eu escolhi por causa do fato de que eu parei de usar "Cartolas" como um ícone principal para o grupo, especificamente o fato de que eu encontrei vários grupos com o mesmo nome, eu encontrei um nome único para o grupo. <br><br> Eu espero que você consiga encontrar qualquer jogo que você goste, ajude este grupo a crescer e conseguir ser mais reconhecido!.')
+            get_elements['CLOVEROK'].html("<-- Este é Cloverok, nosso mascote baseado no meu gato chamado Sherlock.")
+            get_elements['CONTACT'].html("Para contato você pode ir através do nosso servidor do Discord ou mandar um e-mail para <a href='mailto:support@clooverlandstudios.com' style='text-decoration: none;'> <span id='TEXT-MAILTO' style='text-decoration: underline; color: gold;'> support@clooverlandstudios.com </span> </a>")
+
+        } else {
+            translate_global();
+            get_elements['TITLE'].html(STORE_DEFAULT_ABOUT['STORED-TITLE'])
+            get_elements['INFO'].html(STORE_DEFAULT_ABOUT['STORED-INFO'])
+            get_elements['CLOVEROK'].html(STORE_DEFAULT_ABOUT['STORED-CLOVEROK'])
+            get_elements['CONTACT'].html(STORE_DEFAULT_ABOUT['STORED-CONTACT'])
+
+        }
+    }
+
+    localStorage.setItem("translate", is_translated);
+}
+
+GET_TRANS.click(function(){
+    TRANSLATE_PAGE(CURRENT_PAGE);
 })
 
 // SOCIAL MEDIAS \\
