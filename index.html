@@ -309,7 +309,19 @@
             console.log('ready')
 
             CURRENT_PAGE='HOME'
-            TRANSLATE_PAGE(CURRENT_PAGE);
+            TRANSLATE_PAGE(CURRENT_PAGE, true);
+
+            // MAIN
+            PRELOAD([
+                "images/book_ad/bg.png",
+                "images/book_ad/partner.png",
+                "images/big_painting-v2.png",
+            ])
+
+            // NEWS
+            PRELOAD([
+                "news/2025/05/ASSETS/0805-IMAGE.png",
+            ])
 
             function CHECK_HOST_NAME() {
                 if (window.location.hostname == 'clooverlandstudios.com') {

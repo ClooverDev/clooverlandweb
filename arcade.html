@@ -49,27 +49,20 @@
                 #hd-btn {
                     border: 0;
                     background-color: #383619;
-                    transform: scale(1.5);
                     filter: drop-shadow(0 2px 0 #1d1c0d);
-                    transition: 0.25s ease;
-                    margin-right: 40px;
                 }
 
                 #hd-btn:hover {
                     filter: drop-shadow(0 4px 0 #1d1c0d);
-                    color: gray;
-                    transform: scale(1.4);
                 }
 
                 #hd-btn:active {
                     color: gold;
-                    transform: scale(1.43);
                 }
                 
                 #games_container {
                     width: 100%;
                     margin-top: 20px;
-
                 }   
 
                 #game_child {
@@ -214,7 +207,7 @@
             </div>
         </main>
  
-        <footer class='py-2 mt-5 w-100 fixed-bottom' style="background-color: #65602c; filter: drop-shadow(0 -6px 0 #46431f);">
+        <footer class='py-2 mt-5 w-100 fixed-bottom' style="background-color: #4e4b22; filter: drop-shadow(0 -6px 0 #353217);">
             <div class='container text-light text-center'>
                 <p class='display-8 mb-1' id="FOOTER-MAINTEXT"> Doing games for entertainment since 2021. </p>
 
@@ -235,6 +228,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     
     <script src="main.js"></script>
+    <script src="preload.js"></script>
 
     <script>
         
@@ -246,6 +240,28 @@
 
             const CURRENT_PROGRESS_INT = 2; // CHANGE PROGRESS HERE
             const CURRENT_PROGRESS_TITLE = "LIGHTS OUT: RELIGHT"; // CHANGE PROGRESS TITLE HERE
+
+            // PRELOAD
+            PRELOAD([
+                "images/arcade/logo_default.png",
+                "images/arcade/games/crossworldsparty.png",
+                "images/arcade/games/friendshiptest.png",
+                "images/arcade/games/icecreamcatch.png",
+                "images/arcade/games/lightsoutold.png",
+                "images/arcade/games/poweroutageold.png",
+                "images/arcade/games/superplatformold.png",
+                "images/arcade/games/superplatformorg.png",
+                "images/arcade/games/superplatformreorg.png",
+                "images/arcade/art/cross_worlds.png",
+                "images/arcade/art/friendship_test.png",
+                "images/arcade/art/icecream_catch.png",
+                "images/arcade/art/lights_out_relight.png",
+                "images/arcade/art/lights_out.png",
+                "images/arcade/art/power_outage_demo.png",
+                "images/arcade/art/super_platform_c2.png",
+                "images/arcade/art/super_platform_org.png",
+                "images/arcade/art/super_platform_reorg.png",
+            ])
 
             // GAME CHILDS
             const CHILD_TEMPLATE = ".gchild-active-"
