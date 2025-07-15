@@ -253,6 +253,7 @@
 
                         <div id="inner-cont-news" class="column-top">
                             <img class="NEWS-08052025" src="news/2025/05/ASSETS/0805-IMAGE.png" width=370>
+                            <img class="NEWS-15072025" src="images/news-placeholder.png" width=370>
                         </div>
                     </div>
                 </div>
@@ -276,6 +277,7 @@
 
                         <div id="inner-cont-news" class="column-top">
                             <img class="NEWS-08052025" src="news/2025/05/ASSETS/0805-IMAGE.png" width=350>
+                            <img class="NEWS-15072025" src="images/news-placeholder.png" width=350>
                         </div>
                     </div>
                 </div>
@@ -309,19 +311,7 @@
             console.log('ready')
 
             CURRENT_PAGE='HOME'
-            TRANSLATE_PAGE(CURRENT_PAGE, true);
-
-            // MAIN
-            PRELOAD([
-                "images/book_ad/bg.png",
-                "images/book_ad/partner.png",
-                "images/big_painting-v2.png",
-            ])
-
-            // NEWS
-            PRELOAD([
-                "news/2025/05/ASSETS/0805-IMAGE.png",
-            ])
+            TRANSLATE_PAGE(CURRENT_PAGE);
 
             function CHECK_HOST_NAME() {
                 if (window.location.hostname == 'clooverlandstudios.com') {
@@ -341,18 +331,32 @@
 
             const AVAILABLE_NEWS = {
                 '08/05/2025' : $(NDEFAULT+"08052025"),
+                '15/07/2025' : $(NDEFAULT+"15072025"),
+
             }
 
             function OPEN_NEWS_PAGE(YEAR, MONTH, DAY) {
-                if (CHECK_HOST_NAME()) {
-                    window.open(NEWS_PATH+YEAR+"/"+MONTH+"/"+DAY, '_blank')
+                if (is_translated) {
+                    if (CHECK_HOST_NAME()) {
+                        window.open(NEWS_PATH+YEAR+"/"+MONTH+"/br/"+DAY, '_blank')
+                    } else {
+                        window.open(NEWS_PATH+YEAR+"/"+MONTH+"/br/"+DAY+'.html', '_blank')
+                    }
                 } else {
-                    window.open(NEWS_PATH+YEAR+"/"+MONTH+"/"+DAY+'.html', '_blank')
+                    if (CHECK_HOST_NAME()) {
+                        window.open(NEWS_PATH+YEAR+"/"+MONTH+"/"+DAY, '_blank')
+                    } else {
+                        window.open(NEWS_PATH+YEAR+"/"+MONTH+"/"+DAY+'.html', '_blank')
+                    }
                 }
             }
 
             AVAILABLE_NEWS['08/05/2025'].click(function(){
                 OPEN_NEWS_PAGE('2025', '05', '08');
+            })
+
+            AVAILABLE_NEWS['15/07/2025'].click(function(){
+               OPEN_NEWS_PAGE('2025', '07', '15') 
             })
 
             /////// ARCADE \\\\\\\\
