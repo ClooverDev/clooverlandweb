@@ -1,5 +1,32 @@
 // MAIN \\
 
+// BAKER \\
+function setCookie(name,value,days) {
+	var expires = "";
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime() + (days*24*60*60*1000));
+		expires = "; expires=" + date.toUTCString();
+	}
+	//document.cookie = name + "=" + (value || "")  + expires + "; Domain=clooverlandstudios.com; SameSite=None; Secure; path=/";
+	document.cookie = name + "=" + (value || "")  + expires + "; SameSite=None; Secure; path=/";
+}
+
+function getCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+function eraseCookie(name) {   
+	document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
 // HEADER \\
 const GET_HOME = $('.BTN-HOME')
 const GET_ARCADE = $('.BTN-ARCADE')
@@ -37,8 +64,8 @@ GET_ABOUT.click(function(){
 
 var is_translated = false;
 
-if (localStorage.getItem("translate") !== null) {
-    is_translated = localStorage.getItem("translate");
+if (getCookie('translate') !== false) {
+    is_translated = getCookie('translate')
 }
 
 const STORE_DEFAULT_ABOUT = {
@@ -48,7 +75,7 @@ const STORE_DEFAULT_ABOUT = {
     'STORED-CONTACT' : $("#CONTACT-INFO").html()
 }
 
-function TRANSLATE_PAGE(current_page_id) {
+function TRANSLATE_PAGE(current_page_id, first_call) {
     DEBUGF('TRANSLATING...')
 
     const get_elements_global = {
@@ -61,7 +88,9 @@ function TRANSLATE_PAGE(current_page_id) {
 
     const btn_img = $(".trans-img")
     
-    is_translated=!is_translated;   
+    if (first_call == false) {
+        is_translated=!is_translated;
+    }
 
     DEBUGF("IS TRANSLATED?: "+is_translated)
 
@@ -89,6 +118,8 @@ function TRANSLATE_PAGE(current_page_id) {
             btn_img.addClass("trans-inactive");
             btn_img.removeClass("trans-active");
         }
+
+        return setCookie('translate', is_translated, 999);
     }
 
     if (current_page_id=="HOME") {
@@ -151,11 +182,11 @@ function TRANSLATE_PAGE(current_page_id) {
         }
     }
 
-    localStorage.setItem("translate", is_translated);
+    setCookie('translate', is_translated, 999);
 }
 
 GET_TRANS.click(function(){
-    TRANSLATE_PAGE(CURRENT_PAGE);
+    TRANSLATE_PAGE(CURRENT_PAGE, false);
 })
 
 // SOCIAL MEDIAS \\
